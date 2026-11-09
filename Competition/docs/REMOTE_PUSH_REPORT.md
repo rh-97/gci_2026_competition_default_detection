@@ -62,4 +62,6 @@ See [REMOTE_CLONE_VERIFICATION.json](REMOTE_CLONE_VERIFICATION.json) for the cle
 
 ## Publication scope
 
-The remote had no branches or tags immediately before publication, so an ordinary push can create the three branches without force. Only `cleanup/project-organization`, `organize/round-folders` and `snapshot/pre-cleanup-2026-11-09` are publication targets; local archive, backup and filter-branch recovery refs are excluded.
+The remote had no branches or tags immediately before publication. The ordinary push successfully created all three branches without force, and each branch now tracks its corresponding `origin` branch. `git ls-remote --heads --tags origin` confirmed the initial published tips matched the local heads and showed only the three requested branches. This report's publication status is committed afterward on `organize/round-folders` and pushed as a normal follow-up.
+
+Only `cleanup/project-organization`, `organize/round-folders` and `snapshot/pre-cleanup-2026-11-09` were published; local archive, backup and filter-branch recovery refs were excluded.

@@ -1,6 +1,6 @@
 """Verify completed work and create a new hash/CRC-checked reproduction archive."""
 from pathlib import Path
-import sys,json,hashlib,argparse,zipfile
+import sys,json,hashlib,argparse,zipfile,subprocess
 import nbformat
 import numpy as np
 import pandas as pd
@@ -10,10 +10,34 @@ import r4_final as old
 HERE=Path(__file__).resolve().parent;ART=HERE/'artifacts'
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
+def project_file(name):
+    """Locate an unchanged original after navigation-only file moves."""
+    p=t.ROOT/name
+    if p.exists():return p
+    locations=t.read(t.ROOT/'docs/file_locations.json')['files']
+    return t.ROOT/locations.get(name,name)
+
+_archived={}
+def project_sha(name):
+    p=project_file(name)
+    if p.exists():return sha(p)
+    archive=t.read(t.ROOT/'docs/output_archive.json')
+    row=archive['archived_files'][name]
+    blob=subprocess.check_output(['git','rev-parse',archive['snapshot_commit']+':'+row['repository_path']],cwd=t.ROOT).decode().strip()
+    assert blob==row['git_blob'],name
+    if blob not in _archived:
+        proc=subprocess.Popen(['git','cat-file','blob',blob],cwd=t.ROOT,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        digest=hashlib.sha256()
+        for chunk in iter(lambda:proc.stdout.read(1024*1024),b''):digest.update(chunk)
+        error=proc.stderr.read();assert proc.wait()==0,error.decode()
+        _archived[blob]=digest.hexdigest()
+    assert _archived[blob]==row['sha256'],name
+    return _archived[blob]
+
 def verify():
     assert Path(sys.prefix).resolve()==(t.ROOT/'.venv').resolve()
     protected=t.read(HERE/'reference/modeling_preserved_hashes.json')
-    for name,want in protected.items():assert sha(t.ROOT/name)==want,name
+    for name,want in protected.items():assert project_sha(name)==want,name
     environment=t.read(ART/'model_environment.json')
     for name,want in environment['identity']['sources'].items():assert sha(HERE/name)==want,name
     freeze=t.read(ART/'model_selection_freeze.json')
@@ -21,7 +45,7 @@ def verify():
     assert freeze['engine']==environment['signature']
     execution=t.read(ART/'model_executed_notebooks.json')
     for name in ['08_high_upside_modeling_plan.ipynb','08b_local_gpu_amendment.ipynb','08c_compute_budget_policy.ipynb','09_high_upside_results_reproduction.ipynb']:
-        assert sha(t.ROOT/name)==execution[name]['sha256'];nb=nbformat.read(t.ROOT/name,as_version=4);nbformat.validate(nb)
+        assert project_sha(name)==execution[name]['sha256'];nb=nbformat.read(project_file(name),as_version=4);nbformat.validate(nb)
         assert hashlib.sha256('\n\0\n'.join(c.source for c in nb.cells if c.cell_type=='code').encode()).hexdigest()==execution[name]['code_sha256']
         assert all(c.execution_count is not None and all(o.output_type!='error' for o in c.outputs) for c in nb.cells if c.cell_type=='code')
     final=t.read(ART/'model_final_results.json');replay=t.read(ART/'model_reproduction.json')
@@ -33,7 +57,7 @@ def verify():
     inference={}
     if final['accepted']:
         assert t.read(ART/'model_confirmation.json')['passed'] and t.read(ART/'model_averaging.json')['passed']
-        assert replay['saved_model_replay'] and sha(t.ROOT/replay['path'])==final['sha256']
+        assert replay['saved_model_replay'] and project_sha(replay['path'])==final['sha256']
         manifest=t.read(ART/'model_manifest.json')
         for family in manifest['families']:
             for seed in family['seeds']:
@@ -49,8 +73,9 @@ def verify():
     result=dict(passed=True,protected_files_unchanged=len(protected),old_notebooks_unchanged=sum(name.endswith('.ipynb') for name in protected),
         new_plan_result_notebooks_executed=True,submission=final['submission'],sha256=final['sha256'],accepted_new_submission=final['accepted'],
         new_submission_saved_model_replay=bool(final['accepted'] and replay.get('saved_model_replay')),
-        reference_checksum_preserved=sha(t.ROOT/'output/submission_round3_bagged.csv')==protected['output/submission_round3_bagged.csv'],
+        reference_checksum_preserved=project_sha('output/submission_round3_bagged.csv')==protected['output/submission_round3_bagged.csv'],
         fallback_to_reference=not final['accepted'],
+        protected_files_archived_in_git=[n for n in protected if not project_file(n).exists()],
         inference_files_checked=len(inference),source_selection_freezes_checked=True,local_venv=sys.executable)
     t.dump(ART/'model_verification.json',result);print('VERIFIED',result,flush=True)
 

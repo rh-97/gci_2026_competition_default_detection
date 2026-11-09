@@ -1,0 +1,98 @@
+{
+  "description": "Primary round folders contain original notebooks/documents and relative links to unchanged checkpoint-compatible implementation paths.",
+  "files": {
+    "README.ipynb": "rounds/round1/notebooks/README.ipynb",
+    "tutorial.ipynb": "rounds/round1/notebooks/tutorial.ipynb",
+    "preprocessing.ipynb": "rounds/round1/notebooks/preprocessing.ipynb",
+    "01_competition_data_audit.ipynb": "rounds/round1/notebooks/01_competition_data_audit.ipynb",
+    "02_improved_models_and_submission.ipynb": "rounds/round1/notebooks/02_improved_models_and_submission.ipynb",
+    "03_round2_experiment_journal.ipynb": "rounds/round2/notebooks/03_round2_experiment_journal.ipynb",
+    "04_round2_validation_and_submission.ipynb": "rounds/round2/notebooks/04_round2_validation_and_submission.ipynb",
+    "EXPERIMENT_LOG.md": "rounds/round2/reports/EXPERIMENT_LOG.md",
+    "05_round3_hypotheses_and_experiments.ipynb": "rounds/round3/notebooks/05_round3_hypotheses_and_experiments.ipynb",
+    "06_round3_validation_and_reproduction.ipynb": "rounds/round3/notebooks/06_round3_validation_and_reproduction.ipynb",
+    "ROUND3_EXPERIMENT_LOG.md": "rounds/round3/reports/ROUND3_EXPERIMENT_LOG.md",
+    "ROUND4_EXPERIMENT_LOG.md": "rounds/round4/reports/ROUND4_EXPERIMENT_LOG.md",
+    "07_signal_opportunity_audit.ipynb": "rounds/round5/notebooks/07_signal_opportunity_audit.ipynb",
+    "08_high_upside_modeling_plan.ipynb": "rounds/round5/notebooks/08_high_upside_modeling_plan.ipynb",
+    "08b_local_gpu_amendment.ipynb": "rounds/round5/notebooks/08b_local_gpu_amendment.ipynb",
+    "08c_compute_budget_policy.ipynb": "rounds/round5/notebooks/08c_compute_budget_policy.ipynb",
+    "09_high_upside_results_reproduction.ipynb": "rounds/round5/notebooks/09_high_upside_results_reproduction.ipynb",
+    "IMPROVEMENT_REPORT.md": "rounds/round5/reports/IMPROVEMENT_REPORT.md",
+    "HIGH_UPSIDE_EXPERIMENT_LOG.md": "rounds/round5/reports/HIGH_UPSIDE_EXPERIMENT_LOG.md",
+    "HIGH_UPSIDE_PLAN.md": "rounds/round5/plans/HIGH_UPSIDE_PLAN.md",
+    "HomeCredit_columns_description.xlsx": "rounds/round1/reference/HomeCredit_columns_description.xlsx",
+    "environment.yml": "environment/environment.yml",
+    "conda-explicit-osx-arm64.txt": "environment/conda-explicit-osx-arm64.txt"
+  },
+  "notebook_working_directory": "Competition",
+  "rounds": {
+    "round1": {
+      "title": "Baseline, data audit and first improved models",
+      "folder": "rounds/round1",
+      "notebooks": [
+        "README.ipynb",
+        "tutorial.ipynb",
+        "preprocessing.ipynb",
+        "01_competition_data_audit.ipynb",
+        "02_improved_models_and_submission.ipynb"
+      ],
+      "reports": [],
+      "plans": []
+    },
+    "round2": {
+      "title": "Feature engineering and two-seed ensemble",
+      "folder": "rounds/round2",
+      "notebooks": [
+        "03_round2_experiment_journal.ipynb",
+        "04_round2_validation_and_submission.ipynb"
+      ],
+      "reports": [
+        "EXPERIMENT_LOG.md"
+      ],
+      "plans": []
+    },
+    "round3": {
+      "title": "Signed term features and three-seed bagging",
+      "folder": "rounds/round3",
+      "notebooks": [
+        "05_round3_hypotheses_and_experiments.ipynb",
+        "06_round3_validation_and_reproduction.ipynb"
+      ],
+      "reports": [
+        "ROUND3_EXPERIMENT_LOG.md"
+      ],
+      "plans": []
+    },
+    "round4": {
+      "title": "Stopped incremental search",
+      "folder": "rounds/round4",
+      "notebooks": [],
+      "reports": [
+        "ROUND4_EXPERIMENT_LOG.md"
+      ],
+      "plans": []
+    },
+    "round5": {
+      "title": "Structural models, neural ensemble and score reconstruction",
+      "folder": "rounds/round5",
+      "notebooks": [
+        "07_signal_opportunity_audit.ipynb",
+        "08_high_upside_modeling_plan.ipynb",
+        "08b_local_gpu_amendment.ipynb",
+        "08c_compute_budget_policy.ipynb",
+        "09_high_upside_results_reproduction.ipynb"
+      ],
+      "reports": [
+        "IMPROVEMENT_REPORT.md",
+        "HIGH_UPSIDE_EXPERIMENT_LOG.md"
+      ],
+      "plans": [
+        "HIGH_UPSIDE_PLAN.md"
+      ]
+    }
+  },
+  "parent_files": {
+    "competition_tutorial.pptx": "Competition/rounds/round1/reference/competition_tutorial.pptx"
+  }
+}

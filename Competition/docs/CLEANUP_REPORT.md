@@ -1,5 +1,7 @@
 # Cleanup and recovery report
 
+This is the first cleanup record. The later [round-based folder layout](../rounds/README.md) moves notebook/document paths, and [output recovery](OUTPUTS.md) describes files now stored in Git. The statements below about files remaining in place describe that earlier cleanup.
+
 ## Saved state
 
 - Snapshot branch: `snapshot/pre-cleanup-2026-11-09`.

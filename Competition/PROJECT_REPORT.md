@@ -1,5 +1,7 @@
 # Competition project report
 
+Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.
+
 The latest generated file is [submission_high_upside.csv](output/submission_high_upside.csv).
 It combines the previous ensemble, a TabM neural model trained from scratch, and
 a CatBoost model with learned external-score reconstruction features. Matched
@@ -297,11 +299,11 @@ Competition/.venv/bin/python Competition/project.py report
 train. `report` rebuilds this report and the complete catalog from saved evidence;
 it does not edit notebooks. The original detailed commands and dependency setup
 remain in [REPRODUCTION_README.md](REPRODUCTION_README.md). The previously delivered
-[reproduction ZIP](output/competition_high_upside_reproduction.zip) remains unchanged
+[reproduction ZIP](docs/OUTPUTS.md) remains unchanged
 as a historical, hash/CRC-checked package; it predates the cleanup and public-result
 addendum. Git records the current organization and documentation.
 
-## 7. Repository cleanup and recovery
+## 7. First cleanup and recovery (historical)
 
 The pre-cleanup snapshot branch is **`snapshot/pre-cleanup-2026-11-09`**, commit
 `b8d094cc94496a74ec38fc66e69319348b9a4924`. It contains 1,674 tracked files, including supplied
@@ -337,13 +339,13 @@ experimental runners are not mistaken for required prediction steps.
 | higher_upside | main screening configuration | 6 |
 
 - [Every trial, rationale, recipe and outcome](docs/EXPERIMENT_CATALOG.md).
-- [First/second-pass journal](EXPERIMENT_LOG.md), [third-pass journal](ROUND3_EXPERIMENT_LOG.md),
-  [stopped fourth-pass journal](ROUND4_EXPERIMENT_LOG.md),
-  [structural-model journal and post-delivery observation](HIGH_UPSIDE_EXPERIMENT_LOG.md).
-- [Detailed latest improvement report](IMPROVEMENT_REPORT.md),
-  [recorded strategy](HIGH_UPSIDE_PLAN.md),
+- [First/second-pass journal](rounds/round2/reports/EXPERIMENT_LOG.md), [third-pass journal](rounds/round3/reports/ROUND3_EXPERIMENT_LOG.md),
+  [stopped fourth-pass journal](rounds/round4/reports/ROUND4_EXPERIMENT_LOG.md),
+  [structural-model journal and post-delivery observation](rounds/round5/reports/HIGH_UPSIDE_EXPERIMENT_LOG.md).
+- [Detailed latest improvement report](rounds/round5/reports/IMPROVEMENT_REPORT.md),
+  [recorded strategy](rounds/round5/plans/HIGH_UPSIDE_PLAN.md),
   [exact modeling rules](improvements/high_upside/MODELING_PLAN.md).
-- [Executed latest results notebook](09_high_upside_results_reproduction.ipynb).
+- [Executed latest results notebook](rounds/round5/notebooks/09_high_upside_results_reproduction.ipynb).
   All supplied and earlier notebooks remain unchanged.
 - [Current model manifest](improvements/high_upside/artifacts/model_manifest.json),
   [exact replay record](improvements/high_upside/artifacts/model_reproduction.json),

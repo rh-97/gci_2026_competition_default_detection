@@ -44,6 +44,16 @@ def main():
     else:
         script, phase = ('h_verify_package.py', 'verify') if args.command == 'verify' else ('h_launch.py', 'reproduce')
         subprocess.run([sys.executable, str(MODELING / script), phase], cwd=MODELING, env=env, check=True)
+        if args.command == 'reproduce':
+            # The historical replay writes a duplicate CSV. Verify it, then keep
+            # only the accepted candidate in the working output directory.
+            import hashlib
+            replay = read('model_reproduction.json')
+            duplicate = ROOT / replay['path']
+            candidate = ROOT / read('model_final_results.json')['submission']
+            assert duplicate != candidate and duplicate.parent == ROOT / 'output'
+            assert hashlib.sha256(duplicate.read_bytes()).hexdigest() == hashlib.sha256(candidate.read_bytes()).hexdigest() == replay['sha256']
+            duplicate.unlink()
 
 
 if __name__ == '__main__':

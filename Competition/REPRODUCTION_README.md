@@ -1,5 +1,7 @@
 # Reproducing the recommended submission
 
+Files are now [grouped by round](rounds/README.md). Only the latest CSV remains in `output/`; [older outputs and historical ZIPs are recoverable from Git](docs/OUTPUTS.md). The current `project.py verify` supports moved notebooks and archived outputs. `project.py reproduce` removes the identical duplicate replay CSV after checking it. Original commands below can create additional generated output files.
+
 Current project entry point, from the repository root:
 
 ```sh
@@ -57,7 +59,7 @@ Full higher-upside phase order (matching caches are reused):
 Do not run all historical notebooks merely to obtain the recommended CSV.
 Notebooks 08/09 review the plan/results; training flags are false by default.
 Selection source, weights and counts cannot be changed after confirmation.
-Read `HIGH_UPSIDE_EXPERIMENT_LOG.md` for exact settings, adaptive decisions and
+Read `rounds/round5/reports/HIGH_UPSIDE_EXPERIMENT_LOG.md` for exact settings, adaptive decisions and
 negative results. The earlier journals retain previous work.
 
 `improvements/high_upside/artifacts/model_package_manifest.json` contains archive

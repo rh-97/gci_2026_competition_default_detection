@@ -9,6 +9,19 @@
   "new_submission_saved_model_replay": true,
   "reference_checksum_preserved": true,
   "fallback_to_reference": false,
+  "protected_files_archived_in_git": [
+    "output/competition_improved_reproduction.zip",
+    "output/competition_round2_reproduction.zip",
+    "output/competition_round3_reproduction.zip",
+    "output/submission_improved.csv",
+    "output/submission_reproduced.csv",
+    "output/submission_round2.csv",
+    "output/submission_round2_reproduced.csv",
+    "output/submission_round3.csv",
+    "output/submission_round3_bagged.csv",
+    "output/submission_round3_bagged_reproduced.csv",
+    "output/submission_round3_reproduced.csv"
+  ],
   "inference_files_checked": 180,
   "source_selection_freezes_checked": true,
   "local_venv": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/.venv/bin/python"

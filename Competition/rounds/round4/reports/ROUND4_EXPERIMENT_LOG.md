@@ -1,6 +1,6 @@
 # Round four: partial experiment journal
 
-> **Paused after the user changed priorities.** Seven screens completed. Later search and validation stages were not completed; no new CSV was produced. Partial fits are not negative scientific results. See [HIGH_UPSIDE_PLAN.md](HIGH_UPSIDE_PLAN.md).
+> **Paused after the user changed priorities.** Seven screens completed. Later search and validation stages were not completed; no new CSV was produced. Partial fits are not negative scientific results. See [HIGH_UPSIDE_PLAN.md](../../round5/plans/HIGH_UPSIDE_PLAN.md).
 
 Reference: `output/submission_round3_bagged.csv`, user-confirmed public AUC **0.76824**, rank snapshot **518**. The screenshot and explicit filename confirmation establish this attribution. Public feedback did not tune this pass. Hidden/private score remains unknown.
 
@@ -176,7 +176,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_control.json](improvements/round4/artifacts/screen/r4_cat_control.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_control.json](../../../improvements/round4/artifacts/screen/r4_cat_control.json).
 
 ### r4_cat_control512
 
@@ -203,7 +203,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_control512.json](improvements/round4/artifacts/screen/r4_cat_control512.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_control512.json](../../../improvements/round4/artifacts/screen/r4_cat_control512.json).
 
 ### r4_cat_depth4
 
@@ -229,7 +229,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth4.json](improvements/round4/artifacts/screen/r4_cat_depth4.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth4.json](../../../improvements/round4/artifacts/screen/r4_cat_depth4.json).
 
 ### r4_cat_depth6
 
@@ -255,7 +255,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth6.json](improvements/round4/artifacts/screen/r4_cat_depth6.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth6.json](../../../improvements/round4/artifacts/screen/r4_cat_depth6.json).
 
 ### r4_cat_depth7
 
@@ -281,7 +281,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth7.json](improvements/round4/artifacts/screen/r4_cat_depth7.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_depth7.json](../../../improvements/round4/artifacts/screen/r4_cat_depth7.json).
 
 ### r4_cat_l2_2
 
@@ -307,7 +307,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_l2_2.json](improvements/round4/artifacts/screen/r4_cat_l2_2.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_l2_2.json](../../../improvements/round4/artifacts/screen/r4_cat_l2_2.json).
 
 ### r4_cat_l2_24
 
@@ -333,7 +333,7 @@ Exact specification:
 }
 ```
 
-Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_l2_24.json](improvements/round4/artifacts/screen/r4_cat_l2_24.json).
+Raw metrics, all blend probes and resolved parameters: [improvements/round4/artifacts/screen/r4_cat_l2_24.json](../../../improvements/round4/artifacts/screen/r4_cat_l2_24.json).
 
 ## Follow-up configurations recorded before their fits
 

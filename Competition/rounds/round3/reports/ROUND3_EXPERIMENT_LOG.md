@@ -8,7 +8,7 @@ Last generated: 2026-11-08T20:25:24.260121+00:00
 
 The user explicitly confirmed submitting `submission_round3_bagged.csv` and supplied a screenshot showing **0.76824, rank 518**. The exact CSV checksum is recorded in `improvements/round3/artifacts/round3_public_result.json`. The gain is **+0.00068** over round two and **+0.00284** over the first pass. Ranks are snapshots; private/full-test performance remains unknown. This feedback was recorded after the recipe was frozen and did not tune this pass. Frozen training-result JSON files and executed notebook outputs retain their pre-submission score fields; the post-submission result is recorded separately. The public gain does not isolate the extra third seed from the other recipe changes.
 
-The plan was written before any third-pass fit: [`PLAN.md`](improvements/round3/PLAN.md). The prospectively recorded quantization amendment is [`FOLLOWUP_PLAN.md`](improvements/round3/FOLLOWUP_PLAN.md). Existing notebooks and prior-pass sources are protected by a SHA-256 manifest. All fits use the project `.venv`; only supplied data are used.
+The plan was written before any third-pass fit: [`PLAN.md`](../../../improvements/round3/PLAN.md). The prospectively recorded quantization amendment is [`FOLLOWUP_PLAN.md`](../../../improvements/round3/FOLLOWUP_PLAN.md). Existing notebooks and prior-pass sources are protected by a SHA-256 manifest. All fits use the project `.venv`; only supplied data are used.
 
 ## Screening results
 

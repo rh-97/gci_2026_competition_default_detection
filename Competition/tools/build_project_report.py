@@ -2,10 +2,34 @@
 from pathlib import Path
 from collections import Counter
 import json
+import os
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'improvements/high_upside/artifacts'
 DOCS = ROOT / 'docs'
+
+
+def navigation_links(text, destination):
+    """Relink older root-level document references to their new round folders."""
+    locations = read(DOCS / 'file_locations.json')['files']
+    archived = read(DOCS / 'output_archive.json')['archived_files']
+    def replace(match):
+        target = match.group(1)
+        if target.startswith(('http:', 'https:', '#', 'mailto:')):
+            return match.group(0)
+        path, marker, fragment = target.partition('#')
+        absolute = Path(os.path.normpath(destination.parent / path))
+        try:
+            relative = str(absolute.relative_to(ROOT))
+        except ValueError:
+            return match.group(0)
+        if relative in locations:
+            absolute = ROOT / locations[relative]
+        elif relative in archived:
+            absolute = DOCS / 'OUTPUTS.md'
+        return '](' + os.path.relpath(absolute, destination.parent) + (marker + fragment if marker else '') + ')'
+    return re.sub(r'\]\(([^)]+)\)', replace, text)
 
 
 def read(path):
@@ -79,7 +103,8 @@ def catalog(rows):
         if settings:
             sections += ['**Recorded recipe/settings:**', '', '```json', json.dumps(settings, indent=2), '```', '']
         sections += ['**Evidence:** ' + link(row.get('artifact') or row.get('source')), '']
-    (DOCS / 'EXPERIMENT_CATALOG.md').write_text('\n'.join(sections).rstrip() + '\n')
+    path = DOCS / 'EXPERIMENT_CATALOG.md'
+    path.write_text(navigation_links('\n'.join(sections).rstrip() + '\n', path))
 
 
 def main():
@@ -456,7 +481,10 @@ are not causal findings. Each retained change earned its place through the
 recorded validation comparisons. Negative results apply to their tested settings,
 not every possible version of that idea.
 '''
-    (ROOT / 'PROJECT_REPORT.md').write_text(report)
+    report = report.replace('## 7. Repository cleanup and recovery', '## 7. First cleanup and recovery (historical)')
+    report = report.replace('# Competition project report\n', '# Competition project report\n\nCurrent navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.\n')
+    path = ROOT / 'PROJECT_REPORT.md'
+    path.write_text(navigation_links(report, path))
     cleanup_check_text = check_text.replace('](docs/cleanup_validation.json)', '](cleanup_validation.json)')
     removed = '\n'.join(f"| `{r['path']}` | {r['bytes']:,} | {r['reason']} | {'Snapshot branch' if r['in_snapshot_git'] else 'Regenerable cache'} |" for r in cleanup['removed_files'])
     cleanup_report = f'''# Cleanup and recovery report
@@ -508,7 +536,9 @@ The manifest stores removed-file paths, sizes, SHA-256s and snapshot membership.
 | --- | --- | --- | --- |
 {removed}
 '''
-    (DOCS / 'CLEANUP_REPORT.md').write_text(cleanup_report)
+    cleanup_report = cleanup_report.replace('# Cleanup and recovery report\n', '# Cleanup and recovery report\n\nThis is the first cleanup record. The later [round-based folder layout](../rounds/README.md) moves notebook/document paths, and [output recovery](OUTPUTS.md) describes files now stored in Git. The statements below about files remaining in place describe that earlier cleanup.\n')
+    path = DOCS / 'CLEANUP_REPORT.md'
+    path.write_text(navigation_links(cleanup_report, path))
     print(f'Built PROJECT_REPORT.md, EXPERIMENT_CATALOG.md ({len(rows)} entries), and CLEANUP_REPORT.md.')
 
 

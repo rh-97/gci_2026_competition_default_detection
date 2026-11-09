@@ -482,7 +482,7 @@ recorded validation comparisons. Negative results apply to their tested settings
 not every possible version of that idea.
 '''
     report = report.replace('## 7. Repository cleanup and recovery', '## 7. First cleanup and recovery (historical)')
-    report = report.replace('# Competition project report\n', '# Competition project report\n\nCurrent navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.\n')
+    report = report.replace('# Competition project report\n', '# Competition project report\n\nFor a data-only explanation, read the [data audit and EDA report](rounds/round1/reports/EDA_REPORT.md). Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.\n')
     path = ROOT / 'PROJECT_REPORT.md'
     path.write_text(navigation_links(report, path))
     cleanup_check_text = check_text.replace('](docs/cleanup_validation.json)', '](cleanup_validation.json)')

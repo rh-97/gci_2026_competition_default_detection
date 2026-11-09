@@ -16,6 +16,7 @@ the original checkpoint-compatible paths in `Competition/improvements/`.
 There is no new Python package or algorithm refactor.
 
 - [Consolidated data/model report](Competition/PROJECT_REPORT.md)
+- [Data audit and EDA report](Competition/rounds/round1/reports/EDA_REPORT.md)
 - [Complete 135-entry experiment catalog](Competition/docs/EXPERIMENT_CATALOG.md)
 - [Latest submission CSV](Competition/output/submission_high_upside.csv)
 - [Historical output recovery](Competition/docs/OUTPUTS.md)

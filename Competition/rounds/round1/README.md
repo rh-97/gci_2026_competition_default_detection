@@ -12,6 +12,7 @@ This folder groups the files for this round. `code`, `results` and `models` are 
 
 ## Reports
 
+- [Data audit and EDA report](reports/EDA_REPORT.md): plain-language findings, charts and supporting tables.
 - [First-pass results](reports/README.md)
 
 ## Code and evidence

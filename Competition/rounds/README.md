@@ -1,5 +1,7 @@
 # Competition rounds
 
+For a data-only explanation, start with the [data audit and EDA report](round1/reports/EDA_REPORT.md).
+
 Start with a round folder; its README links the notebooks, reports, implementation, models and raw results.
 
 | Round | Scope |

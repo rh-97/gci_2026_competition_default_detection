@@ -1,0 +1,5 @@
+feature,group,rows,defaults,default_rate,few_cases
+external_scores_missing,0,36164,2570,0.07106514766065701,False
+external_scores_missing,1,96310,7742,0.08038625272557366,False
+external_scores_missing,2,38611,3498,0.09059594416099039,False
+external_scores_missing,3,117,11,0.09401709401709402,True

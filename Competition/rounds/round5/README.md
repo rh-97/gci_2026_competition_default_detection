@@ -14,6 +14,7 @@ This folder groups the files for this round. `code`, `results` and `models` are 
 
 - [IMPROVEMENT_REPORT.md](reports/IMPROVEMENT_REPORT.md)
 - [HIGH_UPSIDE_EXPERIMENT_LOG.md](reports/HIGH_UPSIDE_EXPERIMENT_LOG.md)
+- [Standalone EDA report, including the later error audit](../round1/reports/EDA_REPORT.md)
 - [ROC curve](reports/roc_curve.png): saved development validation predictions, AUC **0.76626**.
 
 ## Plans

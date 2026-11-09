@@ -1,6 +1,6 @@
 # Competition project report
 
-Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.
+For a data-only explanation, read the [data audit and EDA report](rounds/round1/reports/EDA_REPORT.md). Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.
 
 The latest generated file is [submission_high_upside.csv](output/submission_high_upside.csv).
 It combines the previous ensemble, a TabM neural model trained from scratch, and

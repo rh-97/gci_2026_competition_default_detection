@@ -11,5 +11,5 @@
   "fallback_to_reference": false,
   "inference_files_checked": 180,
   "source_selection_freezes_checked": true,
-  "local_venv": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/high_upside/../../.venv/bin/python"
+  "local_venv": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/.venv/bin/python"
 }

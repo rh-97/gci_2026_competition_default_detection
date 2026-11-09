@@ -1,5 +1,9 @@
 # Competition improvement report — higher-upside experiments
 
+Current consolidated documentation: [PROJECT_REPORT.md](PROJECT_REPORT.md).
+It covers the complete data/model history and links all recorded experiments.
+See [cleanup and recovery](docs/CLEANUP_REPORT.md) for the Git snapshot and current entry point.
+
 ## Latest leaderboard observation
 
 The user's new screenshot shows **0.77029 public AUC**, rank snapshot **364**, for `hasanRocky`: **+0.00205** relative to the previous explicitly attributed 0.76824. The screenshot does not identify the uploaded filename. The higher-upside CSV is the likely file from conversation context, but that attribution remains unconfirmed. This is a public-subset result, not a private/full-test score.

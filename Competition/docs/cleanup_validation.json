@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "snapshot_branch": "snapshot/pre-cleanup-2026-11-09",
+  "snapshot_commit": "b8d094cc94496a74ec38fc66e69319348b9a4924",
+  "retained_snapshot_files_byte_identical": 1655,
+  "preserved_counts": {
+    "existing_notebooks": 15,
+    "model_files": 198,
+    "input_files": 3,
+    "output_files": 14
+  },
+  "tracked_removals_all_manifested": 16,
+  "allowed_updated_historical_files": [
+    "Competition/IMPROVEMENT_REPORT.md",
+    "Competition/REPRODUCTION_README.md",
+    "Competition/improvements/high_upside/artifacts/model_verification.json"
+  ],
+  "verification_metadata_change": "Only the equivalent normalized local-venv interpreter path changed. All other verification fields matched.",
+  "local_venv": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/.venv/bin/python",
+  "checks": [
+    "New status/verify/reproduce/report entry points ran successfully",
+    "Full original integrity verification passed",
+    "Exact saved-model replay passed after helper removal",
+    "New report/catalog local links checked",
+    "All retained snapshot files outside declared documentation/verification updates match Git blob hashes"
+  ],
+  "candidate_sha256": "15d050aa8709ae4e2d338b013c03216d4b3f3279348a3faca71080c17e44baed",
+  "no_training_performed": true,
+  "original_notebooks_modified": false,
+  "supplied_data_modified": false,
+  "saved_models_modified": false,
+  "existing_outputs_modified": false
+}

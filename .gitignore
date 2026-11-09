@@ -1,3 +1,12 @@
-
+# Local environment and generated runtime files; experiment evidence stays tracked.
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Competition/improvements/**/artifacts/kernels/
+Competition/improvements/**/artifacts/model_kernels/
+Competition/improvements/**/artifacts/matplotlib/
+catboost_info/
 # Generated ZIP archives are kept in the local backup, not remote history.
 *.zip

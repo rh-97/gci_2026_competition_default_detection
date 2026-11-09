@@ -1,5 +1,19 @@
 # Reproducing the recommended submission
 
+Current project entry point, from the repository root:
+
+```sh
+Competition/.venv/bin/python Competition/project.py status
+Competition/.venv/bin/python Competition/project.py verify
+Competition/.venv/bin/python Competition/project.py reproduce
+```
+
+See [PROJECT_REPORT.md](PROJECT_REPORT.md) for the consolidated data/model results
+and [cleanup details](docs/CLEANUP_REPORT.md) for preserved historical dependencies.
+The original commands below remain supported. The latest user screenshot shows
+0.77029, rank 364; its submitted filename was not explicitly confirmed, so the
+candidate's public-score attribution remains unconfirmed.
+
 Recommended: `output/submission_high_upside.csv`
 SHA-256: `15d050aa8709ae4e2d338b013c03216d4b3f3279348a3faca71080c17e44baed`
 

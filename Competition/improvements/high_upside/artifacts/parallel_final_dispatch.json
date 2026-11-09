@@ -1,0 +1,114 @@
+{
+  "completed": [
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261111,
+      "fold": 0,
+      "auc": 0.7648261034738019,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261111,
+      "fold": 1,
+      "auc": 0.7604474904040094,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261111,
+      "fold": 2,
+      "auc": 0.7705288034215857,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261111,
+      "fold": 3,
+      "auc": 0.7579712031991297,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261111,
+      "fold": 4,
+      "auc": 0.7635461212815718,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261410,
+      "fold": 0,
+      "auc": 0.761878151262629,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261410,
+      "fold": 1,
+      "auc": 0.7611799753513512,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261410,
+      "fold": 2,
+      "auc": 0.767059629103855,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261410,
+      "fold": 3,
+      "auc": 0.7668698007845179,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261410,
+      "fold": 4,
+      "auc": 0.7606122019045958,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261710,
+      "fold": 0,
+      "auc": 0.7628171020698411,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261710,
+      "fold": 1,
+      "auc": 0.7633760628666935,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261710,
+      "fold": 2,
+      "auc": 0.7580240080007665,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261710,
+      "fold": 3,
+      "auc": 0.7650625869083817,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261710,
+      "fold": 4,
+      "auc": 0.7645762516967881,
+      "count": 1150
+    }
+  ],
+  "source_sha256": "4c5c47115c7050a08926e055985e8d44d416af10bd1d386378fc8e5aef8a818e",
+  "selection_sha256": "4e37e30cb228e73e77908a797cfb1c3e67e3bb1a44d3630775f4c61aaff8b15b",
+  "gate": "model_averaging.json",
+  "settings_changed": false,
+  "validation_early_stopping": false
+}

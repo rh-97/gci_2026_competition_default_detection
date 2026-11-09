@@ -1,0 +1,42 @@
+{
+  "base_identity": {
+    "sources": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    },
+    "dependencies": "d0aec5be64502e2221948604668af1cef86b6c63a68bf6bd3f34ea4ddf7a8bc0",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scikit-learn": "1.9.1",
+      "catboost": "1.2.10",
+      "lightgbm": "4.7.0",
+      "torch": "2.15.0",
+      "tabm": "0.0.3",
+      "rtdl_num_embeddings": "0.0.12",
+      "joblib": "1.6.0"
+    },
+    "plan_sha256": "895201103c1193357228009c6d4b670b932bce6c87cbed6314028ee5d6476452"
+  },
+  "base_signature": "97df13e32b1d82c9b150abaf948f529c20f27b43bac158c852a86c3ee6a7fb84",
+  "completed_cpu_pilots": [
+    "hu_tabm_raw_piecewise",
+    "hu_tabm_signed_piecewise",
+    "hu_tabm_signed_periodic"
+  ],
+  "hashes": {
+    "artifacts/pilots/hu_tabm_raw_piecewise.json": "b83b829435ccca3a88259d15aa0637832921ea081b49277d139f8c1af22f2220",
+    "artifacts/pilots/hu_tabm_raw_piecewise.npy": "23ccc48104c797bf0f85c9ed4ad1eda043d93ac8a6990064e499e41f5e781e3d",
+    "artifacts/pilots/hu_tabm_raw_piecewise_curve.json": "5e8e8427a022fb9745c0c14abdf332da94631f64b99ea51a5b473ec882870b0f",
+    "models/hu_tabm_raw_piecewise_pilot.joblib": "3a0da7a68266f7fef0d45ffcbe2689b6f63c541de7da111d1a03cc8e5fbae850",
+    "artifacts/pilots/hu_tabm_signed_piecewise.json": "f50f0fb06210054b3f9fd7821868dc790b15f599b7ab0fffb087c2b47f957625",
+    "artifacts/pilots/hu_tabm_signed_piecewise.npy": "871e0749a4269217b5070013a9b61b360cabc8d470e58432358a813d086bcad2",
+    "artifacts/pilots/hu_tabm_signed_piecewise_curve.json": "6d3ef1177fb567e82422a427edd1f944ff8f348a7c98ff362453e6f8c8a3ba31",
+    "models/hu_tabm_signed_piecewise_pilot.joblib": "b559c0fa60e67eb7fabc35c9f1b0f5a8ab86c9e1cdbca68e1a90f7fee0f78918",
+    "artifacts/pilots/hu_tabm_signed_periodic.json": "65ab2fc0de88a5d521995a2ce8e5654c51f56d1662b515c2610159c3908db8d9",
+    "artifacts/pilots/hu_tabm_signed_periodic.npy": "e24b835416d50d33fec734eea72dbfc2726bff0e06fd0c2160a38e1721d8596d",
+    "artifacts/pilots/hu_tabm_signed_periodic_curve.json": "e3efb0ec93fc450eba984574b25ccbed3a8d638a3e8c4b53f4067047d205d5e2",
+    "models/hu_tabm_signed_periodic_pilot.joblib": "d063077d6985bb252f15c2a4af6fec151a60d2b79c4ab1778720168569669be0"
+  },
+  "reason": "Reuse completed CPU evidence unchanged; not an assertion of numerically identical GPU retraining. Remaining fits switch to separately hashed GPU implementation before any primary CV or selection."
+}

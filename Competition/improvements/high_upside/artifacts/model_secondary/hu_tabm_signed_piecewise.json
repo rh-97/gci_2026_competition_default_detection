@@ -1,0 +1,64 @@
+{
+  "name": "hu_tabm_signed_piecewise",
+  "spec": {
+    "kind": "tabm",
+    "architecture": "tabm-mini",
+    "dropout": 0.1,
+    "learning_rate": 0.002,
+    "weight_decay": 0.0003,
+    "max_epochs": 140,
+    "patience": 20,
+    "max_seconds": 1500,
+    "name": "hu_tabm_signed_piecewise",
+    "features": "signed",
+    "embedding": "piecewise",
+    "hypothesis": "Same neural recipe with the successful tree representation."
+  },
+  "origin": "high_upside",
+  "signature": {
+    "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+    "spec": {
+      "kind": "tabm",
+      "architecture": "tabm-mini",
+      "dropout": 0.1,
+      "learning_rate": 0.002,
+      "weight_decay": 0.0003,
+      "max_epochs": 140,
+      "patience": 20,
+      "max_seconds": 1500,
+      "name": "hu_tabm_signed_piecewise",
+      "features": "signed",
+      "embedding": "piecewise",
+      "hypothesis": "Same neural recipe with the successful tree representation."
+    },
+    "origin": "high_upside",
+    "seed": 20261409,
+    "fixed": 40
+  },
+  "auc": 0.751509070484736,
+  "average_precision": 0.23901493229370396,
+  "log_loss": 0.24806706498422496,
+  "brier": 0.06811933572370127,
+  "counts": [
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "fold_auc": [
+    0.7642226788000626,
+    0.7586728171260337,
+    0.7663000832812589,
+    0.7592029455273893,
+    0.7609098397505412
+  ],
+  "fold_seconds": [
+    214.0192530155182,
+    208.32799696922302,
+    212.16097784042358,
+    202.7508420944214,
+    207.6631281375885
+  ],
+  "seconds": 1045.103579044342
+}

@@ -1,0 +1,78 @@
+{
+  "name": "r3_cat_signed",
+  "spec": {
+    "name": "r3_cat_signed",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+    "max_iterations": 4500,
+    "patience": 200
+  },
+  "origin": "round3",
+  "signature": {
+    "spec": {
+      "name": "r3_cat_signed",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "origin": "round3",
+    "engine_signature": "d0aec5be64502e2221948604668af1cef86b6c63a68bf6bd3f34ea4ddf7a8bc0",
+    "cv_source_sha256": "29fdca77daeef63a8a76afcfb8ab423a6cb670b6e91bb30babd3e89d6ec730e6",
+    "fold_seed": 20264209,
+    "fixed_iterations": 1312
+  },
+  "auc": 0.7619272036192544,
+  "average_precision": 0.24534483088579429,
+  "log_loss": 0.24513340247742602,
+  "brier": 0.0676900712827147,
+  "iterations": [
+    1312,
+    1312,
+    1312,
+    1312,
+    1312
+  ],
+  "fold_auc": [
+    0.7581807353099904,
+    0.7528249880633548,
+    0.7638824445164453,
+    0.7685580818213987,
+    0.7665545684094411
+  ],
+  "fold_seconds": [
+    163.2196798324585,
+    164.20555806159973,
+    168.63617610931396,
+    169.42507529258728,
+    113.54989171028137
+  ],
+  "seconds": 445.4953339099884,
+  "folds": 5,
+  "training_rows": [
+    109568,
+    109569,
+    109569,
+    109569,
+    109569
+  ],
+  "validation_rows": [
+    27393,
+    27392,
+    27392,
+    27392,
+    27392
+  ]
+}

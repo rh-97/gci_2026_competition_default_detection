@@ -1,0 +1,27 @@
+{
+  "primary_frozen": {
+    "gain": 0.001707637343309143,
+    "ci95": [
+      0.0010390022242385,
+      0.002375515218320242
+    ],
+    "replicates": 400
+  },
+  "caveat": "Paired stratified row resampling conditions on fitted OOF predictions. It omits fitting and search uncertainty; not a search-adjusted significance test or an independent test. Does not alter any gate or prediction.",
+  "confirmation": {
+    "gain": 0.0015020315827136699,
+    "ci95": [
+      0.0008133889646946863,
+      0.0022310427240533667
+    ],
+    "replicates": 400
+  },
+  "three_seed": {
+    "gain": 0.0014574571376479994,
+    "ci95": [
+      0.0009880384437517375,
+      0.0020329388462262204
+    ],
+    "replicates": 400
+  }
+}

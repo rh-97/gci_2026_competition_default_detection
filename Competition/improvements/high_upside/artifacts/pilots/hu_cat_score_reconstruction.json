@@ -1,0 +1,73 @@
+{
+  "name": "hu_cat_score_reconstruction",
+  "spec": {
+    "name": "hu_cat_score_reconstruction",
+    "kind": "cat",
+    "features": "signed",
+    "learned": "score_reconstruction",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "max_iterations": 4500,
+    "patience": 200,
+    "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+  },
+  "signature": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+  "status": "complete",
+  "auc": 0.7507565995744394,
+  "average_precision": 0.23623145716465382,
+  "log_loss": 0.24804706007692776,
+  "brier": 0.06816529346041018,
+  "count": 1217,
+  "seconds": 112.70111799240112,
+  "reference_auc": 0.7518409026469929,
+  "blends": [
+    {
+      "new_weight": 0.1,
+      "auc": 0.7520377362342117
+    },
+    {
+      "new_weight": 0.25,
+      "auc": 0.752206777493612
+    },
+    {
+      "new_weight": 0.5,
+      "auc": 0.7521527560127402
+    },
+    {
+      "new_weight": 0.75,
+      "auc": 0.7516782635077724
+    },
+    {
+      "new_weight": 1.0,
+      "auc": 0.7507565995744394
+    }
+  ],
+  "best_blend": {
+    "new_weight": 0.25,
+    "auc": 0.752206777493612
+  },
+  "diagnostics": {
+    "auxiliary": {
+      "EXT_SOURCE_1": {
+        "observed_rows": 31323,
+        "auxiliary_oof_r2": 0.48281908293018505
+      },
+      "EXT_SOURCE_2": {
+        "observed_rows": 102499,
+        "auxiliary_oof_r2": 0.23558830463737035
+      },
+      "EXT_SOURCE_3": {
+        "observed_rows": 70019,
+        "auxiliary_oof_r2": 0.11573969267290851
+      }
+    },
+    "source_hashes": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    }
+  },
+  "correlation": 0.9774800293572946
+}

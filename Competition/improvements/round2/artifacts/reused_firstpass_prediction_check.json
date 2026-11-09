@@ -1,0 +1,5 @@
+{
+  "exact_sha256_match": true,
+  "sha256": "71cd8588031deef62dadd8eeddb8e33965cbe42b6e0fc25c41e673271b08c616",
+  "purpose": "Verify the new manifest inference path reuses the old public-scored model without changing its predictions"
+}

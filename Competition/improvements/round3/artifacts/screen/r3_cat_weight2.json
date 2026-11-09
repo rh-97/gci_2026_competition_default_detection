@@ -1,0 +1,130 @@
+{
+  "name": "r3_cat_weight2",
+  "spec": {
+    "name": "r3_cat_weight2",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "scale_pos_weight": 2.0
+    },
+    "hypothesis": "A moderately weighted objective may learn different useful ranking errors.",
+    "max_iterations": 4500,
+    "patience": 200
+  },
+  "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7501491797447308,
+  "average_precision": 0.23749329479014866,
+  "log_loss": 0.2651148437049024,
+  "brier": 0.07315012748255448,
+  "iterations": 1335,
+  "features": 51,
+  "seconds": 154.90923404693604,
+  "reference_auc": 0.751231298970185,
+  "individual_gain": -0.0010821192254542034,
+  "best_blend": {
+    "new_weight": 0.25,
+    "auc": 0.7513540656589492
+  },
+  "blends": [
+    {
+      "new_weight": 0.1,
+      "auc": 0.7513525369659799
+    },
+    {
+      "new_weight": 0.25,
+      "auc": 0.7513540656589492
+    },
+    {
+      "new_weight": 0.5,
+      "auc": 0.7510891764997639
+    },
+    {
+      "new_weight": 0.75,
+      "auc": 0.7506526599464558
+    },
+    {
+      "new_weight": 1.0,
+      "auc": 0.7501491797447308
+    }
+  ],
+  "correlation": 0.9804882386236142,
+  "saturated": false,
+  "resolved_parameters": {
+    "nan_mode": "Min",
+    "eval_metric": "AUC",
+    "combinations_ctr": [
+      "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+      "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+    ],
+    "iterations": 4500,
+    "sampling_frequency": "PerTree",
+    "fold_permutation_block": 0,
+    "leaf_estimation_method": "Newton",
+    "od_pval": 0,
+    "random_score_type": "NormalWithModelSizeDecrease",
+    "counter_calc_method": "SkipTest",
+    "grow_policy": "SymmetricTree",
+    "penalties_coefficient": 1,
+    "boosting_type": "Plain",
+    "model_shrink_mode": "Constant",
+    "feature_border_type": "GreedyLogSum",
+    "ctr_leaf_count_limit": 18446744073709551615,
+    "bayesian_matrix_reg": 0.10000000149011612,
+    "one_hot_max_size": 2,
+    "eval_fraction": 0,
+    "force_unit_auto_pair_weights": false,
+    "l2_leaf_reg": 8,
+    "random_strength": 0.5,
+    "od_type": "Iter",
+    "rsm": 1,
+    "boost_from_average": false,
+    "max_ctr_complexity": 4,
+    "model_size_reg": 0.5,
+    "simple_ctr": [
+      "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+      "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+    ],
+    "pool_metainfo_options": {
+      "tags": {}
+    },
+    "subsample": 0.800000011920929,
+    "use_best_model": true,
+    "od_wait": 200,
+    "class_names": [
+      0,
+      1
+    ],
+    "random_seed": 20261108,
+    "depth": 5,
+    "ctr_target_border_count": 1,
+    "posterior_sampling": false,
+    "has_time": false,
+    "store_all_simple_ctr": false,
+    "border_count": 254,
+    "class_weights": [
+      1,
+      2
+    ],
+    "classes_count": 0,
+    "auto_class_weights": "None",
+    "sparse_features_conflict_fraction": 0,
+    "leaf_estimation_backtracking": "AnyImprovement",
+    "best_model_min_trees": 1,
+    "model_shrink_rate": 0,
+    "min_data_in_leaf": 1,
+    "loss_function": "Logloss",
+    "learning_rate": 0.04500000178813934,
+    "score_function": "Cosine",
+    "task_type": "CPU",
+    "leaf_estimation_iterations": 10,
+    "bootstrap_type": "MVS",
+    "max_leaves": 32,
+    "permutation_count": 4
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "r2_cat_finance",
+  "spec": {
+    "name": "r2_cat_finance",
+    "kind": "cat",
+    "features": "finance",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Payment burden, per-adult amounts and hypothetical payment-period rates may expose financial structure."
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7490823704368343,
+  "average_precision": 0.23695133506296323,
+  "log_loss": 0.24849099069576389,
+  "iterations": 1841,
+  "features": 57,
+  "seconds": 177.3465118408203,
+  "auc_delta_vs_pass1_cat": 0.000589788137866698,
+  "prediction_correlation": 0.9745963079649151,
+  "maximum_prediction_difference": 0.26306015216106166,
+  "saturated": false
+}

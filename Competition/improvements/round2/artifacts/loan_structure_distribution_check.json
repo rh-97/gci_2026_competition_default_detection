@@ -1,0 +1,24 @@
+{
+  "features": [
+    {
+      "feature": "CREDIT_TERM",
+      "development_missing": 0.0,
+      "test_missing": 0.0,
+      "KS_statistic": 0.008170892396345941
+    },
+    {
+      "feature": "TERM_MULTIPLE_6_DISTANCE",
+      "development_missing": 0.0,
+      "test_missing": 0.0,
+      "KS_statistic": 0.0074792564235395265
+    },
+    {
+      "feature": "TERM_MULTIPLE_12_DISTANCE",
+      "development_missing": 0.0,
+      "test_missing": 0.0,
+      "KS_statistic": 0.00800181429607616
+    }
+  ],
+  "label_scope": "Original development rows only",
+  "interpretation": "Descriptive associations after feature exploration; confidence bars are binomial sampling intervals, not correction for selection/confounding. Ratios do not establish actual loan terms or rates."
+}

@@ -1,0 +1,10 @@
+{
+  "archive": "output/competition_high_upside_reproduction.zip",
+  "bytes": 285647605,
+  "members": 1600,
+  "sha256": "041ea42366390fb4e79dc56df2268815646f14a1cfa9c16520ca2e73efab2237",
+  "all_member_sha256_checked": true,
+  "zip_crc_checked": true,
+  "manifest_self_hash": "Excluded from its own manifest; covered by ZIP CRC.",
+  "excluded": "Supplied input directory, venv, kernel/cache folders, raw .log files and earlier ZIPs."
+}

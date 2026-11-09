@@ -1,0 +1,30 @@
+{
+  "name": "r2_cat_slow",
+  "spec": {
+    "name": "r2_cat_slow",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "learning_rate": 0.025
+    },
+    "hypothesis": "Smaller boosting steps may improve the bias/variance tradeoff.",
+    "max_iterations": 5000
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7485719134183243,
+  "average_precision": 0.23430991662257394,
+  "log_loss": 0.2486057123587331,
+  "iterations": 2392,
+  "features": 46,
+  "seconds": 232.2389349937439,
+  "auc_delta_vs_pass1_cat": 7.933111935665149e-05,
+  "prediction_correlation": 0.9906960000171039,
+  "maximum_prediction_difference": 0.16197934604552028,
+  "saturated": false
+}

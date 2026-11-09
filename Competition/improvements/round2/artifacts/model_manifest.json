@@ -1,0 +1,627 @@
+{
+  "families": [
+    {
+      "name": "lgb_tune_15",
+      "weight": 0.1875,
+      "spec": {
+        "name": "lgb_tune_15",
+        "kind": "lgb",
+        "features": "engineered",
+        "groups": true,
+        "params": {
+          "num_leaves": 21,
+          "min_child_samples": 89,
+          "colsample_bytree": 0.6846068413999578,
+          "subsample": 0.961965333135664,
+          "subsample_freq": 1,
+          "reg_lambda": 2.1323824335960286,
+          "reg_alpha": 3.687185564401245,
+          "max_bin": 255,
+          "max_depth": -1
+        }
+      },
+      "seeds": [
+        {
+          "seed_number": 0,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/models/lgb_tune_15_fold0.txt",
+              "encoder": "improvements/models/lgb_tune_15_fold0_encoder.joblib",
+              "encoder_type": "pass1"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/models/lgb_tune_15_fold1.txt",
+              "encoder": "improvements/models/lgb_tune_15_fold1_encoder.joblib",
+              "encoder_type": "pass1"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/models/lgb_tune_15_fold2.txt",
+              "encoder": "improvements/models/lgb_tune_15_fold2_encoder.joblib",
+              "encoder_type": "pass1"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/models/lgb_tune_15_fold3.txt",
+              "encoder": "improvements/models/lgb_tune_15_fold3_encoder.joblib",
+              "encoder_type": "pass1"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/models/lgb_tune_15_fold4.txt",
+              "encoder": "improvements/models/lgb_tune_15_fold4_encoder.joblib",
+              "encoder_type": "pass1"
+            }
+          ]
+        },
+        {
+          "seed_number": 1,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round2/models/lgb_tune_15_s1_fold0.txt",
+              "encoder": "improvements/round2/models/lgb_tune_15_s1_fold0_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round2/models/lgb_tune_15_s1_fold1.txt",
+              "encoder": "improvements/round2/models/lgb_tune_15_s1_fold1_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round2/models/lgb_tune_15_s1_fold2.txt",
+              "encoder": "improvements/round2/models/lgb_tune_15_s1_fold2_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round2/models/lgb_tune_15_s1_fold3.txt",
+              "encoder": "improvements/round2/models/lgb_tune_15_s1_fold3_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round2/models/lgb_tune_15_s1_fold4.txt",
+              "encoder": "improvements/round2/models/lgb_tune_15_s1_fold4_encoder.joblib",
+              "encoder_type": "pass2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r2_cat_term_proxies",
+      "weight": 0.5625,
+      "spec": {
+        "name": "r2_cat_term_proxies",
+        "kind": "cat",
+        "features": "finance",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        },
+        "source": "improvements/round2/adaptive.py",
+        "hypothesis": "Isolate the redundant nonlinear rate/term representations; test whether quantization alone explains the finance gain.",
+        "columns": [
+          "NAME_CONTRACT_TYPE",
+          "CODE_GENDER",
+          "CNT_CHILDREN",
+          "AMT_INCOME_TOTAL",
+          "AMT_CREDIT",
+          "AMT_ANNUITY",
+          "AMT_GOODS_PRICE",
+          "NAME_INCOME_TYPE",
+          "NAME_EDUCATION_TYPE",
+          "NAME_FAMILY_STATUS",
+          "NAME_HOUSING_TYPE",
+          "REGION_POPULATION_RELATIVE",
+          "DAYS_BIRTH",
+          "DAYS_EMPLOYED",
+          "DAYS_REGISTRATION",
+          "DAYS_ID_PUBLISH",
+          "OWN_CAR_AGE",
+          "FLAG_MOBIL",
+          "FLAG_EMP_PHONE",
+          "FLAG_WORK_PHONE",
+          "OCCUPATION_TYPE",
+          "CNT_FAM_MEMBERS",
+          "REGION_RATING_CLIENT",
+          "ORGANIZATION_TYPE",
+          "EXT_SOURCE_1",
+          "EXT_SOURCE_2",
+          "EXT_SOURCE_3",
+          "DAYS_LAST_PHONE_CHANGE",
+          "AMT_REQ_CREDIT_BUREAU_HOUR",
+          "AMT_REQ_CREDIT_BUREAU_MON",
+          "AMT_REQ_CREDIT_BUREAU_QRT",
+          "AMT_REQ_CREDIT_BUREAU_YEAR",
+          "EMPLOYED_SENTINEL",
+          "MISSING_COUNT",
+          "CREDIT_TERM",
+          "CREDIT_GOODS_DIFF_RATIO",
+          "INCOME_PER_PERSON",
+          "AMT_INCOME_TOTAL_OVER_AMT_ANNUITY",
+          "AMT_INCOME_TOTAL_OVER_AMT_CREDIT",
+          "DAYS_EMPLOYED_OVER_BIRTH",
+          "EXT_MEAN",
+          "EXT_MIN",
+          "EXT_MAX",
+          "EXT_STD",
+          "EXT_COUNT",
+          "AGE_AT_EMPLOYMENT",
+          "ASSUMED_PERIOD_RATE_24",
+          "ASSUMED_PERIOD_RATE_36",
+          "ASSUMED_PERIOD_RATE_60",
+          "TERM_MULTIPLE_6_DISTANCE",
+          "TERM_MULTIPLE_12_DISTANCE"
+        ]
+      },
+      "seeds": [
+        {
+          "seed_number": 0,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s0_fold0.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s0_fold0_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s0_fold1.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s0_fold1_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s0_fold2.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s0_fold2_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s0_fold3.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s0_fold3_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s0_fold4.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s0_fold4_encoder.joblib",
+              "encoder_type": "pass2"
+            }
+          ]
+        },
+        {
+          "seed_number": 1,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s1_fold0.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s1_fold0_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s1_fold1.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s1_fold1_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s1_fold2.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s1_fold2_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s1_fold3.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s1_fold3_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round2/models/r2_cat_term_proxies_s1_fold4.cbm",
+              "encoder": "improvements/round2/models/r2_cat_term_proxies_s1_fold4_encoder.joblib",
+              "encoder_type": "pass2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r2_cat_proxies_native",
+      "weight": 0.25,
+      "spec": {
+        "name": "r2_cat_proxies_native",
+        "kind": "cat",
+        "features": "finance",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        },
+        "source": "improvements/round2/proxy_followup.py",
+        "hypothesis": "The proxy-only representation improved screening by 0.00146; combine it with the independently promising native missing policy.",
+        "columns": [
+          "NAME_CONTRACT_TYPE",
+          "CODE_GENDER",
+          "CNT_CHILDREN",
+          "AMT_INCOME_TOTAL",
+          "AMT_CREDIT",
+          "AMT_ANNUITY",
+          "AMT_GOODS_PRICE",
+          "NAME_INCOME_TYPE",
+          "NAME_EDUCATION_TYPE",
+          "NAME_FAMILY_STATUS",
+          "NAME_HOUSING_TYPE",
+          "REGION_POPULATION_RELATIVE",
+          "DAYS_BIRTH",
+          "DAYS_EMPLOYED",
+          "DAYS_REGISTRATION",
+          "DAYS_ID_PUBLISH",
+          "OWN_CAR_AGE",
+          "FLAG_MOBIL",
+          "FLAG_EMP_PHONE",
+          "FLAG_WORK_PHONE",
+          "OCCUPATION_TYPE",
+          "CNT_FAM_MEMBERS",
+          "REGION_RATING_CLIENT",
+          "ORGANIZATION_TYPE",
+          "EXT_SOURCE_1",
+          "EXT_SOURCE_2",
+          "EXT_SOURCE_3",
+          "DAYS_LAST_PHONE_CHANGE",
+          "AMT_REQ_CREDIT_BUREAU_HOUR",
+          "AMT_REQ_CREDIT_BUREAU_MON",
+          "AMT_REQ_CREDIT_BUREAU_QRT",
+          "AMT_REQ_CREDIT_BUREAU_YEAR",
+          "EMPLOYED_SENTINEL",
+          "MISSING_COUNT",
+          "CREDIT_TERM",
+          "CREDIT_GOODS_DIFF_RATIO",
+          "INCOME_PER_PERSON",
+          "AMT_INCOME_TOTAL_OVER_AMT_ANNUITY",
+          "AMT_INCOME_TOTAL_OVER_AMT_CREDIT",
+          "DAYS_EMPLOYED_OVER_BIRTH",
+          "EXT_MEAN",
+          "EXT_MIN",
+          "EXT_MAX",
+          "EXT_STD",
+          "EXT_COUNT",
+          "AGE_AT_EMPLOYMENT",
+          "ASSUMED_PERIOD_RATE_24",
+          "ASSUMED_PERIOD_RATE_36",
+          "ASSUMED_PERIOD_RATE_60",
+          "TERM_MULTIPLE_6_DISTANCE",
+          "TERM_MULTIPLE_12_DISTANCE"
+        ],
+        "missing": "native"
+      },
+      "seeds": [
+        {
+          "seed_number": 0,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s0_fold0.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s0_fold0_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s0_fold1.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s0_fold1_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s0_fold2.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s0_fold2_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s0_fold3.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s0_fold3_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s0_fold4.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s0_fold4_encoder.joblib",
+              "encoder_type": "pass2"
+            }
+          ]
+        },
+        {
+          "seed_number": 1,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s1_fold0.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s1_fold0_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s1_fold1.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s1_fold1_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s1_fold2.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s1_fold2_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s1_fold3.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s1_fold3_encoder.joblib",
+              "encoder_type": "pass2"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round2/models/r2_cat_proxies_native_s1_fold4.cbm",
+              "encoder": "improvements/round2/models/r2_cat_proxies_native_s1_fold4_encoder.joblib",
+              "encoder_type": "pass2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "seeds_per_family": 2,
+  "selection": {
+    "names": [
+      "lgb_tune_15",
+      "r2_cat_term_proxies",
+      "r2_cat_proxies_native"
+    ],
+    "weights": [
+      0.1875,
+      0.5625,
+      0.25
+    ],
+    "auc": 0.7630891353395803,
+    "method": "retain best primary pair plus a complementary model",
+    "baseline_auc": 0.7617724188892933,
+    "development_delta": 0.001316716450287081,
+    "models": [
+      {
+        "name": "lgb_tune_15",
+        "spec": {
+          "name": "lgb_tune_15",
+          "kind": "lgb",
+          "features": "engineered",
+          "groups": true,
+          "params": {
+            "num_leaves": 21,
+            "min_child_samples": 89,
+            "colsample_bytree": 0.6846068413999578,
+            "subsample": 0.961965333135664,
+            "subsample_freq": 1,
+            "reg_lambda": 2.1323824335960286,
+            "reg_alpha": 3.687185564401245,
+            "max_bin": 255,
+            "max_depth": -1
+          }
+        },
+        "auc": 0.7573280608933021,
+        "iterations": [
+          590,
+          639,
+          523,
+          768,
+          456
+        ],
+        "origin": "pass1",
+        "prediction_path": "improvements/artifacts/lgb_tune_15_oof.npy"
+      },
+      {
+        "name": "r2_cat_term_proxies",
+        "spec": {
+          "name": "r2_cat_term_proxies",
+          "kind": "cat",
+          "features": "finance",
+          "params": {
+            "depth": 5,
+            "l2_leaf_reg": 8,
+            "random_strength": 0.5
+          },
+          "source": "improvements/round2/adaptive.py",
+          "hypothesis": "Isolate the redundant nonlinear rate/term representations; test whether quantization alone explains the finance gain.",
+          "columns": [
+            "NAME_CONTRACT_TYPE",
+            "CODE_GENDER",
+            "CNT_CHILDREN",
+            "AMT_INCOME_TOTAL",
+            "AMT_CREDIT",
+            "AMT_ANNUITY",
+            "AMT_GOODS_PRICE",
+            "NAME_INCOME_TYPE",
+            "NAME_EDUCATION_TYPE",
+            "NAME_FAMILY_STATUS",
+            "NAME_HOUSING_TYPE",
+            "REGION_POPULATION_RELATIVE",
+            "DAYS_BIRTH",
+            "DAYS_EMPLOYED",
+            "DAYS_REGISTRATION",
+            "DAYS_ID_PUBLISH",
+            "OWN_CAR_AGE",
+            "FLAG_MOBIL",
+            "FLAG_EMP_PHONE",
+            "FLAG_WORK_PHONE",
+            "OCCUPATION_TYPE",
+            "CNT_FAM_MEMBERS",
+            "REGION_RATING_CLIENT",
+            "ORGANIZATION_TYPE",
+            "EXT_SOURCE_1",
+            "EXT_SOURCE_2",
+            "EXT_SOURCE_3",
+            "DAYS_LAST_PHONE_CHANGE",
+            "AMT_REQ_CREDIT_BUREAU_HOUR",
+            "AMT_REQ_CREDIT_BUREAU_MON",
+            "AMT_REQ_CREDIT_BUREAU_QRT",
+            "AMT_REQ_CREDIT_BUREAU_YEAR",
+            "EMPLOYED_SENTINEL",
+            "MISSING_COUNT",
+            "CREDIT_TERM",
+            "CREDIT_GOODS_DIFF_RATIO",
+            "INCOME_PER_PERSON",
+            "AMT_INCOME_TOTAL_OVER_AMT_ANNUITY",
+            "AMT_INCOME_TOTAL_OVER_AMT_CREDIT",
+            "DAYS_EMPLOYED_OVER_BIRTH",
+            "EXT_MEAN",
+            "EXT_MIN",
+            "EXT_MAX",
+            "EXT_STD",
+            "EXT_COUNT",
+            "AGE_AT_EMPLOYMENT",
+            "ASSUMED_PERIOD_RATE_24",
+            "ASSUMED_PERIOD_RATE_36",
+            "ASSUMED_PERIOD_RATE_60",
+            "TERM_MULTIPLE_6_DISTANCE",
+            "TERM_MULTIPLE_12_DISTANCE"
+          ]
+        },
+        "auc": 0.7622544252863716,
+        "iterations": [
+          1385,
+          1332,
+          1637,
+          1636,
+          1568
+        ],
+        "origin": "pass2",
+        "prediction_path": "improvements/round2/artifacts/cv/r2_cat_term_proxies_oof.npy"
+      },
+      {
+        "name": "r2_cat_proxies_native",
+        "spec": {
+          "name": "r2_cat_proxies_native",
+          "kind": "cat",
+          "features": "finance",
+          "params": {
+            "depth": 5,
+            "l2_leaf_reg": 8,
+            "random_strength": 0.5
+          },
+          "source": "improvements/round2/proxy_followup.py",
+          "hypothesis": "The proxy-only representation improved screening by 0.00146; combine it with the independently promising native missing policy.",
+          "columns": [
+            "NAME_CONTRACT_TYPE",
+            "CODE_GENDER",
+            "CNT_CHILDREN",
+            "AMT_INCOME_TOTAL",
+            "AMT_CREDIT",
+            "AMT_ANNUITY",
+            "AMT_GOODS_PRICE",
+            "NAME_INCOME_TYPE",
+            "NAME_EDUCATION_TYPE",
+            "NAME_FAMILY_STATUS",
+            "NAME_HOUSING_TYPE",
+            "REGION_POPULATION_RELATIVE",
+            "DAYS_BIRTH",
+            "DAYS_EMPLOYED",
+            "DAYS_REGISTRATION",
+            "DAYS_ID_PUBLISH",
+            "OWN_CAR_AGE",
+            "FLAG_MOBIL",
+            "FLAG_EMP_PHONE",
+            "FLAG_WORK_PHONE",
+            "OCCUPATION_TYPE",
+            "CNT_FAM_MEMBERS",
+            "REGION_RATING_CLIENT",
+            "ORGANIZATION_TYPE",
+            "EXT_SOURCE_1",
+            "EXT_SOURCE_2",
+            "EXT_SOURCE_3",
+            "DAYS_LAST_PHONE_CHANGE",
+            "AMT_REQ_CREDIT_BUREAU_HOUR",
+            "AMT_REQ_CREDIT_BUREAU_MON",
+            "AMT_REQ_CREDIT_BUREAU_QRT",
+            "AMT_REQ_CREDIT_BUREAU_YEAR",
+            "EMPLOYED_SENTINEL",
+            "MISSING_COUNT",
+            "CREDIT_TERM",
+            "CREDIT_GOODS_DIFF_RATIO",
+            "INCOME_PER_PERSON",
+            "AMT_INCOME_TOTAL_OVER_AMT_ANNUITY",
+            "AMT_INCOME_TOTAL_OVER_AMT_CREDIT",
+            "DAYS_EMPLOYED_OVER_BIRTH",
+            "EXT_MEAN",
+            "EXT_MIN",
+            "EXT_MAX",
+            "EXT_STD",
+            "EXT_COUNT",
+            "AGE_AT_EMPLOYMENT",
+            "ASSUMED_PERIOD_RATE_24",
+            "ASSUMED_PERIOD_RATE_36",
+            "ASSUMED_PERIOD_RATE_60",
+            "TERM_MULTIPLE_6_DISTANCE",
+            "TERM_MULTIPLE_12_DISTANCE"
+          ],
+          "missing": "native"
+        },
+        "auc": 0.7615744712299796,
+        "iterations": [
+          1699,
+          807,
+          1557,
+          1895,
+          1540
+        ],
+        "origin": "pass2",
+        "prediction_path": "improvements/round2/artifacts/cv/r2_cat_proxies_native_oof.npy"
+      }
+    ],
+    "status": "selected after stability check",
+    "selection_scope": "Original development rows only. Historical audit and public labels never tune weights.",
+    "fold_gain": [
+      0.001655787864397018,
+      0.0019313988523183,
+      0.001661494075520964,
+      0.00020547751690691562,
+      0.0011764302447333508
+    ],
+    "conditional_gain_ci95": [
+      0.0006796493413966153,
+      0.0019729709423550066
+    ],
+    "stability": {
+      "baseline_auc": 0.7614238642991982,
+      "candidate_auc": 0.762875657415778,
+      "fold_gain": [
+        0.0014734192439502802,
+        0.0018189609803044293,
+        0.0011588644572408935,
+        0.001473888073414975,
+        0.0012309024211930586
+      ],
+      "fold_seed": 20261409,
+      "early_stopping_on_validation": false,
+      "weights_retuned": false,
+      "caveat": "A robustness check on development data, not a new independent test; the same development labels were used earlier in selection.",
+      "delta": 0.001451793116579836,
+      "recommend_new_submission": true,
+      "two_seed_diagnostic": {
+        "baseline_primary_auc": 0.7617724188892933,
+        "baseline_secondary_auc": 0.7614238642991982,
+        "baseline_averaged_auc": 0.7625874941483515,
+        "candidate_primary_auc": 0.7630891353395803,
+        "candidate_secondary_auc": 0.762875657415778,
+        "candidate_averaged_auc": 0.7639709612844672,
+        "caveat": "Conditional development diagnostic, not independent evidence. The primary seed uses validation early stopping; the secondary seed uses fixed iterations."
+      },
+      "recommend_two_seed_bagging": true
+    }
+  },
+  "notes": "Old first-pass models are reused for their original final folds. All other encoders fit only their training fold."
+}

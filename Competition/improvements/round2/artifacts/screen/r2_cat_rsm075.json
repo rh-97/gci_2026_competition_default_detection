@@ -1,0 +1,31 @@
+{
+  "name": "r2_cat_rsm075",
+  "spec": {
+    "name": "r2_cat_rsm075",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "rsm": 0.75,
+      "bagging_temperature": 1.0
+    },
+    "hypothesis": "Column sampling and Bayesian bootstrap may diversify trees and improve generalization.",
+    "max_iterations": 5000
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7486072687534652,
+  "average_precision": 0.23564021044021322,
+  "log_loss": 0.2485663351315155,
+  "iterations": 1540,
+  "features": 46,
+  "seconds": 168.28677797317505,
+  "auc_delta_vs_pass1_cat": 0.00011468645449752568,
+  "prediction_correlation": 0.9877176114097521,
+  "maximum_prediction_difference": 0.21094832201467112,
+  "saturated": false
+}

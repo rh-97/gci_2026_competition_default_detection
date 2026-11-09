@@ -1,0 +1,379 @@
+[
+  {
+    "name": "lgb_tune_12",
+    "origin": "first pass",
+    "spec": {
+      "name": "lgb_tune_12",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 16,
+        "min_child_samples": 76,
+        "colsample_bytree": 0.7016450200644813,
+        "subsample": 0.960384200459015,
+        "subsample_freq": 1,
+        "reg_lambda": 0.5703637874410369,
+        "reg_alpha": 1.6865703875308493,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    },
+    "iterations": [
+      516,
+      605,
+      813,
+      405,
+      601
+    ],
+    "prediction_path": "improvements/artifacts/lgb_tune_12_oof.npy"
+  },
+  {
+    "name": "lgb_top_70",
+    "origin": "first pass",
+    "spec": {
+      "name": "lgb_top_70",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 89,
+        "colsample_bytree": 0.6846068413999578,
+        "subsample": 0.961965333135664,
+        "subsample_freq": 1,
+        "reg_lambda": 2.1323824335960286,
+        "reg_alpha": 3.687185564401245,
+        "max_bin": 255,
+        "max_depth": -1
+      },
+      "columns": [
+        "EXT_MEAN",
+        "ORGANIZATION_TYPE",
+        "AMT_CREDIT_OVER_AMT_ANNUITY",
+        "OCCUPATION_TYPE",
+        "EXT_SUM",
+        "EXT_MIN",
+        "EXT_SOURCE_3",
+        "AMT_CREDIT_OVER_AMT_GOODS_PRICE",
+        "EXT_2_3_PRODUCT",
+        "DAYS_EMPLOYED",
+        "AMT_ANNUITY_OVER_AMT_GOODS_PRICE",
+        "DAYS_ID_PUBLISH",
+        "AGE_AT_EMPLOYMENT",
+        "CAR_OVER_AGE",
+        "CREDIT_TERM",
+        "EXT_STD",
+        "CREDIT_GOODS_DIFF",
+        "EMPLOYED_YEARS",
+        "DAYS_LAST_PHONE_CHANGE",
+        "EXT_MEAN_TIMES_TERM",
+        "DAYS_EMPLOYED_OVER_BIRTH",
+        "EXT_MAX",
+        "DAYS_REGISTRATION",
+        "DAYS_REGISTRATION_OVER_BIRTH",
+        "REGION_POPULATION_RELATIVE",
+        "DAYS_BIRTH",
+        "CREDIT_GOODS_DIFF_RATIO",
+        "EXT_2_3_DIFF",
+        "AGE_YEARS",
+        "EXT_SOURCE_2",
+        "EXT_MEAN_OVER_AGE",
+        "PHONE_OVER_EMPLOYED",
+        "CODE_GENDER",
+        "DAYS_ID_PUBLISH_OVER_BIRTH",
+        "ANNUITY_PER_PERSON",
+        "DAYS_LAST_PHONE_CHANGE_OVER_BIRTH",
+        "AMT_GOODS_PRICE",
+        "AMT_INCOME_TOTAL_OVER_AMT_ANNUITY",
+        "EDUCATION_RANK",
+        "CREDIT_PER_PERSON",
+        "OWN_CAR_AGE",
+        "EXT_SOURCE_1",
+        "INCOME_AFTER_ANNUITY",
+        "INCOME_PER_PERSON",
+        "EXT_1_2_PRODUCT",
+        "AMT_ANNUITY",
+        "AMT_INCOME_TOTAL_OVER_AMT_GOODS_PRICE",
+        "AMT_INCOME_TOTAL_OVER_AMT_CREDIT",
+        "EXT_1_2_DIFF",
+        "AMT_REQ_CREDIT_BUREAU_YEAR",
+        "BUREAU_SUM",
+        "NAME_FAMILY_STATUS",
+        "NAME_EDUCATION_TYPE",
+        "REGION_RATING_CLIENT",
+        "AMT_CREDIT",
+        "EXT_1_3_DIFF",
+        "AMT_REQ_CREDIT_BUREAU_QRT",
+        "EXT_PRODUCT",
+        "NAME_CONTRACT_TYPE",
+        "CONTACT_FLAGS_SUM",
+        "EXT_1_3_PRODUCT",
+        "AMT_INCOME_TOTAL",
+        "FLAG_WORK_PHONE",
+        "MISSING_COUNT",
+        "AMT_REQ_CREDIT_BUREAU_MON",
+        "NAME_HOUSING_TYPE",
+        "NAME_INCOME_TYPE",
+        "CNT_FAM_MEMBERS",
+        "CHILDREN_FRACTION",
+        "CNT_CHILDREN"
+      ]
+    },
+    "iterations": [
+      430,
+      562,
+      491,
+      494,
+      424
+    ],
+    "prediction_path": "improvements/artifacts/lgb_top_70_oof.npy"
+  },
+  {
+    "name": "lgb_engineered",
+    "origin": "first pass",
+    "spec": {
+      "name": "lgb_engineered",
+      "kind": "lgb",
+      "features": "engineered",
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    },
+    "iterations": [
+      412,
+      375,
+      354,
+      401,
+      277
+    ],
+    "prediction_path": "improvements/artifacts/lgb_engineered_oof.npy"
+  },
+  {
+    "name": "lgb_raw",
+    "origin": "first pass",
+    "spec": {
+      "name": "lgb_raw",
+      "kind": "lgb",
+      "features": "raw",
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    },
+    "iterations": [
+      333,
+      511,
+      351,
+      356,
+      437
+    ],
+    "prediction_path": "improvements/artifacts/lgb_raw_oof.npy"
+  },
+  {
+    "name": "cat_depth4",
+    "origin": "first pass",
+    "spec": {
+      "name": "cat_depth4",
+      "kind": "cat",
+      "features": "engineered",
+      "params": {
+        "depth": 4,
+        "l2_leaf_reg": 5,
+        "random_strength": 0.5
+      }
+    },
+    "iterations": [
+      1404,
+      1142,
+      1441,
+      1723,
+      1395
+    ],
+    "prediction_path": "improvements/artifacts/cat_depth4_oof.npy"
+  },
+  {
+    "name": "cat_lean",
+    "origin": "first pass",
+    "spec": {
+      "name": "cat_lean",
+      "kind": "cat",
+      "features": "lean",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      }
+    },
+    "iterations": [
+      1396,
+      1075,
+      1529,
+      2017,
+      1666
+    ],
+    "prediction_path": "improvements/artifacts/cat_lean_oof.npy"
+  },
+  {
+    "name": "hgb_20",
+    "origin": "first pass",
+    "spec": {
+      "name": "hgb_20",
+      "kind": "hgb",
+      "features": "engineered",
+      "params": {
+        "max_leaf_nodes": 20,
+        "min_samples_leaf": 100,
+        "l2_regularization": 15.0
+      }
+    },
+    "iterations": [
+      230,
+      313,
+      250,
+      241,
+      324
+    ],
+    "prediction_path": "improvements/artifacts/hgb_20_oof.npy"
+  },
+  {
+    "name": "spline_0.1",
+    "origin": "first pass",
+    "spec": {
+      "name": "spline_0.1",
+      "kind": "spline",
+      "features": "engineered",
+      "params": {
+        "C": 0.1
+      }
+    },
+    "iterations": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "prediction_path": "improvements/artifacts/spline_0.1_oof.npy"
+  },
+  {
+    "name": "cat_lean_depth6",
+    "origin": "first pass",
+    "spec": {
+      "name": "cat_lean_depth6",
+      "kind": "cat",
+      "features": "lean",
+      "params": {
+        "depth": 6,
+        "l2_leaf_reg": 12,
+        "random_strength": 0.5
+      }
+    },
+    "iterations": [
+      1315,
+      1017,
+      1174,
+      1500,
+      1357
+    ],
+    "prediction_path": "improvements/artifacts/cat_lean_depth6_oof.npy"
+  },
+  {
+    "name": "r2_cat_native_missing",
+    "origin": "second pass",
+    "spec": {
+      "name": "r2_cat_native_missing",
+      "kind": "cat",
+      "features": "lean",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Native numeric missing bins may handle absence differently from the -999 sentinel.",
+      "missing": "native"
+    },
+    "iterations": [
+      1561,
+      1170,
+      1666,
+      1496,
+      1210
+    ],
+    "prediction_path": "improvements/round2/artifacts/cv/r2_cat_native_missing_oof.npy"
+  },
+  {
+    "name": "r2_lgb_smooth_cats",
+    "origin": "second pass",
+    "spec": {
+      "name": "r2_lgb_smooth_cats",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 16,
+        "min_child_samples": 150,
+        "colsample_bytree": 0.8,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "reg_lambda": 10.0,
+        "reg_alpha": 1.0,
+        "max_bin": 255,
+        "cat_smooth": 100.0,
+        "cat_l2": 30.0
+      },
+      "hypothesis": "Stronger categorical smoothing may improve group-relative LightGBM generalization."
+    },
+    "iterations": [
+      477,
+      605,
+      522,
+      759,
+      673
+    ],
+    "prediction_path": "improvements/round2/artifacts/cv/r2_lgb_smooth_cats_oof.npy"
+  },
+  {
+    "name": "r2_xgb_finance",
+    "origin": "second pass",
+    "spec": {
+      "name": "r2_xgb_finance",
+      "kind": "xgb",
+      "features": "finance",
+      "params": {
+        "max_depth": 3,
+        "min_child_weight": 30,
+        "reg_lambda": 20.0,
+        "reg_alpha": 1.0,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "max_bin": 256
+      },
+      "source": "improvements/round2/adaptive.py",
+      "hypothesis": "Check whether the financial representation also helps the best screened XGBoost recipe."
+    },
+    "iterations": [
+      1012,
+      1119,
+      1212,
+      1132,
+      937
+    ],
+    "prediction_path": "improvements/round2/artifacts/cv/r2_xgb_finance_oof.npy"
+  }
+]

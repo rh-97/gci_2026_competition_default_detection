@@ -1,0 +1,276 @@
+[
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_control",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Reproduce the exact round-three 55-column default model before trusting any new comparison.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_control",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Reproduce the exact round-three 55-column default model before trusting any new comparison.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.7509073195060717,
+    "average_precision": 0.23803493312114735,
+    "log_loss": 0.24803059035340552,
+    "brier": 0.06815862746777034,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7518467760462961
+    },
+    "delta": 5.873399303246707e-06,
+    "iterations": 1528,
+    "seconds": 101.5505599975586,
+    "cv": null,
+    "interpretation": "Exact reproduction control: maximum prediction difference is 0.0. This validates the shared split, representation, fitting path and environment; it is not a new improvement.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_control.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_control512",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Reproduce the exact round-three 55-column 512-border model.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_control512",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Reproduce the exact round-three 55-column 512-border model.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.7508543784548174,
+    "average_precision": 0.2354071973154258,
+    "log_loss": 0.24829031824662692,
+    "brier": 0.06826462014852137,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7518477645244567
+    },
+    "delta": 6.861877463792965e-06,
+    "iterations": 1851,
+    "seconds": 154.3598940372467,
+    "cv": null,
+    "interpretation": "Exact reproduction control: maximum prediction difference is 0.0. This validates the shared split, representation, fitting path and environment; it is not a new improvement.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_control512.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_depth4",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_depth4",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 4,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.750080492006499,
+    "average_precision": 0.2365049141533144,
+    "log_loss": 0.2482571860246119,
+    "brier": 0.06819619722439954,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7517971337535546
+    },
+    "delta": -4.37688934382674e-05,
+    "iterations": 1838,
+    "seconds": 198.23801612854004,
+    "cv": null,
+    "interpretation": "No positive screened blend gain over the current recipe. Promotion has not been evaluated; the search is incomplete. The standalone AUC and blend gain answer different questions; correlated ranking errors can make a weaker individual model useful. The hypothesized bias/variance or encoding mechanism is not causally identified by this score alone. The selected iteration was below the configured cap; the observed result is not explained simply by exhausting that cap. This repeatedly explored split cannot establish hidden-test improvement or universal ineffectiveness.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_depth4.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_depth6",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_depth6",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 6,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.7498035342186081,
+    "average_precision": 0.23563075865566907,
+    "log_loss": 0.24846105236051455,
+    "brier": 0.06825939906544014,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7518468335159566
+    },
+    "delta": 5.930868963721636e-06,
+    "iterations": 1513,
+    "seconds": 228.1593599319458,
+    "cv": null,
+    "interpretation": "Best screened blend improved the current recipe by +0.0000059 AUC. Promotion has not been evaluated; the search is incomplete. The standalone AUC and blend gain answer different questions; correlated ranking errors can make a weaker individual model useful. The hypothesized bias/variance or encoding mechanism is not causally identified by this score alone. The selected iteration was below the configured cap; the observed result is not explained simply by exhausting that cap. This repeatedly explored split cannot establish hidden-test improvement or universal ineffectiveness.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_depth6.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_depth7",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_depth7",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 7,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Change depth on the successful 55-column representation while holding shrinkage fixed.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.749695399305408,
+    "average_precision": 0.2377312084129279,
+    "log_loss": 0.24838747889918347,
+    "brier": 0.06818463344187731,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7519773356210242
+    },
+    "delta": 0.0001364329740313197,
+    "iterations": 1402,
+    "seconds": 232.80314588546753,
+    "cv": null,
+    "interpretation": "Best screened blend improved the current recipe by +0.0001364 AUC. Promotion has not been evaluated; the search is incomplete. The standalone AUC and blend gain answer different questions; correlated ranking errors can make a weaker individual model useful. The hypothesized bias/variance or encoding mechanism is not causally identified by this score alone. The selected iteration was below the configured cap; the observed result is not explained simply by exhausting that cap. This repeatedly explored split cannot establish hidden-test improvement or universal ineffectiveness.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_depth7.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_l2_2",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Retune leaf shrinkage after the signed/category representation changed.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_l2_2",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 2,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Retune leaf shrinkage after the signed/category representation changed.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.7503000146156841,
+    "average_precision": 0.2368760748583549,
+    "log_loss": 0.24829937937419916,
+    "brier": 0.0682103757354647,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7519011998147913
+    },
+    "delta": 6.029716779842875e-05,
+    "iterations": 1756,
+    "seconds": 209.76642084121704,
+    "cv": null,
+    "interpretation": "Best screened blend improved the current recipe by +0.0000603 AUC. Promotion has not been evaluated; the search is incomplete. The standalone AUC and blend gain answer different questions; correlated ranking errors can make a weaker individual model useful. The hypothesized bias/variance or encoding mechanism is not causally identified by this score alone. The selected iteration was below the configured cap; the observed result is not explained simply by exhausting that cap. This repeatedly explored split cannot establish hidden-test improvement or universal ineffectiveness.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_l2_2.json"
+  },
+  {
+    "pass_group": "round4",
+    "record_type": "main screening configuration",
+    "name": "r4_cat_l2_24",
+    "status": "complete",
+    "kind": "cat",
+    "features": "final55",
+    "hypothesis": "Retune leaf shrinkage after the signed/category representation changed.",
+    "rationale_origin": "Plan recorded before fitting",
+    "spec": {
+      "name": "r4_cat_l2_24",
+      "kind": "cat",
+      "features": "final55",
+      "stage": "A",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 24,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Retune leaf shrinkage after the signed/category representation changed.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "auc": 0.7513138254026658,
+    "average_precision": 0.2381176767936667,
+    "log_loss": 0.2480651980103437,
+    "brier": 0.06817261878650915,
+    "reference_auc": 0.7518409026469929,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.752084596995385
+    },
+    "delta": 0.00024369434839210946,
+    "iterations": 2496,
+    "seconds": 268.66657423973083,
+    "cv": null,
+    "interpretation": "Best screened blend improved the current recipe by +0.0002437 AUC. Promotion has not been evaluated; the search is incomplete. The standalone AUC and blend gain answer different questions; correlated ranking errors can make a weaker individual model useful. The hypothesized bias/variance or encoding mechanism is not causally identified by this score alone. The selected iteration was below the configured cap; the observed result is not explained simply by exhausting that cap. This repeatedly explored split cannot establish hidden-test improvement or universal ineffectiveness.",
+    "artifact": "improvements/round4/artifacts/screen/r4_cat_l2_24.json"
+  }
+]

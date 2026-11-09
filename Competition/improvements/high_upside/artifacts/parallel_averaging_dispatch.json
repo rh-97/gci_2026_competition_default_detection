@@ -1,0 +1,72 @@
+{
+  "completed": [
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261409,
+      "fold": 0,
+      "auc": 0.7670280729902486,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261409,
+      "fold": 1,
+      "auc": 0.7594389034067257,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261409,
+      "fold": 2,
+      "auc": 0.7668059908406959,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20261409,
+      "fold": 3,
+      "auc": 0.7598984617762695,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20262209,
+      "fold": 0,
+      "auc": 0.7641111804423856,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20262209,
+      "fold": 1,
+      "auc": 0.7695425059251257,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20262209,
+      "fold": 2,
+      "auc": 0.7694818864653739,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20262209,
+      "fold": 3,
+      "auc": 0.7561993276323022,
+      "count": 1150
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "seed": 20262209,
+      "fold": 4,
+      "auc": 0.7558816305601478,
+      "count": 1150
+    }
+  ],
+  "source_sha256": "4c5c47115c7050a08926e055985e8d44d416af10bd1d386378fc8e5aef8a818e",
+  "selection_sha256": "4e37e30cb228e73e77908a797cfb1c3e67e3bb1a44d3630775f4c61aaff8b15b",
+  "gate": "model_confirmation.json",
+  "settings_changed": false,
+  "validation_early_stopping": false
+}

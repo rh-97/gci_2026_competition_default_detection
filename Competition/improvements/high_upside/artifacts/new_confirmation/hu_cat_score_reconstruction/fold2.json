@@ -1,0 +1,45 @@
+{
+  "signature": {
+    "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+    "spec": {
+      "name": "hu_cat_score_reconstruction",
+      "kind": "cat",
+      "features": "signed",
+      "learned": "score_reconstruction",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "max_iterations": 4500,
+      "patience": 200,
+      "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+    },
+    "origin": "high_upside",
+    "seed": 20264209,
+    "fixed": 1150
+  },
+  "count": 1150,
+  "auc": 0.7645288185899533,
+  "seconds": 134.34747886657715,
+  "diagnostics": {
+    "auxiliary": {
+      "EXT_SOURCE_1": {
+        "observed_rows": 33461,
+        "auxiliary_oof_r2": 0.48525608045339375
+      },
+      "EXT_SOURCE_2": {
+        "observed_rows": 109343,
+        "auxiliary_oof_r2": 0.2346407672682328
+      },
+      "EXT_SOURCE_3": {
+        "observed_rows": 74657,
+        "auxiliary_oof_r2": 0.11177116048516311
+      }
+    },
+    "source_hashes": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    }
+  }
+}

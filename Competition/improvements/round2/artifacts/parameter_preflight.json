@@ -1,0 +1,9 @@
+{
+  "probe": "r2_cat_rsm075",
+  "provided_rows": 300,
+  "iterations": 5,
+  "evaluation_score": null,
+  "observed_bootstrap_type": "MVS",
+  "conclusion": "bagging_temperature alone did not switch this environment to Bayesian bootstrap; explicit bootstrap_type is needed for that hypothesis",
+  "impact": "rsm075 remains a column-sampling experiment; an explicit Bayesian follow-up will isolate the intended bootstrap mechanism"
+}

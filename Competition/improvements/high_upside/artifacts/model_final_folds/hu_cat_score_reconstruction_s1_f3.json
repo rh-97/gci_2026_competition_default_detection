@@ -1,0 +1,47 @@
+{
+  "signature": {
+    "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+    "spec": {
+      "name": "hu_cat_score_reconstruction",
+      "kind": "cat",
+      "features": "signed",
+      "learned": "score_reconstruction",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "max_iterations": 4500,
+      "patience": 200,
+      "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+    },
+    "fixed": 1150,
+    "fold_seed": 20261410,
+    "model_seed": 20261611
+  },
+  "count": 1150,
+  "auc": 0.7668698007845179,
+  "seconds": 271.3697090148926,
+  "diagnostics": {
+    "auxiliary": {
+      "EXT_SOURCE_1": {
+        "observed_rows": 41933,
+        "auxiliary_oof_r2": 0.48605356386714693
+      },
+      "EXT_SOURCE_2": {
+        "observed_rows": 136664,
+        "auxiliary_oof_r2": 0.23705029381863763
+      },
+      "EXT_SOURCE_3": {
+        "observed_rows": 93212,
+        "auxiliary_oof_r2": 0.11434819726246193
+      }
+    },
+    "source_hashes": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    }
+  },
+  "dispatcher_sha256": "4c5c47115c7050a08926e055985e8d44d416af10bd1d386378fc8e5aef8a818e",
+  "dispatch_note": "Only scheduling differs from the frozen main fit; gate passed before dispatch."
+}

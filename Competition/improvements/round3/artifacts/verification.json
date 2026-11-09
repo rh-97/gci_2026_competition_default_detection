@@ -1,0 +1,21 @@
+{
+  "final": true,
+  "local_venv": true,
+  "protected_files_checked": 31,
+  "protected_hashes_match": true,
+  "omitted_from_code_archive": [],
+  "splits_disjoint": true,
+  "features_ignore_target_ID": true,
+  "row_batch_invariance": true,
+  "train_test_schema_matches": true,
+  "hypothetical_rate_formula_verified": true,
+  "neural_unseen_categories_finite": true,
+  "fitted_encoder_batch_invariance": true,
+  "screening_signatures_verified_with_documented_metadata_alias": true,
+  "recommended_submission_sha256": "7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02",
+  "three_seed_extension_freeze_and_reproduction_verified": true,
+  "selection_and_source_freeze_intact": true,
+  "submission_schema_and_order_valid": true,
+  "saved_model_reproduction_verified": true,
+  "new_notebooks_fully_executed": true
+}

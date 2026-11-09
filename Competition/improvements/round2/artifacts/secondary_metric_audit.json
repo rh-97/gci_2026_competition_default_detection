@@ -1,0 +1,826 @@
+{
+  "provenance": "Retrospective recomputation from retained prediction arrays, no fitting and no selection changes",
+  "target_scope": "Original inner validation rows, all inside development",
+  "rows": 34241,
+  "records": [
+    {
+      "phase": "pass1",
+      "name": "tutorial_rf",
+      "roc_auc": 0.6599832535708083,
+      "average_precision": 0.1497416656286945,
+      "log_loss": 0.26802304357262613,
+      "brier_score": 0.07215015618614773,
+      "prediction_source": "improvements/artifacts/baseline_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_raw",
+      "roc_auc": 0.736783840101566,
+      "average_precision": 0.2225883881098014,
+      "log_loss": 0.25197974386383115,
+      "brier_score": 0.06896378022475148,
+      "prediction_source": "improvements/artifacts/lgb_raw_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_engineered",
+      "roc_auc": 0.7440631426975809,
+      "average_precision": 0.23263029604901153,
+      "log_loss": 0.25003088922417005,
+      "brier_score": 0.0684856609566359,
+      "prediction_source": "improvements/artifacts/lgb_engineered_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_extended",
+      "roc_auc": 0.7375498647003277,
+      "average_precision": 0.22397866575194425,
+      "log_loss": 0.25203951508339273,
+      "brier_score": 0.06892717946607191,
+      "prediction_source": "improvements/artifacts/lgb_extended_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_grouped",
+      "roc_auc": 0.737398305711652,
+      "average_precision": 0.22446803760696202,
+      "log_loss": 0.2519703265788751,
+      "brier_score": 0.0688948012834525,
+      "prediction_source": "improvements/artifacts/lgb_grouped_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_00",
+      "roc_auc": 0.7436434532608677,
+      "average_precision": 0.23295250002645468,
+      "log_loss": 0.2502112687915667,
+      "brier_score": 0.06852754196192694,
+      "prediction_source": "improvements/artifacts/lgb_tune_00_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_01",
+      "roc_auc": 0.7387115908995092,
+      "average_precision": 0.2267722269007447,
+      "log_loss": 0.2514480133658372,
+      "brier_score": 0.0688010756045476,
+      "prediction_source": "improvements/artifacts/lgb_tune_01_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_02",
+      "roc_auc": 0.7430297002745716,
+      "average_precision": 0.23120140464049782,
+      "log_loss": 0.2500058336494285,
+      "brier_score": 0.0684850469533536,
+      "prediction_source": "improvements/artifacts/lgb_tune_02_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_03",
+      "roc_auc": 0.7357150653312803,
+      "average_precision": 0.22284019112798653,
+      "log_loss": 0.2524195048697647,
+      "brier_score": 0.06897507914730933,
+      "prediction_source": "improvements/artifacts/lgb_tune_03_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_04",
+      "roc_auc": 0.7388008297883364,
+      "average_precision": 0.22553067490831544,
+      "log_loss": 0.2513363760632438,
+      "brier_score": 0.06877019812870705,
+      "prediction_source": "improvements/artifacts/lgb_tune_04_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_05",
+      "roc_auc": 0.742856371778498,
+      "average_precision": 0.23047512835894263,
+      "log_loss": 0.25043838294531595,
+      "brier_score": 0.0685989271102065,
+      "prediction_source": "improvements/artifacts/lgb_tune_05_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_06",
+      "roc_auc": 0.7433577026149202,
+      "average_precision": 0.23253272345906195,
+      "log_loss": 0.25005751025855216,
+      "brier_score": 0.0684645093409913,
+      "prediction_source": "improvements/artifacts/lgb_tune_06_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_07",
+      "roc_auc": 0.7395692911007036,
+      "average_precision": 0.22693904540272208,
+      "log_loss": 0.25127196099324833,
+      "brier_score": 0.06876758836054107,
+      "prediction_source": "improvements/artifacts/lgb_tune_07_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_08",
+      "roc_auc": 0.7435077673924226,
+      "average_precision": 0.23154616487938945,
+      "log_loss": 0.25008288352608454,
+      "brier_score": 0.06850503868502272,
+      "prediction_source": "improvements/artifacts/lgb_tune_08_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_09",
+      "roc_auc": 0.7444407643428066,
+      "average_precision": 0.23244115747628113,
+      "log_loss": 0.24999142796251667,
+      "brier_score": 0.0685028508226984,
+      "prediction_source": "improvements/artifacts/lgb_tune_09_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_10",
+      "roc_auc": 0.7447465374184731,
+      "average_precision": 0.23229225086833605,
+      "log_loss": 0.24979824123771638,
+      "brier_score": 0.06847249310263981,
+      "prediction_source": "improvements/artifacts/lgb_tune_10_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_11",
+      "roc_auc": 0.7450017486868298,
+      "average_precision": 0.23414634220792607,
+      "log_loss": 0.2496761001900159,
+      "brier_score": 0.06840355554330016,
+      "prediction_source": "improvements/artifacts/lgb_tune_11_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_12",
+      "roc_auc": 0.7465780954986682,
+      "average_precision": 0.23505512528616881,
+      "log_loss": 0.24926369929665831,
+      "brier_score": 0.06833872943426089,
+      "prediction_source": "improvements/artifacts/lgb_tune_12_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_13",
+      "roc_auc": 0.7456064099728343,
+      "average_precision": 0.23172559835972842,
+      "log_loss": 0.2496295020036151,
+      "brier_score": 0.06844884686680314,
+      "prediction_source": "improvements/artifacts/lgb_tune_13_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_14",
+      "roc_auc": 0.7454357940447361,
+      "average_precision": 0.23283265890064891,
+      "log_loss": 0.2495147077569151,
+      "brier_score": 0.06841332615216206,
+      "prediction_source": "improvements/artifacts/lgb_tune_14_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_15",
+      "roc_auc": 0.7471511024956684,
+      "average_precision": 0.23703309662067248,
+      "log_loss": 0.24906656163409133,
+      "brier_score": 0.06826022600237959,
+      "prediction_source": "improvements/artifacts/lgb_tune_15_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_16",
+      "roc_auc": 0.7452127083166001,
+      "average_precision": 0.23488786494755604,
+      "log_loss": 0.24942101982268286,
+      "brier_score": 0.06837029008556067,
+      "prediction_source": "improvements/artifacts/lgb_tune_16_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_17",
+      "roc_auc": 0.7455600434507414,
+      "average_precision": 0.23612029264119952,
+      "log_loss": 0.24946747999276475,
+      "brier_score": 0.06834537541282741,
+      "prediction_source": "improvements/artifacts/lgb_tune_17_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_18",
+      "roc_auc": 0.7404704843409657,
+      "average_precision": 0.22951373679546644,
+      "log_loss": 0.25088405859153423,
+      "brier_score": 0.06867663245279533,
+      "prediction_source": "improvements/artifacts/lgb_tune_18_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_19",
+      "roc_auc": 0.7433811387424728,
+      "average_precision": 0.23373868723807562,
+      "log_loss": 0.24985362711968004,
+      "brier_score": 0.06841640789219416,
+      "prediction_source": "improvements/artifacts/lgb_tune_19_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_20",
+      "roc_auc": 0.7458653337812594,
+      "average_precision": 0.233172315111913,
+      "log_loss": 0.24951970015172328,
+      "brier_score": 0.0684063196136908,
+      "prediction_source": "improvements/artifacts/lgb_tune_20_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_21",
+      "roc_auc": 0.7459210448701501,
+      "average_precision": 0.23464999989782367,
+      "log_loss": 0.24936882293069199,
+      "brier_score": 0.06835291511463179,
+      "prediction_source": "improvements/artifacts/lgb_tune_21_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_22",
+      "roc_auc": 0.7461070626672626,
+      "average_precision": 0.23402137174810372,
+      "log_loss": 0.24940034078160497,
+      "brier_score": 0.06838833065590662,
+      "prediction_source": "improvements/artifacts/lgb_tune_22_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_tune_23",
+      "roc_auc": 0.7433509786646415,
+      "average_precision": 0.2331563795568535,
+      "log_loss": 0.24994761520484993,
+      "brier_score": 0.06844963999746483,
+      "prediction_source": "improvements/artifacts/lgb_tune_23_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_depth4",
+      "roc_auc": 0.748958799172823,
+      "average_precision": 0.23640490887911558,
+      "log_loss": 0.24841972493165984,
+      "brier_score": 0.06820037547056793,
+      "prediction_source": "improvements/artifacts/cat_depth4_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_depth5",
+      "roc_auc": 0.7476596285335853,
+      "average_precision": 0.23361030867573615,
+      "log_loss": 0.2488242406014613,
+      "brier_score": 0.06828945559142466,
+      "prediction_source": "improvements/artifacts/cat_depth5_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_depth6",
+      "roc_auc": 0.747211514602788,
+      "average_precision": 0.2352352741439007,
+      "log_loss": 0.2488432547447487,
+      "brier_score": 0.0682643239100689,
+      "prediction_source": "improvements/artifacts/cat_depth6_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_depth7",
+      "roc_auc": 0.7473373501714228,
+      "average_precision": 0.23288203974705146,
+      "log_loss": 0.24887260938889924,
+      "brier_score": 0.06831659494588553,
+      "prediction_source": "improvements/artifacts/cat_depth7_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "logistic_0.01",
+      "roc_auc": 0.7329595330373998,
+      "average_precision": 0.21627159536688068,
+      "log_loss": 0.25298077672882624,
+      "brier_score": 0.06914461051622384,
+      "prediction_source": "improvements/artifacts/logistic_0.01_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "logistic_0.1",
+      "roc_auc": 0.7323117005424263,
+      "average_precision": 0.21707153882420926,
+      "log_loss": 0.2532306278201877,
+      "brier_score": 0.0691886394746702,
+      "prediction_source": "improvements/artifacts/logistic_0.1_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "logistic_1.0",
+      "roc_auc": 0.7317957839061686,
+      "average_precision": 0.21632434224401303,
+      "log_loss": 0.25344765113937784,
+      "brier_score": 0.06923748529562765,
+      "prediction_source": "improvements/artifacts/logistic_1.0_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "hgb_10",
+      "roc_auc": 0.7412823237530796,
+      "average_precision": 0.22654159726639012,
+      "log_loss": 0.25074791273947467,
+      "brier_score": 0.06868229062640885,
+      "prediction_source": "improvements/artifacts/hgb_10_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "hgb_20",
+      "roc_auc": 0.7416091192305576,
+      "average_precision": 0.23045754182740963,
+      "log_loss": 0.2507082771035609,
+      "brier_score": 0.06861451042391978,
+      "prediction_source": "improvements/artifacts/hgb_20_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "hgb_31",
+      "roc_auc": 0.7413034955760085,
+      "average_precision": 0.2287025339701793,
+      "log_loss": 0.25061914055752194,
+      "brier_score": 0.0686171702527088,
+      "prediction_source": "improvements/artifacts/hgb_31_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "spline_0.01",
+      "roc_auc": 0.7360168615064397,
+      "average_precision": 0.22037764544235192,
+      "log_loss": 0.2519699563242719,
+      "brier_score": 0.06896175743858494,
+      "prediction_source": "improvements/artifacts/spline_0.01_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "spline_0.1",
+      "roc_auc": 0.736537329739809,
+      "average_precision": 0.22373282052442844,
+      "log_loss": 0.25184856834221786,
+      "brier_score": 0.06887675186217508,
+      "prediction_source": "improvements/artifacts/spline_0.1_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "spline_1.0",
+      "roc_auc": 0.735930335185588,
+      "average_precision": 0.22415756888557054,
+      "log_loss": 0.25206763649244124,
+      "brier_score": 0.0689015956797657,
+      "prediction_source": "improvements/artifacts/spline_1.0_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_engineered_groups",
+      "roc_auc": 0.7450357707258468,
+      "average_precision": 0.23359483736238495,
+      "log_loss": 0.24961471996655102,
+      "brier_score": 0.0684041070644937,
+      "prediction_source": "improvements/artifacts/lgb_engineered_groups_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_lean",
+      "roc_auc": 0.7432963020296399,
+      "average_precision": 0.2312502498047433,
+      "log_loss": 0.2500846815299535,
+      "brier_score": 0.06852308891903425,
+      "prediction_source": "improvements/artifacts/lgb_lean_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_scores",
+      "roc_auc": 0.7389121600146608,
+      "average_precision": 0.22559165311818694,
+      "log_loss": 0.2514262879204209,
+      "brier_score": 0.06880138791982991,
+      "prediction_source": "improvements/artifacts/lgb_scores_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_small_8",
+      "roc_auc": 0.7451259406231744,
+      "average_precision": 0.2316587348852852,
+      "log_loss": 0.24982750029075101,
+      "brier_score": 0.06848674722583226,
+      "prediction_source": "improvements/artifacts/lgb_small_8_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_small_12",
+      "roc_auc": 0.7454155532303075,
+      "average_precision": 0.2334101746818395,
+      "log_loss": 0.24959177353025347,
+      "brier_score": 0.06840994556022358,
+      "prediction_source": "improvements/artifacts/lgb_small_12_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_weight_2.0",
+      "roc_auc": 0.7441755188717262,
+      "average_precision": 0.23080798858824697,
+      "log_loss": 0.2670192250658681,
+      "brier_score": 0.07382560075867797,
+      "prediction_source": "improvements/artifacts/lgb_weight_2.0_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_weight_5.0",
+      "roc_auc": 0.7449651290191579,
+      "average_precision": 0.22851071314411903,
+      "log_loss": 0.3590242983631526,
+      "brier_score": 0.10774762134058287,
+      "prediction_source": "improvements/artifacts/lgb_weight_5.0_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_raw",
+      "roc_auc": 0.7416555662101753,
+      "average_precision": 0.22672684130238346,
+      "log_loss": 0.2504222480027876,
+      "brier_score": 0.06866116143334092,
+      "prediction_source": "improvements/artifacts/cat_raw_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_lean",
+      "roc_auc": 0.7484925822989676,
+      "average_precision": 0.23399382407407893,
+      "log_loss": 0.24872784171801024,
+      "brier_score": 0.06830221607647655,
+      "prediction_source": "improvements/artifacts/cat_lean_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_top_25",
+      "roc_auc": 0.7381651233917288,
+      "average_precision": 0.23140823145957873,
+      "log_loss": 0.2510906121947384,
+      "brier_score": 0.06859918732012218,
+      "prediction_source": "improvements/artifacts/lgb_top_25_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_top_40",
+      "roc_auc": 0.7428896007362,
+      "average_precision": 0.23249843384212449,
+      "log_loss": 0.25004585446333466,
+      "brier_score": 0.06847037362394813,
+      "prediction_source": "improvements/artifacts/lgb_top_40_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_top_55",
+      "roc_auc": 0.7459223896602057,
+      "average_precision": 0.23583177619814874,
+      "log_loss": 0.24939764230151817,
+      "brier_score": 0.0683450006494462,
+      "prediction_source": "improvements/artifacts/lgb_top_55_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "lgb_top_70",
+      "roc_auc": 0.7463364125883933,
+      "average_precision": 0.23538158293079292,
+      "log_loss": 0.24929552968342708,
+      "brier_score": 0.06833352909714945,
+      "prediction_source": "improvements/artifacts/lgb_top_70_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_lean_depth4",
+      "roc_auc": 0.7476148596680543,
+      "average_precision": 0.23484293354404573,
+      "log_loss": 0.248732803621242,
+      "brier_score": 0.06824692318708525,
+      "prediction_source": "improvements/artifacts/cat_lean_depth4_inner.npy"
+    },
+    {
+      "phase": "pass1",
+      "name": "cat_lean_depth6",
+      "roc_auc": 0.7480283308875013,
+      "average_precision": 0.2342446504010398,
+      "log_loss": 0.24882742068855157,
+      "brier_score": 0.06831875155316845,
+      "prediction_source": "improvements/artifacts/cat_lean_depth6_inner.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_baseline",
+      "roc_auc": 0.7484925822989676,
+      "average_precision": 0.23399382407407893,
+      "log_loss": 0.24872784171801024,
+      "brier_score": 0.06830221607647655,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_baseline.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_bayesian_rsm075",
+      "roc_auc": 0.7471480795915258,
+      "average_precision": 0.2357865078505114,
+      "log_loss": 0.24882356740523054,
+      "brier_score": 0.06827699265090072,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_bayesian_rsm075.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_borders512",
+      "roc_auc": 0.7477309943579964,
+      "average_precision": 0.2329338827965057,
+      "log_loss": 0.24897815081364302,
+      "brier_score": 0.06836632824774644,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_borders512.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_budget_control",
+      "roc_auc": 0.7484925822989676,
+      "average_precision": 0.23399382407407893,
+      "log_loss": 0.24872784171801024,
+      "brier_score": 0.06830221607647655,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_budget_control.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_burden",
+      "roc_auc": 0.7476912138589971,
+      "average_precision": 0.23291628981778256,
+      "log_loss": 0.24899534174797577,
+      "brier_score": 0.06835864432120795,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_burden.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_combined",
+      "roc_auc": 0.7486699796470049,
+      "average_precision": 0.23252866869520245,
+      "log_loss": 0.24886171803628926,
+      "brier_score": 0.068392985243443,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_combined.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_ctr1",
+      "roc_auc": 0.7478273020150656,
+      "average_precision": 0.23496282459329731,
+      "log_loss": 0.24882784964763044,
+      "brier_score": 0.06829330476811818,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_ctr1.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_ctr2",
+      "roc_auc": 0.7480951221269366,
+      "average_precision": 0.23498338031125013,
+      "log_loss": 0.24879881642354418,
+      "brier_score": 0.06828792530234816,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_ctr2.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_distances_only",
+      "roc_auc": 0.7487658160528576,
+      "average_precision": 0.23480543942541102,
+      "log_loss": 0.24875018343935848,
+      "brier_score": 0.06833199465290556,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_distances_only.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_finance",
+      "roc_auc": 0.7490823704368343,
+      "average_precision": 0.23695133506296323,
+      "log_loss": 0.24849099069576389,
+      "brier_score": 0.06822716880017536,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_finance.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_finance_native",
+      "roc_auc": 0.7492351937580407,
+      "average_precision": 0.2353886633983824,
+      "log_loss": 0.24842787906348462,
+      "brier_score": 0.06823865081807788,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_finance_native.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_finance_tuned",
+      "roc_auc": 0.74927333062475,
+      "average_precision": 0.236726465840811,
+      "log_loss": 0.2485128892131365,
+      "brier_score": 0.068241638564299,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_finance_tuned.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_missing",
+      "roc_auc": 0.7475892741751988,
+      "average_precision": 0.23337010603501024,
+      "log_loss": 0.24894504750034444,
+      "brier_score": 0.06834706197535155,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_missing.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_native_missing",
+      "roc_auc": 0.7489812698100794,
+      "average_precision": 0.2351966435147253,
+      "log_loss": 0.24855145333919446,
+      "brier_score": 0.06826106280884463,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_native_missing.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_onehot10",
+      "roc_auc": 0.7480036649092139,
+      "average_precision": 0.2340427239289903,
+      "log_loss": 0.24879837692117301,
+      "brier_score": 0.06830455250225766,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_onehot10.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_onehot64",
+      "roc_auc": 0.7481927630801293,
+      "average_precision": 0.23421838023574182,
+      "log_loss": 0.24882901749011196,
+      "brier_score": 0.06831407780221814,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_onehot64.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_ordered",
+      "roc_auc": 0.7477316610060584,
+      "average_precision": 0.2372321264690252,
+      "log_loss": 0.2484657709464355,
+      "brier_score": 0.06814196607798936,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_ordered.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_proxies_native",
+      "roc_auc": 0.7496474121388887,
+      "average_precision": 0.23677497229101735,
+      "log_loss": 0.24839801216758328,
+      "brier_score": 0.06821783842892833,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_proxies_native.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_proxies_rsm075",
+      "roc_auc": 0.7492880773396347,
+      "average_precision": 0.2362469974140332,
+      "log_loss": 0.2484353168575852,
+      "brier_score": 0.06823670636843664,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_proxies_rsm075.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_rates_only",
+      "roc_auc": 0.7484734449020205,
+      "average_precision": 0.2355793330838261,
+      "log_loss": 0.24861223672595745,
+      "brier_score": 0.06824831110522156,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_rates_only.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_risk",
+      "roc_auc": 0.7468125372317196,
+      "average_precision": 0.2320273532839549,
+      "log_loss": 0.24919455586472083,
+      "brier_score": 0.06840964217587385,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_risk.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_rsm075",
+      "roc_auc": 0.7486072687534652,
+      "average_precision": 0.23564021044021322,
+      "log_loss": 0.2485663351315155,
+      "brier_score": 0.06823894797448943,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_rsm075.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_slow",
+      "roc_auc": 0.7485719134183243,
+      "average_precision": 0.23430991662257394,
+      "log_loss": 0.2486057123587331,
+      "brier_score": 0.06826969948044623,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_slow.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_strong_l2",
+      "roc_auc": 0.7476634330251105,
+      "average_precision": 0.23289822155152634,
+      "log_loss": 0.2489499082005478,
+      "brier_score": 0.06835446676297523,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_strong_l2.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_term_proxies",
+      "roc_auc": 0.7499521162788699,
+      "average_precision": 0.23917249545660454,
+      "log_loss": 0.2481209393103184,
+      "brier_score": 0.06811745173291633,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_term_proxies.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_cat_weak_l2",
+      "roc_auc": 0.7475689873850417,
+      "average_precision": 0.23394340453034054,
+      "log_loss": 0.2489220221367248,
+      "brier_score": 0.06831973184483,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_cat_weak_l2.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_lgb_finance",
+      "roc_auc": 0.7464873279168714,
+      "average_precision": 0.23797042069263935,
+      "log_loss": 0.24916628498374827,
+      "brier_score": 0.06827904393599193,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_lgb_finance.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_lgb_linear",
+      "roc_auc": 0.7437656107712305,
+      "average_precision": 0.23161437467911153,
+      "log_loss": 0.2499283462291188,
+      "brier_score": 0.06847551505346564,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_lgb_linear.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_lgb_smooth_cats",
+      "roc_auc": 0.747657869961974,
+      "average_precision": 0.23855591841553267,
+      "log_loss": 0.2486614384620144,
+      "brier_score": 0.06817311177190784,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_lgb_smooth_cats.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_xgb_d3",
+      "roc_auc": 0.7455420611939703,
+      "average_precision": 0.23156394959196772,
+      "log_loss": 0.24955976009368896,
+      "brier_score": 0.06841664761304855,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_xgb_d3.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_xgb_d4",
+      "roc_auc": 0.7451603592028488,
+      "average_precision": 0.2329234816385662,
+      "log_loss": 0.24957633018493652,
+      "brier_score": 0.06838095933198929,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_xgb_d4.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_xgb_d5",
+      "roc_auc": 0.7445444108755217,
+      "average_precision": 0.23250726290516024,
+      "log_loss": 0.2497924268245697,
+      "brier_score": 0.06843090057373047,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_xgb_d5.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_xgb_finance",
+      "roc_auc": 0.7472249222745828,
+      "average_precision": 0.23544086617712603,
+      "log_loss": 0.2490898072719574,
+      "brier_score": 0.06833525002002716,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_xgb_finance.npy"
+    },
+    {
+      "phase": "pass2",
+      "name": "r2_xgb_lean",
+      "roc_auc": 0.7452149496333597,
+      "average_precision": 0.23318711294466085,
+      "log_loss": 0.2496316283941269,
+      "brier_score": 0.06842019408941269,
+      "prediction_source": "improvements/round2/artifacts/screen/r2_xgb_lean.npy"
+    }
+  ]
+}

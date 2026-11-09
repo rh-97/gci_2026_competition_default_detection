@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "signature": "97df13e32b1d82c9b150abaf948f529c20f27b43bac158c852a86c3ee6a7fb84",
+  "feature_target_id_independence": true,
+  "train_test_schema": true,
+  "neural_saved_model_replay_exact": true,
+  "neural_batch_max_difference": 2.9802322387695312e-08,
+  "unknown_category_reserved": true,
+  "learned_transform_batch_invariance": true,
+  "auxiliary_software_probe": {
+    "score_reconstruction": {
+      "EXT_SOURCE_1": {
+        "observed_rows": 341,
+        "auxiliary_oof_r2": 0.25237476992076346
+      },
+      "EXT_SOURCE_2": {
+        "observed_rows": 1198,
+        "auxiliary_oof_r2": 0.09835271965101033
+      },
+      "EXT_SOURCE_3": {
+        "observed_rows": 803,
+        "auxiliary_oof_r2": -0.023918244457870053
+      }
+    },
+    "interaction_risk": {
+      "inner_folds": 5,
+      "interactions": 8,
+      "features": 32
+    }
+  },
+  "prior_75_model_replay_max_difference": 1.1102230246251565e-16,
+  "python": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/.venv/bin/python",
+  "note": "Tiny two-epoch neural fit and small auxiliary fits are software checks, not competitive trial results."
+}

@@ -1,0 +1,2 @@
+{'name': 'cat_lean_depth4', 'auc': 0.7476148596680543, 'iterations': 1494, 'seconds': 158.99422907829285}
+{'name': 'cat_lean_depth6', 'auc': 0.7480283308875013, 'iterations': 1395, 'seconds': 188.15825200080872}

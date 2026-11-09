@@ -1,0 +1,17 @@
+{
+  "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+  "hashes": {
+    "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+    "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42",
+    "h_accel.py": "660ecd8d5ac2ea523785f3b70e36f91af35885774ce1f724c9ded5d983c42c1e",
+    "h_pipeline.py": "061bd6bb1b5d0dad684c7f61c80b043d48049faab48f77c681f7a43f62a7d7d1",
+    "h_launch.py": "c0121428d5257f34e18836cc1bef157971d9a41c8aa9a25e09fb453a65ecc7ed",
+    "MODELING_PLAN.md": "895201103c1193357228009c6d4b670b932bce6c87cbed6314028ee5d6476452",
+    "ACCELERATOR_AMENDMENT.md": "1fbf383c17ab2ee9bcd3bc635818fb48b058c719d22ee8168b0aa2a080bfddf8",
+    "COMPLEXITY_POLICY.md": "f54e105e0e49336b2b661288f497dd56d601a1fd0935b2dcc463fac77b3ec648",
+    "reference/cpu_stage_reuse.json": "ccbd5d0137cccea48bcdd5454f611139291ef30782ebbb9b8706923d46b04c8e",
+    "artifacts/model_candidate_plan.json": "31c45147325c566e51ec7f1feae8dc18f469e4083089111e4f5e28da949a4aff",
+    "artifacts/model_promotion.json": "231a4cbfbee54c9b332f7373ec18deed0d8ba5fe36ab4390a0103cac7c2f8ff3",
+    "artifacts/model_selection.json": "4e37e30cb228e73e77908a797cfb1c3e67e3bb1a44d3630775f4c61aaff8b15b"
+  }
+}

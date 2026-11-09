@@ -1,0 +1,52 @@
+{
+  "signature": {
+    "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+    "spec": {
+      "kind": "tabm",
+      "architecture": "tabm-mini",
+      "dropout": 0.1,
+      "learning_rate": 0.002,
+      "weight_decay": 0.0003,
+      "max_epochs": 140,
+      "patience": 20,
+      "max_seconds": 1500,
+      "name": "hu_tabm_signed_piecewise",
+      "features": "signed",
+      "embedding": "piecewise",
+      "hypothesis": "Same neural recipe with the successful tree representation."
+    },
+    "origin": "high_upside",
+    "seed": 20261110,
+    "fixed": null
+  },
+  "count": 29,
+  "auc": 0.7592338701077257,
+  "seconds": 222.4787528514862,
+  "diagnostics": {
+    "stop_reason": "AUC patience",
+    "epochs_completed": 49,
+    "parameters": 136608,
+    "numeric_dimensions": 64,
+    "categorical_cardinalities": [
+      3,
+      4,
+      9,
+      6,
+      7,
+      7,
+      20,
+      59,
+      9,
+      5
+    ],
+    "device": "mps",
+    "inference_device": "cpu",
+    "gpu_cpu_prediction_max_difference": 1.1920928955078125e-07,
+    "gpu_source_sha256": "660ecd8d5ac2ea523785f3b70e36f91af35885774ce1f724c9ded5d983c42c1e",
+    "source_hashes": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    },
+    "retraining_bitwise_determinism_promised": false
+  }
+}

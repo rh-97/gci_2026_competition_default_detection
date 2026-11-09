@@ -1,0 +1,16 @@
+{
+  "observed_at_utc": "2026-11-09T11:59:43.834024+00:00",
+  "username": "hasanRocky",
+  "public_auc": 0.77029,
+  "rank_snapshot": 364,
+  "source": "Leaderboard screenshot supplied by user after higher-upside submission delivery.",
+  "score_and_rank_confirmed_by_screenshot": true,
+  "submitted_filename_explicitly_confirmed": false,
+  "contextually_likely_submission": "output/submission_high_upside.csv",
+  "local_candidate_sha256": "15d050aa8709ae4e2d338b013c03216d4b3f3279348a3faca71080c17e44baed",
+  "previous_explicitly_attributed_public_auc": 0.76824,
+  "observed_score_difference": 0.00205,
+  "private_full_test_score": null,
+  "used_for_model_selection": false,
+  "interpretation": "The observation does not establish an upper bound. Filename attribution remains unconfirmed; the score difference is not an isolated causal estimate of a model change."
+}

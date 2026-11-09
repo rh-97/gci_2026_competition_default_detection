@@ -1,0 +1,768 @@
+[
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.375,
+      0.375
+    ],
+    "method": "probability",
+    "auc": 0.7654305267165775
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "method": "probability",
+    "auc": 0.7652912076015304
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.375,
+      0.125
+    ],
+    "method": "probability",
+    "auc": 0.7652899792596118
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "method": "log_odds",
+    "auc": 0.7652644390859812
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.375,
+      0.375
+    ],
+    "method": "log_odds",
+    "auc": 0.765250917986607
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.1875,
+      0.5625
+    ],
+    "method": "log_odds",
+    "auc": 0.765110759145418
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "probability",
+    "auc": 0.7651075984995459
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.375,
+      0.125
+    ],
+    "method": "log_odds",
+    "auc": 0.7650907149039613
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "probability",
+    "auc": 0.7650647200283223
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "log_odds",
+    "auc": 0.7650471252874163
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.1875,
+      0.5625
+    ],
+    "method": "probability",
+    "auc": 0.7650438533006102
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "probability",
+    "auc": 0.7650343253899636
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.125,
+      0.375
+    ],
+    "method": "log_odds",
+    "auc": 0.7650019481646492
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.5625,
+      0.1875
+    ],
+    "method": "probability",
+    "auc": 0.7649946872990872
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.125,
+      0.375
+    ],
+    "method": "probability",
+    "auc": 0.7649317732063498
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "log_odds",
+    "auc": 0.7649208423999334
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "probability",
+    "auc": 0.7649119092653736
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.1875,
+      0.0625
+    ],
+    "method": "log_odds",
+    "auc": 0.7648984592805315
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "probability",
+    "auc": 0.7648972647000576
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "log_odds",
+    "auc": 0.764893033744561
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "log_odds",
+    "auc": 0.7648923728822423
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.1875,
+      0.0625
+    ],
+    "method": "probability",
+    "auc": 0.7648552884495644
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "log_odds",
+    "auc": 0.764810346220252
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "probability",
+    "auc": 0.764806552726877
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.125,
+      0.125
+    ],
+    "method": "log_odds",
+    "auc": 0.764788003327252
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.125,
+      0.125
+    ],
+    "method": "probability",
+    "auc": 0.7647187988309012
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.0625,
+      0.1875
+    ],
+    "method": "log_odds",
+    "auc": 0.7645466671834036
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "log_odds",
+    "auc": 0.76454584900712
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.5625,
+      0.1875
+    ],
+    "method": "log_odds",
+    "auc": 0.7645178859110968
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.0625,
+      0.1875
+    ],
+    "method": "probability",
+    "auc": 0.7644934138921051
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "probability",
+    "auc": 0.7644669348629849
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "log_odds",
+    "auc": 0.7644110819404568
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "probability",
+    "auc": 0.764329356258153
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "probability",
+    "auc": 0.764232827259911
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "probability",
+    "auc": 0.764218862951786
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "log_odds",
+    "auc": 0.7642185425772272
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "probability",
+    "auc": 0.7642176231166099
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "method": "log_odds",
+    "auc": 0.7642028004057994
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "probability",
+    "auc": 0.7641744594689289
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "log_odds",
+    "auc": 0.7641609735676566
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "log_odds",
+    "auc": 0.7640765297299028
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "probability",
+    "auc": 0.7640245069355088
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "log_odds",
+    "auc": 0.76400909016694
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "probability",
+    "auc": 0.7639556910549344
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "log_odds",
+    "auc": 0.7639461904407748
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "probability",
+    "auc": 0.763944211445462
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.6666666666666666,
+      0.33333333333333337
+    ],
+    "method": "log_odds",
+    "auc": 0.7639403403725975
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "probability",
+    "auc": 0.7638661535490266
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "probability",
+    "auc": 0.7638595973638282
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "log_odds",
+    "auc": 0.7638435247612411
+  },
+  {
+    "names": [
+      "round3_reference"
+    ],
+    "weights": [
+      1.0
+    ],
+    "method": "probability",
+    "auc": 0.7637228893732684
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "method": "log_odds",
+    "auc": 0.7636638068453222
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "probability",
+    "auc": 0.7636320811440546
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "probability",
+    "auc": 0.7634454859500498
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "log_odds",
+    "auc": 0.7634365111524308
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.75,
+      0.25
+    ],
+    "method": "log_odds",
+    "auc": 0.7632971582759391
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "method": "log_odds",
+    "auc": 0.7630573636652818
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "probability",
+    "auc": 0.7622357207277672
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "probability",
+    "auc": 0.7621000104956429
+  },
+  {
+    "names": [
+      "hu_tabm_signed_piecewise",
+      "hu_cat_score_reconstruction"
+    ],
+    "weights": [
+      0.9,
+      0.09999999999999998
+    ],
+    "method": "log_odds",
+    "auc": 0.7618495077604373
+  },
+  {
+    "names": [
+      "round3_reference",
+      "hu_tabm_signed_piecewise"
+    ],
+    "weights": [
+      0.1,
+      0.9
+    ],
+    "method": "log_odds",
+    "auc": 0.7617286683671401
+  }
+]

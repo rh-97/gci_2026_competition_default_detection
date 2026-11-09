@@ -1,0 +1,40 @@
+{
+  "reference": "Frozen round-three three-seed development OOF recipe",
+  "auc": 0.7648034854637242,
+  "rows": 136961,
+  "positives": 11057,
+  "positive_negative_pairs": 1392120528,
+  "global_pair_loss": 0.23519651453627577,
+  "data_sha256": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "split_sha256": "5edf2b0fd97c608ca1213e3870f64a719cc8c2e971f1174d5ef8085088f54121",
+  "prediction_sha256": "e2f80818c8560a72e5815952debd961b068127015a038428d4f0d15a09652484",
+  "source_sha256": "be063c48c58bf69e3312486ae329851de50b359ca5968472c5380c60d34e8738",
+  "saved_capacity_diagnostic": {
+    "model": "improvements/round3/models/r3_cat_signed_s0_fold0.cbm",
+    "own_training_sample_rows": 20000,
+    "heldout_rows": 34241,
+    "own_training_sample_auc": 0.81409251455652,
+    "heldout_auc": 0.7651793349951106,
+    "caution": "One saved model and a sampled training subset. In-sample performance is optimistic, not validation; this cannot identify the attainable AUC ceiling."
+  },
+  "no_models_fitted": true,
+  "predictions_changed": false,
+  "caveat": "Exploratory attribution on repeatedly explored development labels. Pair-loss contributions are descriptive and not achievable gains or instructions to manually change predictions."
+}
+value  rows  positives      auc  calibration_residual  positive_share_of_total_loss  within_auc_loss
+    0 28971       2050 0.775382              0.000989                      0.205902     8.904566e-03
+    1 77134       6210 0.768369              0.000976                      0.562643     7.328309e-02
+    2 30767       2791 0.743954              0.000159                      0.230912     1.436104e-02
+    3    89          6 0.640562             -0.027873                      0.000543     1.285808e-07
+          value   rows  positives      auc  calibration_residual  positive_share_of_total_loss  within_auc_loss
+     Cash loans 124000      10337 0.764245              0.001055                      0.911417         0.198975
+Revolving loans  12961        720 0.756307             -0.001890                      0.088583         0.001543
+               value  rows  positives      auc  calibration_residual  positive_share_of_total_loss  within_auc_loss
+         Businessman     2          0      NaN             -0.012254                      0.000000         0.000000
+Commercial associate 32083       2403 0.753580              0.000309                      0.240769         0.012625
+     Maternity leave     3          1 1.000000              0.313292                      0.000225         0.000000
+           Pensioner 24542       1321 0.735402              0.001525                      0.188332         0.005830
+       State servant  9610        559 0.773432             -0.001177                      0.065133         0.000823
+             Student     7          0      NaN             -0.034085                      0.000000         0.000000
+          Unemployed     8          1 1.000000              0.028530                      0.000042         0.000000
+             Working 70706       6772 0.763959              0.000982                      0.505500         0.073411

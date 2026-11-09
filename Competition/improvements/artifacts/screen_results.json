@@ -1,0 +1,723 @@
+[
+  {
+    "name": "tutorial_rf",
+    "auc": 0.6599832535708083
+  },
+  {
+    "name": "lgb_raw",
+    "auc": 0.736783840101566,
+    "iterations": 483,
+    "seconds": 5.136061906814575,
+    "spec": {
+      "name": "lgb_raw",
+      "kind": "lgb",
+      "features": "raw",
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    }
+  },
+  {
+    "name": "lgb_engineered",
+    "auc": 0.7440631426975809,
+    "iterations": 662,
+    "seconds": 9.006707906723022,
+    "spec": {
+      "name": "lgb_engineered",
+      "kind": "lgb",
+      "features": "engineered",
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    }
+  },
+  {
+    "name": "lgb_extended",
+    "auc": 0.7375498647003277,
+    "iterations": 486,
+    "seconds": 9.674824953079224,
+    "spec": {
+      "name": "lgb_extended",
+      "kind": "lgb",
+      "features": "extended",
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    }
+  },
+  {
+    "name": "lgb_grouped",
+    "auc": 0.737398305711652,
+    "iterations": 459,
+    "seconds": 11.637397050857544,
+    "spec": {
+      "name": "lgb_grouped",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": true,
+      "params": {
+        "num_leaves": 24,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "reg_lambda": 10,
+        "reg_alpha": 0.1,
+        "max_bin": 127
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_00",
+    "auc": 0.7436434532608677,
+    "iterations": 435,
+    "seconds": 10.376543998718262,
+    "spec": {
+      "name": "lgb_tune_00",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 45,
+        "min_child_samples": 148,
+        "colsample_bytree": 0.7652330811644328,
+        "subsample": 0.8271190783202719,
+        "subsample_freq": 1,
+        "reg_lambda": 0.652583271652393,
+        "reg_alpha": 0.018170180928652968,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_01",
+    "auc": 0.7387115908995092,
+    "iterations": 339,
+    "seconds": 7.690968990325928,
+    "spec": {
+      "name": "lgb_tune_01",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": true,
+      "params": {
+        "num_leaves": 20,
+        "min_child_samples": 349,
+        "colsample_bytree": 0.8967196619343512,
+        "subsample": 0.9890245833565928,
+        "subsample_freq": 1,
+        "reg_lambda": 8.310860102624094,
+        "reg_alpha": 0.6732698427206649,
+        "max_bin": 127,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_02",
+    "auc": 0.7430297002745716,
+    "iterations": 259,
+    "seconds": 6.449880838394165,
+    "spec": {
+      "name": "lgb_tune_02",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": false,
+      "params": {
+        "num_leaves": 47,
+        "min_child_samples": 204,
+        "colsample_bytree": 0.725046618438576,
+        "subsample": 0.8572834631300237,
+        "subsample_freq": 1,
+        "reg_lambda": 13.320793623704482,
+        "reg_alpha": 6.045311521986175,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_03",
+    "auc": 0.7357150653312803,
+    "iterations": 335,
+    "seconds": 8.381278038024902,
+    "spec": {
+      "name": "lgb_tune_03",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": true,
+      "params": {
+        "num_leaves": 42,
+        "min_child_samples": 52,
+        "colsample_bytree": 0.8877509010778653,
+        "subsample": 0.7129799526301828,
+        "subsample_freq": 1,
+        "reg_lambda": 0.6853497491826263,
+        "reg_alpha": 0.002578254216781311,
+        "max_bin": 127,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_04",
+    "auc": 0.7388008297883364,
+    "iterations": 317,
+    "seconds": 8.540993213653564,
+    "spec": {
+      "name": "lgb_tune_04",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": true,
+      "params": {
+        "num_leaves": 30,
+        "min_child_samples": 160,
+        "colsample_bytree": 0.6824704554254913,
+        "subsample": 0.8238561240836021,
+        "subsample_freq": 1,
+        "reg_lambda": 4.0749466913192975,
+        "reg_alpha": 0.008450124590987818,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_05",
+    "auc": 0.742856371778498,
+    "iterations": 350,
+    "seconds": 11.195542097091675,
+    "spec": {
+      "name": "lgb_tune_05",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 37,
+        "min_child_samples": 234,
+        "colsample_bytree": 0.9624419798590104,
+        "subsample": 0.8168366720016197,
+        "subsample_freq": 1,
+        "reg_lambda": 3.386424244493785,
+        "reg_alpha": 0.04330527884780594,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_06",
+    "auc": 0.7433577026149202,
+    "iterations": 564,
+    "seconds": 10.533881902694702,
+    "spec": {
+      "name": "lgb_tune_06",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": false,
+      "params": {
+        "num_leaves": 20,
+        "min_child_samples": 294,
+        "colsample_bytree": 0.8198210636755052,
+        "subsample": 0.9148380294892694,
+        "subsample_freq": 1,
+        "reg_lambda": 0.3808158557191752,
+        "reg_alpha": 0.00190476335724297,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_07",
+    "auc": 0.7395692911007036,
+    "iterations": 297,
+    "seconds": 11.962697982788086,
+    "spec": {
+      "name": "lgb_tune_07",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": false,
+      "params": {
+        "num_leaves": 45,
+        "min_child_samples": 176,
+        "colsample_bytree": 0.7313531708890701,
+        "subsample": 0.9899086313887235,
+        "subsample_freq": 1,
+        "reg_lambda": 14.16537350976517,
+        "reg_alpha": 7.043741573368013,
+        "max_bin": 127,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_08",
+    "auc": 0.7435077673924226,
+    "iterations": 782,
+    "seconds": 14.33474612236023,
+    "spec": {
+      "name": "lgb_tune_08",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 13,
+        "min_child_samples": 97,
+        "colsample_bytree": 0.9200665023873321,
+        "subsample": 0.6784069253819305,
+        "subsample_freq": 1,
+        "reg_lambda": 0.45177078769529433,
+        "reg_alpha": 5.17238600396412,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_09",
+    "auc": 0.7444407643428066,
+    "iterations": 456,
+    "seconds": 13.731580257415771,
+    "spec": {
+      "name": "lgb_tune_09",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 38,
+        "min_child_samples": 162,
+        "colsample_bytree": 0.7634614881240677,
+        "subsample": 0.9631927502349246,
+        "subsample_freq": 1,
+        "reg_lambda": 0.23470730903827638,
+        "reg_alpha": 0.17481947281502147,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_10",
+    "auc": 0.7447465374184731,
+    "iterations": 793,
+    "seconds": 15.1419517993927,
+    "spec": {
+      "name": "lgb_tune_10",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 14,
+        "min_child_samples": 131,
+        "colsample_bytree": 0.8530873294402385,
+        "subsample": 0.9555468612325263,
+        "subsample_freq": 1,
+        "reg_lambda": 0.6587863894843841,
+        "reg_alpha": 0.21547047510160577,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_11",
+    "auc": 0.7450017486868298,
+    "iterations": 728,
+    "seconds": 16.73520302772522,
+    "spec": {
+      "name": "lgb_tune_11",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 17,
+        "min_child_samples": 100,
+        "colsample_bytree": 0.8000881291780853,
+        "subsample": 0.933325997310737,
+        "subsample_freq": 1,
+        "reg_lambda": 0.36604656775974564,
+        "reg_alpha": 0.22552926805304213,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_12",
+    "auc": 0.7465780954986682,
+    "iterations": 849,
+    "seconds": 18.415102005004883,
+    "spec": {
+      "name": "lgb_tune_12",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 16,
+        "min_child_samples": 76,
+        "colsample_bytree": 0.7016450200644813,
+        "subsample": 0.960384200459015,
+        "subsample_freq": 1,
+        "reg_lambda": 0.5703637874410369,
+        "reg_alpha": 1.6865703875308493,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_13",
+    "auc": 0.7456064099728343,
+    "iterations": 939,
+    "seconds": 16.954808712005615,
+    "spec": {
+      "name": "lgb_tune_13",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 13,
+        "min_child_samples": 73,
+        "colsample_bytree": 0.7191764739632918,
+        "subsample": 0.9783878685095276,
+        "subsample_freq": 1,
+        "reg_lambda": 1.1129906076406433,
+        "reg_alpha": 0.3383552094629685,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_14",
+    "auc": 0.7454357940447361,
+    "iterations": 746,
+    "seconds": 14.962612867355347,
+    "spec": {
+      "name": "lgb_tune_14",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 15,
+        "min_child_samples": 61,
+        "colsample_bytree": 0.6489502246662009,
+        "subsample": 0.9877070624071099,
+        "subsample_freq": 1,
+        "reg_lambda": 0.2174410134760038,
+        "reg_alpha": 1.6993246668017472,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_15",
+    "auc": 0.7471511024956684,
+    "iterations": 844,
+    "seconds": 19.157272815704346,
+    "spec": {
+      "name": "lgb_tune_15",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 89,
+        "colsample_bytree": 0.6846068413999578,
+        "subsample": 0.961965333135664,
+        "subsample_freq": 1,
+        "reg_lambda": 2.1323824335960286,
+        "reg_alpha": 3.687185564401245,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_16",
+    "auc": 0.7452127083166001,
+    "iterations": 544,
+    "seconds": 14.011862993240356,
+    "spec": {
+      "name": "lgb_tune_16",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 19,
+        "min_child_samples": 161,
+        "colsample_bytree": 0.6148105309759075,
+        "subsample": 0.999529777296887,
+        "subsample_freq": 1,
+        "reg_lambda": 0.751447868942907,
+        "reg_alpha": 5.253642888313459,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_17",
+    "auc": 0.7455600434507414,
+    "iterations": 561,
+    "seconds": 20.276935815811157,
+    "spec": {
+      "name": "lgb_tune_17",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 32,
+        "min_child_samples": 126,
+        "colsample_bytree": 0.6887299521210465,
+        "subsample": 0.931150306878146,
+        "subsample_freq": 1,
+        "reg_lambda": 1.2958348142896836,
+        "reg_alpha": 1.9062509287974798,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_18",
+    "auc": 0.7404704843409657,
+    "iterations": 373,
+    "seconds": 14.772811889648438,
+    "spec": {
+      "name": "lgb_tune_18",
+      "kind": "lgb",
+      "features": "extended",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 73,
+        "colsample_bytree": 0.6380710940932686,
+        "subsample": 0.9932795302337665,
+        "subsample_freq": 1,
+        "reg_lambda": 7.012900547344847,
+        "reg_alpha": 0.8430223434949234,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_19",
+    "auc": 0.7433811387424728,
+    "iterations": 567,
+    "seconds": 15.26753282546997,
+    "spec": {
+      "name": "lgb_tune_19",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 16,
+        "min_child_samples": 87,
+        "colsample_bytree": 0.7485195977745238,
+        "subsample": 0.8392543286099333,
+        "subsample_freq": 1,
+        "reg_lambda": 1.4293683811585762,
+        "reg_alpha": 8.836681679932243,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_20",
+    "auc": 0.7458653337812594,
+    "iterations": 561,
+    "seconds": 18.130851984024048,
+    "spec": {
+      "name": "lgb_tune_20",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 25,
+        "min_child_samples": 51,
+        "colsample_bytree": 0.6966732598524357,
+        "subsample": 0.9213050927267354,
+        "subsample_freq": 1,
+        "reg_lambda": 0.31190183790323456,
+        "reg_alpha": 0.1442947960154403,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_21",
+    "auc": 0.7459210448701501,
+    "iterations": 821,
+    "seconds": 22.78743886947632,
+    "spec": {
+      "name": "lgb_tune_21",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 17,
+        "min_child_samples": 92,
+        "colsample_bytree": 0.742825268226029,
+        "subsample": 0.9793438469230858,
+        "subsample_freq": 1,
+        "reg_lambda": 7.9483221299740014,
+        "reg_alpha": 2.7972741874288203,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_22",
+    "auc": 0.7461070626672626,
+    "iterations": 695,
+    "seconds": 20.764415979385376,
+    "spec": {
+      "name": "lgb_tune_22",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 105,
+        "colsample_bytree": 0.7485499123045329,
+        "subsample": 0.9704195474219368,
+        "subsample_freq": 1,
+        "reg_lambda": 4.911744732892914,
+        "reg_alpha": 2.16467625438755,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "lgb_tune_23",
+    "auc": 0.7433509786646415,
+    "iterations": 428,
+    "seconds": 16.048749685287476,
+    "spec": {
+      "name": "lgb_tune_23",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 27,
+        "min_child_samples": 123,
+        "colsample_bytree": 0.7861038803344867,
+        "subsample": 0.992629081235298,
+        "subsample_freq": 1,
+        "reg_lambda": 7.902003345019391,
+        "reg_alpha": 3.88832071957301,
+        "max_bin": 63,
+        "max_depth": -1
+      }
+    }
+  },
+  {
+    "name": "cat_depth4",
+    "auc": 0.748958799172823,
+    "iterations": 1828,
+    "seconds": 163.19562911987305,
+    "spec": {
+      "name": "cat_depth4",
+      "kind": "cat",
+      "features": "engineered",
+      "params": {
+        "depth": 4,
+        "l2_leaf_reg": 5,
+        "random_strength": 0.5
+      }
+    }
+  },
+  {
+    "name": "cat_depth5",
+    "auc": 0.7476596285335853,
+    "iterations": 1464,
+    "seconds": 128.3121838569641,
+    "spec": {
+      "name": "cat_depth5",
+      "kind": "cat",
+      "features": "engineered",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      }
+    }
+  },
+  {
+    "name": "cat_depth6",
+    "auc": 0.747211514602788,
+    "iterations": 1016,
+    "seconds": 155.89956879615784,
+    "spec": {
+      "name": "cat_depth6",
+      "kind": "cat",
+      "features": "engineered",
+      "params": {
+        "depth": 6,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      }
+    }
+  },
+  {
+    "name": "cat_depth7",
+    "auc": 0.7473373501714228,
+    "iterations": 932,
+    "seconds": 162.35854387283325,
+    "spec": {
+      "name": "cat_depth7",
+      "kind": "cat",
+      "features": "engineered",
+      "params": {
+        "depth": 7,
+        "l2_leaf_reg": 12,
+        "random_strength": 0.5
+      }
+    }
+  },
+  {
+    "name": "logistic_0.01",
+    "auc": 0.7329595330373998
+  },
+  {
+    "name": "logistic_0.1",
+    "auc": 0.7323117005424263
+  },
+  {
+    "name": "logistic_1.0",
+    "auc": 0.7317957839061686
+  }
+]

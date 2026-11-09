@@ -1,0 +1,612 @@
+{
+  "reference": "Frozen third-pass primary winner",
+  "baseline_auc": 0.7637228893732684,
+  "results": [
+    {
+      "name": "lgb_tune_12",
+      "origin": "first pass",
+      "helper_auc": 0.7573877195207913,
+      "best": {
+        "helper_weight": 0.1,
+        "method": "probability",
+        "auc": 0.7637922303520547,
+        "gain": 6.934097878630308e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637774291911023,
+          "gain": 5.453981783387629e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637733469296274,
+          "gain": 5.045755635901816e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7637922303520547,
+          "gain": 6.934097878630308e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7637849587115635,
+          "gain": 6.206933829511208e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7635845285085833,
+          "gain": -0.00013836086468510533
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7635801186892635,
+          "gain": -0.00014277068400492254
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "lgb_top_70",
+      "origin": "first pass",
+      "helper_auc": 0.756959629432316,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637504911500019,
+        "gain": 2.7601776733554573e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637504911500019,
+          "gain": 2.7601776733554573e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.76374105374876,
+          "gain": 1.8164375491624973e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7637337303886089,
+          "gain": 1.0841015340545823e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7637196008649043,
+          "gain": -3.2885083640632473e-06
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7634528868896904,
+          "gain": -0.0002700024835780024
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7634272073603098,
+          "gain": -0.00029568201295859797
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "lgb_engineered",
+      "origin": "first pass",
+      "helper_auc": 0.7561021821237018,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637461244303985,
+        "gain": 2.3235057130088776e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637461244303985,
+          "gain": 2.3235057130088776e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637367725102606,
+          "gain": 1.3883136992243195e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7637238871317038,
+          "gain": 9.977584354281532e-07
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7637080630708147,
+          "gain": -1.4826302453641027e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7633960318987554,
+          "gain": -0.0003268574745129982
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.763366814600984,
+          "gain": -0.0003560747722843871
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "lgb_raw",
+      "origin": "first pass",
+      "helper_auc": 0.7499471346061496,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637810272990961,
+        "gain": 5.813792582776145e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637810272990961,
+          "gain": 5.813792582776145e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637793679600133,
+          "gain": 5.647858674495687e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.763754403167597,
+          "gain": 3.151379432864143e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7637591333614757,
+          "gain": 3.624398820734065e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7632129536416118,
+          "gain": -0.0005099357316565856
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7632501020055356,
+          "gain": -0.0004727873677328187
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "cat_depth4",
+      "origin": "first pass",
+      "helper_auc": 0.7597278157513098,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637086377337007,
+        "gain": -1.425163956769726e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637086377337007,
+          "gain": -1.425163956769726e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637044915409795,
+          "gain": -1.8397832288852278e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7636733663624276,
+          "gain": -4.9523010840824e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7636667290060966,
+          "gain": -5.616036717182027e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.763451980358988,
+          "gain": -0.00027090901428039604
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7634431837068637,
+          "gain": -0.00027970566640467265
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "cat_lean",
+      "origin": "first pass",
+      "helper_auc": 0.7607901174487961,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637142708666387,
+        "gain": -8.61850662969843e-06
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637142708666387,
+          "gain": -8.61850662969843e-06
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637091312254538,
+          "gain": -1.3758147814568744e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7636889734880772,
+          "gain": -3.3915885191193595e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7636789721988784,
+          "gain": -4.3917174390006863e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7635298565182856,
+          "gain": -0.00019303285498273315
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7635137752957551,
+          "gain": -0.0002091140775132283
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "hgb_20",
+      "origin": "first pass",
+      "helper_auc": 0.7532917904073893,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637152887382752,
+        "gain": -7.600634993165656e-06
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637152887382752,
+          "gain": -7.600634993165656e-06
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637146659473726,
+          "gain": -8.223425895792502e-06
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7636497721409937,
+          "gain": -7.311723227465539e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7636507224897411,
+          "gain": -7.21668835272915e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7631233859659026,
+          "gain": -0.000599503407365809
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7631320957002655,
+          "gain": -0.000590793673002854
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "spline_0.1",
+      "origin": "first pass",
+      "helper_auc": 0.7483044119007489,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7636223650313128,
+        "gain": -0.00010052434195562121
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7636223650313128,
+          "gain": -0.00010052434195562121
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7636180004666951,
+          "gain": -0.00010488890657323058
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7634468162946304,
+          "gain": -0.0002760730786379728
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7634425515776891,
+          "gain": -0.000280337795579233
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7624984185277384,
+          "gain": -0.0012244708455300124
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7625124575420384,
+          "gain": -0.00121043183122993
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "cat_lean_depth6",
+      "origin": "first pass",
+      "helper_auc": 0.7601479927318477,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637041783497068,
+        "gain": -1.8711023561546192e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637041783497068,
+          "gain": -1.8711023561546192e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.763699976845683,
+          "gain": -2.291252758535034e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7636678416971091,
+          "gain": -5.5047676159269976e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7636596735825162,
+          "gain": -6.32157907521913e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7634601606851673,
+          "gain": -0.000262728688101066
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7634461317274677,
+          "gain": -0.00027675764580070705
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "r2_cat_native_missing",
+      "origin": "second pass",
+      "helper_auc": 0.7605612895609853,
+      "best": {
+        "helper_weight": 0.05,
+        "method": "probability",
+        "auc": 0.7637059195782507,
+        "gain": -1.696979501764062e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637059195782507,
+          "gain": -1.696979501764062e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.763704719251148,
+          "gain": -1.8170122120353405e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7636725582427444,
+          "gain": -5.033113052399507e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.763670171955111,
+          "gain": -5.2717418157377516e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7634803924103906,
+          "gain": -0.00024249696287781397
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7634787079298064,
+          "gain": -0.0002441814434619438
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "r2_lgb_smooth_cats",
+      "origin": "second pass",
+      "helper_auc": 0.7584174292127097,
+      "best": {
+        "helper_weight": 0.1,
+        "method": "probability",
+        "auc": 0.7637711833238623,
+        "gain": 4.829395059391395e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637650322759986,
+          "gain": 4.214290273019117e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637613508418862,
+          "gain": 3.8461468617856376e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7637711833238623,
+          "gain": 4.829395059391395e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7637650588541568,
+          "gain": 4.2169480888420985e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7635860456186019,
+          "gain": -0.00013684375466649357
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7635807687766529,
+          "gain": -0.00014212059661544707
+        }
+      ],
+      "alignment_verified": true
+    },
+    {
+      "name": "r2_xgb_finance",
+      "origin": "second pass",
+      "helper_auc": 0.758883318470827,
+      "best": {
+        "helper_weight": 0.1,
+        "method": "log_odds",
+        "auc": 0.7638145983865559,
+        "gain": 9.17090132874776e-05
+      },
+      "blends": [
+        {
+          "helper_weight": 0.05,
+          "method": "probability",
+          "auc": 0.7637802673074295,
+          "gain": 5.7377934161162436e-05
+        },
+        {
+          "helper_weight": 0.05,
+          "method": "log_odds",
+          "auc": 0.7637864233835938,
+          "gain": 6.353401032543893e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "probability",
+          "auc": 0.7638002706041558,
+          "gain": 7.738123088740778e-05
+        },
+        {
+          "helper_weight": 0.1,
+          "method": "log_odds",
+          "auc": 0.7638145983865559,
+          "gain": 9.17090132874776e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "probability",
+          "auc": 0.7636719634666576,
+          "gain": -5.0925906610821414e-05
+        },
+        {
+          "helper_weight": 0.25,
+          "method": "log_odds",
+          "auc": 0.7637033249753213,
+          "gain": -1.9564397947036127e-05
+        }
+      ],
+      "alignment_verified": true
+    }
+  ],
+  "helpers": 12,
+  "best_helper": "r2_xgb_finance",
+  "best_gain": 9.17090132874776e-05,
+  "warrants_new_validation_branch": false,
+  "seconds": 11.115429878234863,
+  "note": "Late adaptive primary-only screening on stored OOF predictions. It does not alter frozen weights or independently confirm a new model."
+}

@@ -1,0 +1,30 @@
+{
+  "name": "r2_cat_onehot64",
+  "spec": {
+    "name": "r2_cat_onehot64",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "one_hot_max_size": 64
+    },
+    "hypothesis": "One-hot splits for every raw category may avoid noisy target statistics, at the cost of expressiveness.",
+    "max_iterations": 5000
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7481927630801293,
+  "average_precision": 0.23421838023574182,
+  "log_loss": 0.24882901749011196,
+  "iterations": 1783,
+  "features": 46,
+  "seconds": 49.46202206611633,
+  "auc_delta_vs_pass1_cat": -0.0002998192188383708,
+  "prediction_correlation": 0.9781275269155396,
+  "maximum_prediction_difference": 0.27174524851388393,
+  "saturated": false
+}

@@ -1,0 +1,76 @@
+{
+  "names": [
+    "cat_lean",
+    "lgb_tune_15"
+  ],
+  "weights": [
+    0.6666666666666666,
+    0.33333333333333337
+  ],
+  "auc": 0.7617724188892933,
+  "models": [
+    {
+      "name": "cat_lean",
+      "auc": 0.7607901174487961,
+      "fold_auc": [
+        0.7561397974146384,
+        0.7624387853469601,
+        0.7601855734989755,
+        0.7608974525116583,
+        0.7643846403543672
+      ],
+      "iterations": [
+        1396,
+        1075,
+        1529,
+        2017,
+        1666
+      ],
+      "spec": {
+        "name": "cat_lean",
+        "kind": "cat",
+        "features": "lean",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        }
+      }
+    },
+    {
+      "name": "lgb_tune_15",
+      "auc": 0.7573280608933021,
+      "fold_auc": [
+        0.7514156817480501,
+        0.7600112588747114,
+        0.7574728751267328,
+        0.7562619228374088,
+        0.7616778723031425
+      ],
+      "iterations": [
+        590,
+        639,
+        523,
+        768,
+        456
+      ],
+      "spec": {
+        "name": "lgb_tune_15",
+        "kind": "lgb",
+        "features": "engineered",
+        "groups": true,
+        "params": {
+          "num_leaves": 21,
+          "min_child_samples": 89,
+          "colsample_bytree": 0.6846068413999578,
+          "subsample": 0.961965333135664,
+          "subsample_freq": 1,
+          "reg_lambda": 2.1323824335960286,
+          "reg_alpha": 3.687185564401245,
+          "max_bin": 255,
+          "max_depth": -1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3754 @@
+[
+  {
+    "name": "r3_cat_baseline",
+    "spec": {
+      "name": "r3_cat_baseline",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Exact control: recover the round-two proxy-only screen before evaluating new settings.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7499521162788699,
+    "average_precision": 0.23917249545660454,
+    "log_loss": 0.2481209393103184,
+    "brier": 0.06811745173291633,
+    "iterations": 1480,
+    "features": 51,
+    "seconds": 82.09040927886963,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.001279182691315106,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7511554735001189
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7511554735001189
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.751021040470273
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7507433700585919
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7503940579681294
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7499521162788699
+      }
+    ],
+    "correlation": 0.9964145150982497,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "baseline_max_difference": 0.0,
+    "interpretation": "Implementation control; maximum prediction difference from the previous proxy screen is 0.0. This is not a new improvement.",
+    "parent_comparisons": [],
+    "promoted": null,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_depth4",
+    "spec": {
+      "name": "r3_cat_depth4",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 4,
+        "l2_leaf_reg": 5,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Shallower trees may regularize the successful proxy representation differently.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.750398149807957,
+    "average_precision": 0.23627606006171117,
+    "log_loss": 0.2482917633326568,
+    "brier": 0.06823547936432647,
+    "iterations": 2194,
+    "features": 51,
+    "seconds": 175.67452216148376,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0008331491622279863,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513464566758987
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513056647108745
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513464566758987
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7512385401474082
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7509299395644452
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.750398149807957
+      }
+    ],
+    "correlation": 0.9877965770860688,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 5,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 4,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 16,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.0004460335290871198
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_depth6",
+    "spec": {
+      "name": "r3_cat_depth6",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 6,
+        "l2_leaf_reg": 12,
+        "random_strength": 0.5
+      },
+      "hypothesis": "More interactions may become useful with the proxy representation.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7496098384748526,
+    "average_precision": 0.23619622633315215,
+    "log_loss": 0.24843231978845218,
+    "brier": 0.06824353520974677,
+    "iterations": 1243,
+    "features": 51,
+    "seconds": 140.61117506027222,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0016214604953324052,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512686312616471
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512686312616471
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7512335862626731
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7509619501653448
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7504222181017753
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7496098384748526
+      }
+    ],
+    "correlation": 0.9856817626076254,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 12,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 6,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 64,
+      "permutation_count": 4
+    },
+    "interpretation": "A small screening gain below the promotion threshold. No reliable improvement is established; selection noise and training variation remain plausible. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0003422778040172991
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_depth7",
+    "spec": {
+      "name": "r3_cat_depth7",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 7,
+        "l2_leaf_reg": 20,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Test a further increase in interaction capacity with stronger shrinkage.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7493145248773978,
+    "average_precision": 0.2356302727766176,
+    "log_loss": 0.24852812935567486,
+    "brier": 0.06826203267684972,
+    "iterations": 1355,
+    "features": 51,
+    "seconds": 187.3707149028778,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0019167740927872323,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513717778083158
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.751331939839656
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513717778083158
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7511059691345625
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7504172412291759
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7493145248773978
+      }
+    ],
+    "correlation": 0.9795591453368303,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 20,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 7,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 128,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0006375914014721262
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_slow",
+    "spec": {
+      "name": "r3_cat_slow",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "learning_rate": 0.025
+      },
+      "hypothesis": "Smaller boosting steps may improve the proxy model rather than the old representation.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7498111891773871,
+    "average_precision": 0.2368696728601674,
+    "log_loss": 0.2482587403280978,
+    "brier": 0.06819419910220524,
+    "iterations": 2811,
+    "features": 51,
+    "seconds": 282.4830300807953,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0014201097927979411,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512001504141931
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512001504141931
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.751104877211013
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7508264596937456
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7503932189110859
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7498111891773871
+      }
+    ],
+    "correlation": 0.9925763651701393,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.02500000037252903,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.00014092710148283505
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_l2_30",
+    "spec": {
+      "name": "r3_cat_l2_30",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 30,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Test stronger shrinkage with the winning feature block.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.74926829628249,
+    "average_precision": 0.23575298106719628,
+    "log_loss": 0.24846596933824094,
+    "brier": 0.06824414272035585,
+    "iterations": 1835,
+    "features": 51,
+    "seconds": 197.28040099143982,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0019630026876950035,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.751193610366828
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.751193610366828
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7510627864316614
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7506847624988121
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7500951352759948
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.74926829628249
+      }
+    ],
+    "correlation": 0.9886590313925279,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 30,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0006838199963798974
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_borders512",
+    "spec": {
+      "name": "r3_cat_borders512",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Finer quantization may preserve loan-proxy and score thresholds.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7508330687047031,
+    "average_precision": 0.23542669309843905,
+    "log_loss": 0.24817381255224372,
+    "brier": 0.06822485672888326,
+    "iterations": 1621,
+    "features": 51,
+    "seconds": 181.53681111335754,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.00039823026548191365,
+    "best_blend": {
+      "new_weight": 0.5,
+      "auc": 0.7514878320407334
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513561000849309
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7514659361000823
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7514878320407334
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7512609992907324
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7508330687047031
+      }
+    ],
+    "correlation": 0.9873747238052012,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 512,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.0008809524258331924
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_weight2",
+    "spec": {
+      "name": "r3_cat_weight2",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "scale_pos_weight": 2.0
+      },
+      "hypothesis": "A moderately weighted objective may learn different useful ranking errors.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7501491797447308,
+    "average_precision": 0.23749329479014866,
+    "log_loss": 0.2651148437049024,
+    "brier": 0.07315012748255448,
+    "iterations": 1335,
+    "features": 51,
+    "seconds": 154.90923404693604,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0010821192254542034,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513540656589492
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513525369659799
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513540656589492
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7510891764997639
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7506526599464558
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7501491797447308
+      }
+    ],
+    "correlation": 0.9804882386236142,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "class_weights": [
+        1,
+        2
+      ],
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.00019706346586090273
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_depthwise",
+    "spec": {
+      "name": "r3_cat_depthwise",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 6,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "grow_policy": "Depthwise",
+        "min_data_in_leaf": 150
+      },
+      "hypothesis": "Asymmetric trees may model conditional loan/score effects efficiently.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7490869909975386,
+    "average_precision": 0.23702951387038584,
+    "log_loss": 0.2485342366602094,
+    "brier": 0.06824651356536673,
+    "iterations": 474,
+    "features": 51,
+    "seconds": 56.35379195213318,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.00214430797264642,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513863980899477
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513450314283182
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513863980899477
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7511046128505746
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7503584727543465
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7490869909975386
+      }
+    ],
+    "correlation": 0.9755954701445009,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "Depthwise",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 6,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 150,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 64,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0008651252813313137
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_groups",
+    "spec": {
+      "name": "r3_cat_groups",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Training-fold-only frequencies and group-relative financial quantities may complement the compact proxy model.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "groups": true
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7499412085373065,
+    "average_precision": 0.2356925963585802,
+    "log_loss": 0.24853100247183438,
+    "brier": 0.06829581436321014,
+    "iterations": 1998,
+    "features": 51,
+    "seconds": 222.18739199638367,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0012900904328785323,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7514594420284455
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513718352779764
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7514594420284455
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7513162161405427
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7508230459959117
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7499412085373065
+      }
+    ],
+    "correlation": 0.9817821051551913,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -1.0907741563426221e-05
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_median",
+    "spec": {
+      "name": "r3_cat_median",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Median imputation may improve upon a sentinel or native missing split.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "missing": "median"
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7490228548564185,
+    "average_precision": 0.2377161894998924,
+    "log_loss": 0.24838355866880873,
+    "brier": 0.0681954093681664,
+    "iterations": 1488,
+    "features": 51,
+    "seconds": 164.65728878974915,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.002208444113766528,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513980184553011
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513672721869326
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513980184553011
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.751051637317524
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7502655787951114
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7490228548564185
+      }
+    ],
+    "correlation": 0.9750914421714749,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0009292614224514217
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_signed",
+    "spec": {
+      "name": "r3_cat_signed",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7509073195060717,
+    "average_precision": 0.23803493312114735,
+    "log_loss": 0.24803059035340552,
+    "brier": 0.06815862746777034,
+    "iterations": 1528,
+    "features": 55,
+    "seconds": 195.14298701286316,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0003239794641133331,
+    "best_blend": {
+      "new_weight": 0.5,
+      "auc": 0.7516576204057203
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7514144317903404
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7515874729381116
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7516576204057203
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7514247993170949
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7509073195060717
+      }
+    ],
+    "correlation": 0.9848299830189329,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: advanced to common-fold CV. Common-fold standalone OOF AUC: 0.762850230. Included in the frozen primary recipe; later gates determine deployment.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.000955203227201773
+      }
+    ],
+    "promoted": true,
+    "cv_auc": 0.7628502300197386,
+    "cv_fold_auc": [
+      0.7583912545503287,
+      0.7651902981347654,
+      0.7624314032438613,
+      0.7620548441405436,
+      0.766348511333229
+    ],
+    "included_in_frozen_primary_recipe": true,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_rates",
+    "spec": {
+      "name": "r3_cat_rates",
+      "kind": "cat",
+      "features": "rates",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Additional assumed-period transforms may expose useful numeric thresholds; these do not recover true rates.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7495567594964132,
+    "average_precision": 0.23625726590712207,
+    "log_loss": 0.24840291116385188,
+    "brier": 0.06822643767569403,
+    "iterations": 1452,
+    "features": 56,
+    "seconds": 168.49952292442322,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.00167453947377183,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512148281654851
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512148281654851
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7511326925266959
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7508171725966085
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7502981296108195
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7495567594964132
+      }
+    ],
+    "correlation": 0.9894039430751574,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.0003953567824567239
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_crosses",
+    "spec": {
+      "name": "r3_cat_crosses",
+      "kind": "cat",
+      "features": "crosses",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Explicit categorical interactions and age bands may complement native categorical combinations.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7496441248743081,
+    "average_precision": 0.23812072277384888,
+    "log_loss": 0.2482676190851748,
+    "brier": 0.06816888028124866,
+    "iterations": 1578,
+    "features": 55,
+    "seconds": 241.10046410560608,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.001587174095876942,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512007710865265
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512007710865265
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7511054174258217
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7508106095613792
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7503230484556133
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7496441248743081
+      }
+    ],
+    "correlation": 0.9894873328430696,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.00030799140456183594
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_engineered_proxy",
+    "spec": {
+      "name": "r3_cat_engineered_proxy",
+      "kind": "cat",
+      "features": "engineered_proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "The proxy block may improve the larger financial/score representation rather than just the compact one.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7500868366570184,
+    "average_precision": 0.23993945169552586,
+    "log_loss": 0.24807513979518275,
+    "brier": 0.06811740147383259,
+    "iterations": 1802,
+    "features": 81,
+    "seconds": 230.97178387641907,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.001144462313166672,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7515459913371613
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.75140933997842
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7515459913371613
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.751469004979953
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.750980076096267
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7500868366570184
+      }
+    ],
+    "correlation": 0.9772468802063223,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.00013472037814843407
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_lgb_proxy",
+    "spec": {
+      "name": "r3_lgb_proxy",
+      "kind": "lgb",
+      "features": "proxy",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 89,
+        "colsample_bytree": 0.6846068413999578,
+        "subsample": 0.961965333135664,
+        "subsample_freq": 1,
+        "reg_lambda": 2.1323824335960286,
+        "reg_alpha": 3.687185564401245,
+        "max_bin": 255,
+        "max_depth": -1
+      },
+      "hypothesis": "Use the exact compact successful proxy block in the known complementary LightGBM recipe."
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7480538244288999,
+    "average_precision": 0.23757427805202483,
+    "log_loss": 0.2488525086234224,
+    "brier": 0.06826957980869185,
+    "iterations": 757,
+    "features": 51,
+    "seconds": 17.428948879241943,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0031774745412851413,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7517154923538455
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7515361870130797
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7517154923538455
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7513438820351083
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7501330422640619
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7480538244288999
+      }
+    ],
+    "correlation": 0.9631508974275895,
+    "saturated": false,
+    "resolved_parameters": {
+      "boosting_type": "gbdt",
+      "class_weight": null,
+      "colsample_bytree": 0.6846068413999578,
+      "importance_type": "split",
+      "learning_rate": 0.035,
+      "max_depth": -1,
+      "min_child_samples": 89,
+      "min_child_weight": 0.001,
+      "min_split_gain": 0.0,
+      "n_estimators": 4500,
+      "n_jobs": 4,
+      "num_leaves": 21,
+      "objective": "binary",
+      "random_state": 20261108,
+      "reg_alpha": 3.687185564401245,
+      "reg_lambda": 2.1323824335960286,
+      "subsample": 0.961965333135664,
+      "subsample_for_bin": 200000,
+      "subsample_freq": 1,
+      "metric": "auc",
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1,
+      "max_bin": 255
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: advanced to common-fold CV. Common-fold standalone OOF AUC: 0.759216711.",
+    "parent_comparisons": [],
+    "promoted": true,
+    "cv_auc": 0.7592167105806804,
+    "cv_fold_auc": [
+      0.7544512449575741,
+      0.7625559470465041,
+      0.7601162427983408,
+      0.7567239419079855,
+      0.7623564764078381
+    ],
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_lgb_proxy_smooth",
+    "spec": {
+      "name": "r3_lgb_proxy_smooth",
+      "kind": "lgb",
+      "features": "proxy",
+      "groups": true,
+      "params": {
+        "num_leaves": 16,
+        "min_child_samples": 150,
+        "colsample_bytree": 0.6846068413999578,
+        "subsample": 0.961965333135664,
+        "subsample_freq": 1,
+        "reg_lambda": 2.1323824335960286,
+        "reg_alpha": 3.687185564401245,
+        "max_bin": 255,
+        "max_depth": -1,
+        "cat_smooth": 100.0,
+        "cat_l2": 30.0
+      },
+      "hypothesis": "Stronger categorical/leaf smoothing may work differently on the compact proxy representation."
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7489292942491214,
+    "average_precision": 0.23956883551380162,
+    "log_loss": 0.24846357397147073,
+    "brier": 0.0681694807356169,
+    "iterations": 876,
+    "features": 51,
+    "seconds": 17.398489952087402,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0023020047210636774,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7516863667299032
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7515056821172852
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7516863667299032
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7514396609713007
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7505218704930856
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7489292942491214
+      }
+    ],
+    "correlation": 0.9703244571971257,
+    "saturated": false,
+    "resolved_parameters": {
+      "boosting_type": "gbdt",
+      "class_weight": null,
+      "colsample_bytree": 0.6846068413999578,
+      "importance_type": "split",
+      "learning_rate": 0.035,
+      "max_depth": -1,
+      "min_child_samples": 150,
+      "min_child_weight": 0.001,
+      "min_split_gain": 0.0,
+      "n_estimators": 4500,
+      "n_jobs": 4,
+      "num_leaves": 16,
+      "objective": "binary",
+      "random_state": 20261108,
+      "reg_alpha": 3.687185564401245,
+      "reg_lambda": 2.1323824335960286,
+      "subsample": 0.961965333135664,
+      "subsample_for_bin": 200000,
+      "subsample_freq": 1,
+      "metric": "auc",
+      "deterministic": true,
+      "force_col_wise": true,
+      "verbosity": -1,
+      "max_bin": 255,
+      "cat_smooth": 100.0,
+      "cat_l2": 30.0
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_xgb_proxy",
+    "spec": {
+      "name": "r3_xgb_proxy",
+      "kind": "xgb",
+      "features": "proxy",
+      "params": {
+        "max_depth": 3,
+        "min_child_weight": 30,
+        "reg_lambda": 20.0,
+        "reg_alpha": 1.0,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "max_bin": 256
+      },
+      "hypothesis": "Remove the finance burden block that hurt CatBoost and test XGBoost on the successful compact proxy representation."
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7469758257781034,
+    "average_precision": 0.2363315470885032,
+    "log_loss": 0.24907243251800537,
+    "brier": 0.06830599904060364,
+    "iterations": 1494,
+    "features": 51,
+    "seconds": 32.516570806503296,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.004255473192081638,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7513789959976748
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513789959976748
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513690077706797
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7506819809672439
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7492265388271693
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7469758257781034
+      }
+    ],
+    "correlation": 0.963978170890197,
+    "saturated": false,
+    "resolved_parameters": {
+      "objective": "binary:logistic",
+      "base_score": null,
+      "booster": null,
+      "callbacks": null,
+      "colsample_bylevel": null,
+      "colsample_bynode": null,
+      "colsample_bytree": 0.85,
+      "device": "cpu",
+      "early_stopping_rounds": 200,
+      "enable_categorical": true,
+      "eval_metric": "auc",
+      "feature_types": null,
+      "feature_weights": null,
+      "gamma": null,
+      "grow_policy": null,
+      "importance_type": null,
+      "interaction_constraints": null,
+      "learning_rate": 0.035,
+      "max_bin": 256,
+      "max_cat_threshold": null,
+      "max_cat_to_onehot": null,
+      "max_delta_step": null,
+      "max_depth": 3,
+      "max_leaves": null,
+      "min_child_weight": 30,
+      "missing": NaN,
+      "monotone_constraints": null,
+      "multi_strategy": null,
+      "n_estimators": 4500,
+      "n_jobs": 4,
+      "num_parallel_tree": null,
+      "random_state": 20261108,
+      "reg_alpha": 1.0,
+      "reg_lambda": 20.0,
+      "sampling_method": null,
+      "scale_pos_weight": null,
+      "subsample": 0.85,
+      "tree_method": "hist",
+      "validate_parameters": null,
+      "verbosity": null
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_mlp_small",
+    "spec": {
+      "name": "r3_mlp_small",
+      "kind": "mlp",
+      "features": "proxy",
+      "max_iterations": 80,
+      "patience": 12,
+      "params": {
+        "hidden_layer_sizes": [
+          64,
+          32
+        ],
+        "alpha": 0.1
+      },
+      "hypothesis": "A quantile-normalized neural model trained from scratch may contribute smooth complementary errors; fit preprocessing only on training rows."
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7271761082345886,
+    "average_precision": 0.20442568574137115,
+    "log_loss": 0.2559899389743805,
+    "brier": 0.06968941539525986,
+    "iterations": 15,
+    "features": 51,
+    "seconds": 8.756216049194336,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.024055190735596477,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7509350888460263
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7509350888460263
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7497404670131735
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7456529489039087
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7385018841083377
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7271761082345886
+      }
+    ],
+    "correlation": 0.8673491963280756,
+    "saturated": false,
+    "resolved_parameters": {
+      "activation": "relu",
+      "alpha": 0.1,
+      "batch_size": 1024,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "early_stopping": false,
+      "epsilon": 1e-08,
+      "hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "learning_rate": "constant",
+      "learning_rate_init": 0.001,
+      "max_fun": 15000,
+      "max_iter": 1,
+      "momentum": 0.9,
+      "n_iter_no_change": 10,
+      "nesterovs_momentum": true,
+      "power_t": 0.5,
+      "random_state": 20261108,
+      "shuffle": true,
+      "solver": "adam",
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": false,
+      "warm_start": false
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_mlp_wide",
+    "spec": {
+      "name": "r3_mlp_wide",
+      "kind": "mlp",
+      "features": "proxy",
+      "max_iterations": 80,
+      "patience": 12,
+      "params": {
+        "hidden_layer_sizes": [
+          128,
+          64
+        ],
+        "alpha": 1.0
+      },
+      "hypothesis": "A quantile-normalized neural model trained from scratch may contribute smooth complementary errors; fit preprocessing only on training rows."
+    },
+    "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7345608044409978,
+    "average_precision": 0.21476976616788496,
+    "log_loss": 0.25334611535072327,
+    "brier": 0.06918284296989441,
+    "iterations": 49,
+    "features": 51,
+    "seconds": 23.14644193649292,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.01667049452918723,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512223796788753
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512223796788753
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7506487635034736
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7480209977588211
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7429501162887087
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7345608044409978
+      }
+    ],
+    "correlation": 0.8988805899356661,
+    "saturated": false,
+    "resolved_parameters": {
+      "activation": "relu",
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "early_stopping": false,
+      "epsilon": 1e-08,
+      "hidden_layer_sizes": [
+        128,
+        64
+      ],
+      "learning_rate": "constant",
+      "learning_rate_init": 0.001,
+      "max_fun": 15000,
+      "max_iter": 1,
+      "momentum": 0.9,
+      "n_iter_no_change": 10,
+      "nesterovs_momentum": true,
+      "power_t": 0.5,
+      "random_state": 20261108,
+      "shuffle": true,
+      "solver": "adam",
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": false,
+      "warm_start": false
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false,
+    "implementation_signature_note": "Raw signature is the proven inspect.getsource line-offset metadata alias. Identical feature/encoder/fitting ASTs and exact phantom-hash reproduction are retained in reference/signature_alias_proof.json. Raw evidence is unchanged."
+  },
+  {
+    "name": "r3_cat_borders1024",
+    "spec": {
+      "name": "r3_cat_borders1024",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 1024
+      },
+      "hypothesis": "Follow up the positive 512-border result: test whether finer quantization continues to help.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7505390079458472,
+    "average_precision": 0.23939841401142686,
+    "log_loss": 0.24811388513214158,
+    "brier": 0.06812930728369991,
+    "iterations": 2072,
+    "features": 51,
+    "seconds": 194.7775719165802,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0006922910243378766,
+    "best_blend": {
+      "new_weight": 0.5,
+      "auc": 0.7515476464633837
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7514008574565298
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7515431408420004
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7515476464633837
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.75121102367396
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7505390079458472
+      }
+    ],
+    "correlation": 0.9833237806308454,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 1024,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.0005868916669772295
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_depth4_b512",
+    "spec": {
+      "name": "r3_cat_depth4_b512",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 4,
+        "l2_leaf_reg": 5,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Combine independently promising shallower trees and finer quantization on the proxy representation.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7507157616336868,
+    "average_precision": 0.23652242792990044,
+    "log_loss": 0.24819266365384227,
+    "brier": 0.06820773317315121,
+    "iterations": 2176,
+    "features": 51,
+    "seconds": 168.93348217010498,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0005155373364982285,
+    "best_blend": {
+      "new_weight": 0.5,
+      "auc": 0.751528428608912
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513887428520961
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7515236241452941
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.751528428608912
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7512534362834105
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7507157616336868
+      }
+    ],
+    "correlation": 0.9858985242841402,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 5,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 4,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 512,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 16,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_depth4",
+        "parent_auc": 0.750398149807957,
+        "individual_auc_delta": 0.00031761182572975777
+      },
+      {
+        "parent": "r3_cat_borders512",
+        "parent_auc": 0.7508330687047031,
+        "individual_auc_delta": -0.00011730707101631488
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_native_b512",
+    "spec": {
+      "name": "r3_cat_native_b512",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Test the interaction between native missing bins and finer quantization.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py",
+      "missing": "native"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7504872737574634,
+    "average_precision": 0.2362578268267533,
+    "log_loss": 0.24825715882211472,
+    "brier": 0.06821173487927813,
+    "iterations": 1973,
+    "features": 51,
+    "seconds": 202.01132011413574,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0007440252127216551,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7514886710977767
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.75137108817239
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7514886710977767
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7514672119265452
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7511296926104176
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7504872737574634
+      }
+    ],
+    "correlation": 0.982037957831863,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 512,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_borders512",
+        "parent_auc": 0.7508330687047031,
+        "individual_auc_delta": -0.00034579494723974147
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_loan_b512",
+    "spec": {
+      "name": "r3_cat_loan_b512",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "per_float_feature_quantization": [
+          "34:border_count=512",
+          "46:border_count=512",
+          "47:border_count=512",
+          "48:border_count=512",
+          "49:border_count=512",
+          "50:border_count=512"
+        ]
+      },
+      "hypothesis": "Isolate higher resolution for credit term and loan proxies; test whether they explain the global border-count gain.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7501346973902843,
+    "average_precision": 0.2374984935366681,
+    "log_loss": 0.24825725391491196,
+    "brier": 0.06820981011542676,
+    "iterations": 1656,
+    "features": 51,
+    "seconds": 173.94941210746765,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.001096601579900769,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7513282617813839
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7513018947011456
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7513282617813839
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7511700133242258
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7507670475587185
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7501346973902843
+      }
+    ],
+    "correlation": 0.9879617273481587,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "per_float_feature_quantization": [
+        "50:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "46:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "48:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "34:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "47:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "49:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum"
+      ],
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "A small screening gain below the promotion threshold. No reliable improvement is established; selection noise and training variation remain plausible. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": 0.0001825811114143372
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_scores_b512",
+    "spec": {
+      "name": "r3_cat_scores_b512",
+      "kind": "cat",
+      "features": "proxy",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "per_float_feature_quantization": [
+          "24:border_count=512",
+          "25:border_count=512",
+          "26:border_count=512",
+          "40:border_count=512",
+          "41:border_count=512",
+          "42:border_count=512",
+          "43:border_count=512",
+          "44:border_count=512"
+        ]
+      },
+      "hypothesis": "Isolate higher resolution for external scores as an alternative explanation for the global border-count gain.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7495164732644013,
+    "average_precision": 0.23707101420025622,
+    "log_loss": 0.24835697980154042,
+    "brier": 0.0682140811754365,
+    "iterations": 1568,
+    "features": 51,
+    "seconds": 153.98231387138367,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0017148257057837402,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7512251267286472
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7512251267286472
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7511432324624319
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7508183679655468
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7502849230828363
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7495164732644013
+      }
+    ],
+    "correlation": 0.9885636080663195,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "per_float_feature_quantization": [
+        "43:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "24:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "41:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "25:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "40:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "42:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "26:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum",
+        "44:border_count=512,dev_max_subset_size_for_build_borders=,nan_mode=Min,border_type=GreedyLogSum"
+      ],
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_baseline",
+        "parent_auc": 0.7499521162788699,
+        "individual_auc_delta": -0.00043564301446863407
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_signed_only",
+    "spec": {
+      "name": "r3_cat_signed_only",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "ignored_features": [
+          52,
+          54
+        ]
+      },
+      "hypothesis": "Decompose the positive joint term representation: keep signed residual additions and ignore rounded category additions.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7502678201118709,
+    "average_precision": 0.23942486323860362,
+    "log_loss": 0.24809280085193394,
+    "brier": 0.06810886869660496,
+    "iterations": 1810,
+    "features": 55,
+    "seconds": 175.70933413505554,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0009634788583141596,
+    "best_blend": {
+      "new_weight": 0.25,
+      "auc": 0.7514634993864769
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.751368122737908
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7514634993864769
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7513902600511333
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7509884896545646
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7502678201118709
+      }
+    ],
+    "correlation": 0.9832045932805912,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "ignored_features": [
+        52,
+        54
+      ],
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_signed",
+        "parent_auc": 0.7509073195060717,
+        "individual_auc_delta": -0.0006394993942008265
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_term_categories",
+    "spec": {
+      "name": "r3_cat_term_categories",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "ignored_features": [
+          51,
+          53
+        ]
+      },
+      "hypothesis": "Decompose the positive joint term representation: keep rounded category additions and ignore signed residual additions.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7491226451749139,
+    "average_precision": 0.2354164974259072,
+    "log_loss": 0.24860684388660073,
+    "brier": 0.0682874806206427,
+    "iterations": 1655,
+    "features": 55,
+    "seconds": 186.55786418914795,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.0021086537952711426,
+    "best_blend": {
+      "new_weight": 0.1,
+      "auc": 0.7511759326992575
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7511759326992575
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.7510132820661051
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7505937650383735
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7499691502862427
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7491226451749139
+      }
+    ],
+    "correlation": 0.9891558137229962,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 254,
+      "ignored_features": [
+        51,
+        53
+      ],
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "No screened blend beat the complete current reference. This does not prove that the idea is universally ineffective. Promotion decision: did not advance under the recorded threshold and finalist cap.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_signed",
+        "parent_auc": 0.7509073195060717,
+        "individual_auc_delta": -0.0017846743311578095
+      }
+    ],
+    "promoted": false,
+    "cv_auc": null,
+    "cv_fold_auc": null,
+    "included_in_frozen_primary_recipe": false
+  },
+  {
+    "name": "r3_cat_feature_b512",
+    "spec": {
+      "name": "r3_cat_feature_b512",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "seed": 20261108,
+    "split": "original inner_fit/inner_valid, development only",
+    "status": "complete",
+    "auc": 0.7508543784548174,
+    "average_precision": 0.2354071973154258,
+    "log_loss": 0.24829031824662692,
+    "brier": 0.06826462014852137,
+    "iterations": 1851,
+    "features": 55,
+    "seconds": 192.8398299217224,
+    "reference_auc": 0.751231298970185,
+    "individual_gain": -0.00037692051536764026,
+    "best_blend": {
+      "new_weight": 0.5,
+      "auc": 0.7517070328198198
+    },
+    "blends": [
+      {
+        "new_weight": 0.1,
+        "auc": 0.7514332128753923
+      },
+      {
+        "new_weight": 0.25,
+        "auc": 0.75163928758402
+      },
+      {
+        "new_weight": 0.5,
+        "auc": 0.7517070328198198
+      },
+      {
+        "new_weight": 0.75,
+        "auc": 0.7514596144374269
+      },
+      {
+        "new_weight": 1.0,
+        "auc": 0.7508543784548174
+      }
+    ],
+    "correlation": 0.9808761970033321,
+    "saturated": false,
+    "resolved_parameters": {
+      "nan_mode": "Min",
+      "eval_metric": "AUC",
+      "combinations_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "iterations": 4500,
+      "sampling_frequency": "PerTree",
+      "fold_permutation_block": 0,
+      "leaf_estimation_method": "Newton",
+      "od_pval": 0,
+      "random_score_type": "NormalWithModelSizeDecrease",
+      "counter_calc_method": "SkipTest",
+      "grow_policy": "SymmetricTree",
+      "penalties_coefficient": 1,
+      "boosting_type": "Plain",
+      "model_shrink_mode": "Constant",
+      "feature_border_type": "GreedyLogSum",
+      "ctr_leaf_count_limit": 18446744073709551615,
+      "bayesian_matrix_reg": 0.10000000149011612,
+      "one_hot_max_size": 2,
+      "eval_fraction": 0,
+      "force_unit_auto_pair_weights": false,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "od_type": "Iter",
+      "rsm": 1,
+      "boost_from_average": false,
+      "max_ctr_complexity": 4,
+      "model_size_reg": 0.5,
+      "simple_ctr": [
+        "Borders:CtrBorderCount=15:CtrBorderType=Uniform:TargetBorderCount=1:TargetBorderType=MinEntropy:Prior=0/1:Prior=0.5/1:Prior=1/1",
+        "Counter:CtrBorderCount=15:CtrBorderType=Uniform:Prior=0/1"
+      ],
+      "pool_metainfo_options": {
+        "tags": {}
+      },
+      "subsample": 0.800000011920929,
+      "use_best_model": true,
+      "od_wait": 200,
+      "class_names": [
+        0,
+        1
+      ],
+      "random_seed": 20261108,
+      "depth": 5,
+      "ctr_target_border_count": 1,
+      "posterior_sampling": false,
+      "has_time": false,
+      "store_all_simple_ctr": false,
+      "border_count": 512,
+      "classes_count": 0,
+      "auto_class_weights": "None",
+      "sparse_features_conflict_fraction": 0,
+      "leaf_estimation_backtracking": "AnyImprovement",
+      "best_model_min_trees": 1,
+      "model_shrink_rate": 0,
+      "min_data_in_leaf": 1,
+      "loss_function": "Logloss",
+      "learning_rate": 0.04500000178813934,
+      "score_function": "Cosine",
+      "task_type": "CPU",
+      "leaf_estimation_iterations": 10,
+      "bootstrap_type": "MVS",
+      "max_leaves": 32,
+      "permutation_count": 4
+    },
+    "interpretation": "Promising inner complementarity under the predeclared promotion threshold. Requires matching development CV before any claim of a useful improvement. Promotion decision: advanced to common-fold CV. Common-fold standalone OOF AUC: 0.762661887. Included in the frozen primary recipe; later gates determine deployment.",
+    "parent_comparisons": [
+      {
+        "parent": "r3_cat_signed",
+        "parent_auc": 0.7509073195060717,
+        "individual_auc_delta": -5.294105125430715e-05
+      },
+      {
+        "parent": "r3_cat_borders512",
+        "parent_auc": 0.7508330687047031,
+        "individual_auc_delta": 2.1309750114273385e-05
+      }
+    ],
+    "promoted": true,
+    "cv_auc": 0.7626618871322325,
+    "cv_fold_auc": [
+      0.7580250631001172,
+      0.765108610045002,
+      0.7626256190122456,
+      0.7606695413043127,
+      0.7670705280030794
+    ],
+    "included_in_frozen_primary_recipe": true
+  }
+]

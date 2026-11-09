@@ -1,0 +1,49 @@
+{
+  "lead": "r2_cat_term_proxies",
+  "scope": "Recorded primary development weight grid only; no new fitting or secondary-seed search",
+  "interpretation": "A higher individual AUC does not guarantee a better mixture; differences can also reflect calibration and correlated errors. These scores do not isolate a causal mechanism.",
+  "comparisons": [
+    {
+      "component": "lgb_tune_15",
+      "individual_auc": 0.7573280608933021,
+      "best_recorded_pair_auc": 0.7629541355344485,
+      "lead_weight": 0.75,
+      "component_weight": 0.25
+    },
+    {
+      "component": "r2_xgb_finance",
+      "individual_auc": 0.758883318470827,
+      "best_recorded_pair_auc": 0.7629482050134669,
+      "lead_weight": 0.75,
+      "component_weight": 0.25
+    },
+    {
+      "component": "r2_lgb_smooth_cats",
+      "individual_auc": 0.7584174292127097,
+      "best_recorded_pair_auc": 0.7628906582720832,
+      "lead_weight": 0.75,
+      "component_weight": 0.25
+    },
+    {
+      "component": "r2_cat_proxies_native",
+      "individual_auc": 0.7615744712299796,
+      "best_recorded_pair_auc": 0.7625661992967897,
+      "lead_weight": 0.6666666666666667,
+      "component_weight": 0.3333333333333333
+    },
+    {
+      "component": "cat_lean",
+      "individual_auc": 0.7607901174487961,
+      "best_recorded_pair_auc": 0.7625408451702681,
+      "lead_weight": 0.75,
+      "component_weight": 0.25
+    },
+    {
+      "component": "r2_cat_native_missing",
+      "individual_auc": 0.7605612895609853,
+      "best_recorded_pair_auc": 0.7625170706483542,
+      "lead_weight": 0.75,
+      "component_weight": 0.25
+    }
+  ]
+}

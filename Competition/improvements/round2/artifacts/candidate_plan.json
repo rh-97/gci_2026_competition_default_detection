@@ -1,0 +1,274 @@
+[
+  {
+    "name": "r2_cat_baseline",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Reproduce the first-pass compact CatBoost to verify implementation equivalence.",
+    "max_iterations": 3000,
+    "patience": 150
+  },
+  {
+    "name": "r2_cat_risk",
+    "kind": "cat",
+    "features": "risk",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Smooth score summaries and score/age/term interactions may help shallow trees model risk."
+  },
+  {
+    "name": "r2_cat_finance",
+    "kind": "cat",
+    "features": "finance",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Payment burden, per-adult amounts and hypothetical payment-period rates may expose financial structure."
+  },
+  {
+    "name": "r2_cat_missing",
+    "kind": "cat",
+    "features": "missing",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Joint missing-score patterns and coarse organization groups may expose data-collection segments."
+  },
+  {
+    "name": "r2_cat_combined",
+    "kind": "cat",
+    "features": "combined",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "The three targeted feature families may be complementary; their combination may also add noise."
+  },
+  {
+    "name": "r2_cat_slow",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "learning_rate": 0.025
+    },
+    "hypothesis": "Smaller boosting steps may improve the bias/variance tradeoff.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_strong_l2",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 30,
+      "random_strength": 1.0
+    },
+    "hypothesis": "Stronger leaf shrinkage may reduce overfitting in sparse categorical groups.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_weak_l2",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 2,
+      "random_strength": 0.1
+    },
+    "hypothesis": "Less shrinkage may recover useful signal suppressed by the first-pass settings.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_onehot10",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "one_hot_max_size": 10
+    },
+    "hypothesis": "One-hot splits for low-cardinality categories may outperform ordered target statistics.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_onehot64",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "one_hot_max_size": 64
+    },
+    "hypothesis": "One-hot splits for every raw category may avoid noisy target statistics, at the cost of expressiveness.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_borders512",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "border_count": 512
+    },
+    "hypothesis": "Finer numeric quantization may preserve useful external-score and loan-term thresholds.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_rsm075",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "rsm": 0.75,
+      "bagging_temperature": 1.0
+    },
+    "hypothesis": "Column sampling and Bayesian bootstrap may diversify trees and improve generalization.",
+    "max_iterations": 5000
+  },
+  {
+    "name": "r2_cat_ordered",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "boosting_type": "Ordered",
+      "learning_rate": 0.06
+    },
+    "hypothesis": "Ordered boosting may reduce prediction shift from fitting residuals on the training rows.",
+    "max_iterations": 3500
+  },
+  {
+    "name": "r2_cat_native_missing",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Native numeric missing bins may handle absence differently from the -999 sentinel.",
+    "missing": "native"
+  },
+  {
+    "name": "r2_xgb_d3",
+    "kind": "xgb",
+    "features": "engineered",
+    "params": {
+      "max_depth": 3,
+      "min_child_weight": 30,
+      "reg_lambda": 20.0,
+      "reg_alpha": 1.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "max_bin": 256
+    },
+    "hypothesis": "A separate histogram-boosting implementation may improve individual AUC or add complementary ensemble errors."
+  },
+  {
+    "name": "r2_xgb_d4",
+    "kind": "xgb",
+    "features": "engineered",
+    "params": {
+      "max_depth": 4,
+      "min_child_weight": 30,
+      "reg_lambda": 20.0,
+      "reg_alpha": 1.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "max_bin": 256
+    },
+    "hypothesis": "A separate histogram-boosting implementation may improve individual AUC or add complementary ensemble errors."
+  },
+  {
+    "name": "r2_xgb_d5",
+    "kind": "xgb",
+    "features": "engineered",
+    "params": {
+      "max_depth": 5,
+      "min_child_weight": 30,
+      "reg_lambda": 20.0,
+      "reg_alpha": 1.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "max_bin": 256
+    },
+    "hypothesis": "A separate histogram-boosting implementation may improve individual AUC or add complementary ensemble errors."
+  },
+  {
+    "name": "r2_xgb_lean",
+    "kind": "xgb",
+    "features": "lean",
+    "params": {
+      "max_depth": 4,
+      "min_child_weight": 30,
+      "reg_lambda": 20.0,
+      "reg_alpha": 1.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "max_bin": 256
+    },
+    "hypothesis": "The compact representation may also reduce noise for XGBoost."
+  },
+  {
+    "name": "r2_lgb_smooth_cats",
+    "kind": "lgb",
+    "features": "engineered",
+    "groups": true,
+    "params": {
+      "num_leaves": 16,
+      "min_child_samples": 150,
+      "colsample_bytree": 0.8,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "reg_lambda": 10.0,
+      "reg_alpha": 1.0,
+      "max_bin": 255,
+      "cat_smooth": 100.0,
+      "cat_l2": 30.0
+    },
+    "hypothesis": "Stronger categorical smoothing may improve group-relative LightGBM generalization."
+  },
+  {
+    "name": "r2_lgb_linear",
+    "kind": "lgb",
+    "features": "lean",
+    "max_iterations": 1500,
+    "patience": 100,
+    "params": {
+      "num_leaves": 16,
+      "min_child_samples": 150,
+      "colsample_bytree": 0.8,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "reg_lambda": 10.0,
+      "reg_alpha": 1.0,
+      "max_bin": 127,
+      "linear_tree": true,
+      "linear_lambda": 10.0
+    },
+    "hypothesis": "Linear models inside leaves may model smooth financial relationships more efficiently than constant leaves."
+  }
+]

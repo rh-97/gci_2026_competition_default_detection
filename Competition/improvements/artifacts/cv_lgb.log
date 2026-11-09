@@ -1,0 +1,26 @@
+CV lgb_tune_15 0 0.751416 590
+CV lgb_tune_15 1 0.760011 639
+CV lgb_tune_15 2 0.757473 523
+CV lgb_tune_15 3 0.756262 768
+CV lgb_tune_15 4 0.761678 456
+CV lgb_tune_12 0 0.751519 516
+CV lgb_tune_12 1 0.760517 605
+CV lgb_tune_12 2 0.757996 813
+CV lgb_tune_12 3 0.755287 405
+CV lgb_tune_12 4 0.761755 601
+CV lgb_top_70 0 0.750901 430
+CV lgb_top_70 1 0.759741 562
+CV lgb_top_70 2 0.756946 491
+CV lgb_top_70 3 0.7557 494
+CV lgb_top_70 4 0.761675 424
+CV lgb_engineered 0 0.750651 412
+CV lgb_engineered 1 0.758966 375
+CV lgb_engineered 2 0.757087 354
+CV lgb_engineered 3 0.754211 401
+CV lgb_engineered 4 0.759824 277
+CV lgb_raw 0 0.74573 333
+CV lgb_raw 1 0.753894 511
+CV lgb_raw 2 0.747803 351
+CV lgb_raw 3 0.747634 356
+CV lgb_raw 4 0.754762 437
+CV SELECTION {'names': ['lgb_tune_12', 'lgb_tune_15'], 'weights': [0.5, 0.5], 'auc': 0.7580286913203251, 'models': [{'name': 'lgb_tune_12', 'auc': 0.7573877195207913, 'fold_auc': [0.7515190383288642, 0.7605168700723451, 0.7579962680325605, 0.755287054156671, 0.7617547868726724], 'iterations': [516, 605, 813, 405, 601], 'spec': {'name': 'lgb_tune_12', 'kind': 'lgb', 'features': 'engineered', 'groups': True, 'params': {'num_leaves': 16, 'min_child_samples': 76, 'colsample_bytree': 0.7016450200644813, 'subsample': 0.960384200459015, 'subsample_freq': 1, 'reg_lambda': 0.5703637874410369, 'reg_alpha': 1.6865703875308493, 'max_bin': 255, 'max_depth': -1}}}, {'name': 'lgb_tune_15', 'auc': 0.7573280608933021, 'fold_auc': [0.7514156817480501, 0.7600112588747114, 0.7574728751267328, 0.7562619228374088, 0.7616778723031425], 'iterations': [590, 639, 523, 768, 456], 'spec': {'name': 'lgb_tune_15', 'kind': 'lgb', 'features': 'engineered', 'groups': True, 'params': {'num_leaves': 21, 'min_child_samples': 89, 'colsample_bytree': 0.6846068413999578, 'subsample': 0.961965333135664, 'subsample_freq': 1, 'reg_lambda': 2.1323824335960286, 'reg_alpha': 3.687185564401245, 'max_bin': 255, 'max_depth': -1}}}]}

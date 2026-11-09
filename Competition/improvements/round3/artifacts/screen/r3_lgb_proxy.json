@@ -1,0 +1,88 @@
+{
+  "name": "r3_lgb_proxy",
+  "spec": {
+    "name": "r3_lgb_proxy",
+    "kind": "lgb",
+    "features": "proxy",
+    "groups": true,
+    "params": {
+      "num_leaves": 21,
+      "min_child_samples": 89,
+      "colsample_bytree": 0.6846068413999578,
+      "subsample": 0.961965333135664,
+      "subsample_freq": 1,
+      "reg_lambda": 2.1323824335960286,
+      "reg_alpha": 3.687185564401245,
+      "max_bin": 255,
+      "max_depth": -1
+    },
+    "hypothesis": "Use the exact compact successful proxy block in the known complementary LightGBM recipe."
+  },
+  "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7480538244288999,
+  "average_precision": 0.23757427805202483,
+  "log_loss": 0.2488525086234224,
+  "brier": 0.06826957980869185,
+  "iterations": 757,
+  "features": 51,
+  "seconds": 17.428948879241943,
+  "reference_auc": 0.751231298970185,
+  "individual_gain": -0.0031774745412851413,
+  "best_blend": {
+    "new_weight": 0.25,
+    "auc": 0.7517154923538455
+  },
+  "blends": [
+    {
+      "new_weight": 0.1,
+      "auc": 0.7515361870130797
+    },
+    {
+      "new_weight": 0.25,
+      "auc": 0.7517154923538455
+    },
+    {
+      "new_weight": 0.5,
+      "auc": 0.7513438820351083
+    },
+    {
+      "new_weight": 0.75,
+      "auc": 0.7501330422640619
+    },
+    {
+      "new_weight": 1.0,
+      "auc": 0.7480538244288999
+    }
+  ],
+  "correlation": 0.9631508974275895,
+  "saturated": false,
+  "resolved_parameters": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.6846068413999578,
+    "importance_type": "split",
+    "learning_rate": 0.035,
+    "max_depth": -1,
+    "min_child_samples": 89,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 4500,
+    "n_jobs": 4,
+    "num_leaves": 21,
+    "objective": "binary",
+    "random_state": 20261108,
+    "reg_alpha": 3.687185564401245,
+    "reg_lambda": 2.1323824335960286,
+    "subsample": 0.961965333135664,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 1,
+    "metric": "auc",
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1,
+    "max_bin": 255
+  }
+}

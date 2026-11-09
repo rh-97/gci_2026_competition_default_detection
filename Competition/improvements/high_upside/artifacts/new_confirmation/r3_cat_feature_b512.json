@@ -1,0 +1,82 @@
+{
+  "name": "r3_cat_feature_b512",
+  "spec": {
+    "name": "r3_cat_feature_b512",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "border_count": 512
+    },
+    "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  "origin": "round3",
+  "signature": {
+    "spec": {
+      "name": "r3_cat_feature_b512",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "origin": "round3",
+    "engine_signature": "d0aec5be64502e2221948604668af1cef86b6c63a68bf6bd3f34ea4ddf7a8bc0",
+    "cv_source_sha256": "29fdca77daeef63a8a76afcfb8ab423a6cb670b6e91bb30babd3e89d6ec730e6",
+    "fold_seed": 20264209,
+    "fixed_iterations": 1619
+  },
+  "auc": 0.7618027381031478,
+  "average_precision": 0.24528547197140863,
+  "log_loss": 0.2451888486662769,
+  "brier": 0.06770893265468376,
+  "iterations": [
+    1619,
+    1619,
+    1619,
+    1619,
+    1619
+  ],
+  "fold_auc": [
+    0.7580623339463515,
+    0.7520958841434419,
+    0.76417578881768,
+    0.7683958910890849,
+    0.7666639257023931
+  ],
+  "fold_seconds": [
+    424.7960567474365,
+    424.2333688735962,
+    271.101970911026,
+    271.36277985572815,
+    141.40004682540894
+  ],
+  "seconds": 836.8335068225861,
+  "folds": 5,
+  "training_rows": [
+    109568,
+    109569,
+    109569,
+    109569,
+    109569
+  ],
+  "validation_rows": [
+    27393,
+    27392,
+    27392,
+    27392,
+    27392
+  ]
+}

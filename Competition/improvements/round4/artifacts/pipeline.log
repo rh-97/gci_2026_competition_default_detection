@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/round4/run_round4.py", line 22, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/round4/run_round4.py", line 15, in main
+    time.sleep(10)
+KeyboardInterrupt

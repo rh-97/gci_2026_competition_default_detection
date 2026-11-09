@@ -1,0 +1,26 @@
+{
+  "signature": {
+    "spec": {
+      "name": "r3_cat_feature_b512",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5,
+        "border_count": 512
+      },
+      "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+      "max_iterations": 4500,
+      "patience": 200,
+      "source": "improvements/round3/followup.py"
+    },
+    "origin": "round3",
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "fold_seed": 20261409,
+    "fixed_iterations": 1619
+  },
+  "iterations": 1619,
+  "auc": 0.760604790740637,
+  "seconds": 160.51536393165588
+}

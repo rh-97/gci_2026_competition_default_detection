@@ -1,0 +1,215 @@
+{
+  "rule": "At most 2 CatBoost, 1 other tree, 1 neural model; inner-blend gain >=0.00010.",
+  "chosen": [
+    {
+      "name": "r3_cat_feature_b512",
+      "spec": {
+        "name": "r3_cat_feature_b512",
+        "kind": "cat",
+        "features": "signed",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5,
+          "border_count": 512
+        },
+        "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+        "max_iterations": 4500,
+        "patience": 200,
+        "source": "improvements/round3/followup.py"
+      },
+      "origin": "round3",
+      "screen_auc": 0.7508543784548174,
+      "screen_blend": {
+        "new_weight": 0.5,
+        "auc": 0.7517070328198198
+      }
+    },
+    {
+      "name": "r3_cat_signed",
+      "spec": {
+        "name": "r3_cat_signed",
+        "kind": "cat",
+        "features": "signed",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        },
+        "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+        "max_iterations": 4500,
+        "patience": 200
+      },
+      "origin": "round3",
+      "screen_auc": 0.7509073195060717,
+      "screen_blend": {
+        "new_weight": 0.5,
+        "auc": 0.7516576204057203
+      }
+    },
+    {
+      "name": "r3_lgb_proxy",
+      "spec": {
+        "name": "r3_lgb_proxy",
+        "kind": "lgb",
+        "features": "proxy",
+        "groups": true,
+        "params": {
+          "num_leaves": 21,
+          "min_child_samples": 89,
+          "colsample_bytree": 0.6846068413999578,
+          "subsample": 0.961965333135664,
+          "subsample_freq": 1,
+          "reg_lambda": 2.1323824335960286,
+          "reg_alpha": 3.687185564401245,
+          "max_bin": 255,
+          "max_depth": -1
+        },
+        "hypothesis": "Use the exact compact successful proxy block in the known complementary LightGBM recipe."
+      },
+      "origin": "round3",
+      "screen_auc": 0.7480538244288999,
+      "screen_blend": {
+        "new_weight": 0.25,
+        "auc": 0.7517154923538455
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "name": "r3_cat_borders1024",
+      "promoted": false,
+      "inner_gain": 0.0003163474931986432
+    },
+    {
+      "name": "r3_cat_borders512",
+      "promoted": false,
+      "inner_gain": 0.0002565330705484037
+    },
+    {
+      "name": "r3_cat_crosses",
+      "promoted": false,
+      "inner_gain": -3.052788365853765e-05
+    },
+    {
+      "name": "r3_cat_depth4",
+      "promoted": false,
+      "inner_gain": 0.00011515770571368655
+    },
+    {
+      "name": "r3_cat_depth4_b512",
+      "promoted": false,
+      "inner_gain": 0.0002971296387269673
+    },
+    {
+      "name": "r3_cat_depth6",
+      "promoted": false,
+      "inner_gain": 3.733229146207773e-05
+    },
+    {
+      "name": "r3_cat_depth7",
+      "promoted": false,
+      "inner_gain": 0.00014047883813073092
+    },
+    {
+      "name": "r3_cat_depthwise",
+      "promoted": false,
+      "inner_gain": 0.00015509911976263613
+    },
+    {
+      "name": "r3_cat_engineered_proxy",
+      "promoted": false,
+      "inner_gain": 0.0003146923669762325
+    },
+    {
+      "name": "r3_cat_feature_b512",
+      "promoted": true,
+      "inner_gain": 0.00047573384963472964
+    },
+    {
+      "name": "r3_cat_groups",
+      "promoted": false,
+      "inner_gain": 0.000228143058260466
+    },
+    {
+      "name": "r3_cat_l2_30",
+      "promoted": false,
+      "inner_gain": -3.76886033570667e-05
+    },
+    {
+      "name": "r3_cat_loan_b512",
+      "promoted": false,
+      "inner_gain": 9.696281119886407e-05
+    },
+    {
+      "name": "r3_cat_median",
+      "promoted": false,
+      "inner_gain": 0.0001667194851160403
+    },
+    {
+      "name": "r3_cat_native_b512",
+      "promoted": false,
+      "inner_gain": 0.0002573721275916929
+    },
+    {
+      "name": "r3_cat_rates",
+      "promoted": false,
+      "inner_gain": -1.647080469990847e-05
+    },
+    {
+      "name": "r3_cat_scores_b512",
+      "promoted": false,
+      "inner_gain": -6.17224153787177e-06
+    },
+    {
+      "name": "r3_cat_signed",
+      "promoted": true,
+      "inner_gain": 0.0004263214355352263
+    },
+    {
+      "name": "r3_cat_signed_only",
+      "promoted": false,
+      "inner_gain": 0.00023220041629190558
+    },
+    {
+      "name": "r3_cat_slow",
+      "promoted": false,
+      "inner_gain": -3.114855599195554e-05
+    },
+    {
+      "name": "r3_cat_term_categories",
+      "promoted": false,
+      "inner_gain": -5.536627092750379e-05
+    },
+    {
+      "name": "r3_cat_weight2",
+      "promoted": false,
+      "inner_gain": 0.0001227666887642087
+    },
+    {
+      "name": "r3_lgb_proxy",
+      "promoted": true,
+      "inner_gain": 0.0004841933836604584
+    },
+    {
+      "name": "r3_lgb_proxy_smooth",
+      "promoted": false,
+      "inner_gain": 0.00045506775971815294
+    },
+    {
+      "name": "r3_mlp_small",
+      "promoted": false,
+      "inner_gain": -0.0002962101241587023
+    },
+    {
+      "name": "r3_mlp_wide",
+      "promoted": false,
+      "inner_gain": -8.919291309750221e-06
+    },
+    {
+      "name": "r3_xgb_proxy",
+      "promoted": false,
+      "inner_gain": 0.0001476970274897349
+    }
+  ]
+}

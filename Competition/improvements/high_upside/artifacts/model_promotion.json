@@ -1,0 +1,79 @@
+{
+  "chosen": [
+    {
+      "name": "hu_tabm_signed_piecewise",
+      "spec": {
+        "kind": "tabm",
+        "architecture": "tabm-mini",
+        "dropout": 0.1,
+        "learning_rate": 0.002,
+        "weight_decay": 0.0003,
+        "max_epochs": 140,
+        "patience": 20,
+        "max_seconds": 1500,
+        "name": "hu_tabm_signed_piecewise",
+        "features": "signed",
+        "embedding": "piecewise",
+        "hypothesis": "Same neural recipe with the successful tree representation."
+      },
+      "origin": "high_upside"
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "spec": {
+        "name": "hu_cat_score_reconstruction",
+        "kind": "cat",
+        "features": "signed",
+        "learned": "score_reconstruction",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        },
+        "max_iterations": 4500,
+        "patience": 200,
+        "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+      },
+      "origin": "high_upside"
+    }
+  ],
+  "threshold": 0.0003,
+  "decisions": [
+    {
+      "name": "hu_tabm_raw_piecewise",
+      "status": "complete",
+      "promoted": false,
+      "gain": 0.00023940711171865914
+    },
+    {
+      "name": "hu_tabm_signed_piecewise",
+      "status": "complete",
+      "promoted": true,
+      "gain": 0.0015386237266847846
+    },
+    {
+      "name": "hu_tabm_signed_periodic",
+      "status": "complete",
+      "promoted": false,
+      "gain": 0.0009184341384127492
+    },
+    {
+      "name": "hu_tabm_regularized",
+      "status": "complete",
+      "promoted": false,
+      "gain": 0.0009786278608223675
+    },
+    {
+      "name": "hu_cat_score_reconstruction",
+      "status": "complete",
+      "promoted": true,
+      "gain": 0.0003658748466190964
+    },
+    {
+      "name": "hu_cat_interaction_risk",
+      "status": "complete",
+      "promoted": false,
+      "gain": -0.00013253653104949858
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "name": "r3_cat_borders1024",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "border_count": 1024
+    },
+    "hypothesis": "Follow up the positive 512-border result: test whether finer quantization continues to help.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_depth4_b512",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 4,
+      "l2_leaf_reg": 5,
+      "random_strength": 0.5,
+      "border_count": 512
+    },
+    "hypothesis": "Combine independently promising shallower trees and finer quantization on the proxy representation.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_native_b512",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "border_count": 512
+    },
+    "hypothesis": "Test the interaction between native missing bins and finer quantization.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py",
+    "missing": "native"
+  },
+  {
+    "name": "r3_cat_loan_b512",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "per_float_feature_quantization": [
+        "34:border_count=512",
+        "46:border_count=512",
+        "47:border_count=512",
+        "48:border_count=512",
+        "49:border_count=512",
+        "50:border_count=512"
+      ]
+    },
+    "hypothesis": "Isolate higher resolution for credit term and loan proxies; test whether they explain the global border-count gain.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_scores_b512",
+    "kind": "cat",
+    "features": "proxy",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "per_float_feature_quantization": [
+        "24:border_count=512",
+        "25:border_count=512",
+        "26:border_count=512",
+        "40:border_count=512",
+        "41:border_count=512",
+        "42:border_count=512",
+        "43:border_count=512",
+        "44:border_count=512"
+      ]
+    },
+    "hypothesis": "Isolate higher resolution for external scores as an alternative explanation for the global border-count gain.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_signed_only",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "ignored_features": [
+        52,
+        54
+      ]
+    },
+    "hypothesis": "Decompose the positive joint term representation: keep signed residual additions and ignore rounded category additions.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_term_categories",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "ignored_features": [
+        51,
+        53
+      ]
+    },
+    "hypothesis": "Decompose the positive joint term representation: keep rounded category additions and ignore signed residual additions.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  },
+  {
+    "name": "r3_cat_feature_b512",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "border_count": 512
+    },
+    "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+    "max_iterations": 4500,
+    "patience": 200,
+    "source": "improvements/round3/followup.py"
+  }
+]

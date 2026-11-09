@@ -1,0 +1,28 @@
+{
+  "name": "r2_cat_combined",
+  "spec": {
+    "name": "r2_cat_combined",
+    "kind": "cat",
+    "features": "combined",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "The three targeted feature families may be complementary; their combination may also add noise."
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7486699796470049,
+  "average_precision": 0.23252866869520245,
+  "log_loss": 0.24886171803628926,
+  "iterations": 1576,
+  "features": 74,
+  "seconds": 196.5467631816864,
+  "auc_delta_vs_pass1_cat": 0.00017739734803723373,
+  "prediction_correlation": 0.9702876086767642,
+  "maximum_prediction_difference": 0.27982999721701235,
+  "saturated": false
+}

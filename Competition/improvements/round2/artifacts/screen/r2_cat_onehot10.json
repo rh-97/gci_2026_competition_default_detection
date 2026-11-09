@@ -1,0 +1,30 @@
+{
+  "name": "r2_cat_onehot10",
+  "spec": {
+    "name": "r2_cat_onehot10",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5,
+      "one_hot_max_size": 10
+    },
+    "hypothesis": "One-hot splits for low-cardinality categories may outperform ordered target statistics.",
+    "max_iterations": 5000
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7480036649092139,
+  "average_precision": 0.2340427239289903,
+  "log_loss": 0.24879837692117301,
+  "iterations": 1299,
+  "features": 46,
+  "seconds": 96.04540491104126,
+  "auc_delta_vs_pass1_cat": -0.0004889173897537624,
+  "prediction_correlation": 0.9863149859101499,
+  "maximum_prediction_difference": 0.17495324346218527,
+  "saturated": false
+}

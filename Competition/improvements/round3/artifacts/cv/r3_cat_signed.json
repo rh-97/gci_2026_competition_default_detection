@@ -1,0 +1,59 @@
+{
+  "name": "r3_cat_signed",
+  "spec": {
+    "name": "r3_cat_signed",
+    "kind": "cat",
+    "features": "signed",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+    "max_iterations": 4500,
+    "patience": 200
+  },
+  "origin": "round3",
+  "signature": {
+    "spec": {
+      "name": "r3_cat_signed",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "origin": "round3",
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "fold_seed": 20261110,
+    "fixed_iterations": null
+  },
+  "auc": 0.7628502300197386,
+  "fold_auc": [
+    0.7583912545503287,
+    0.7651902981347654,
+    0.7624314032438613,
+    0.7620548441405436,
+    0.766348511333229
+  ],
+  "iterations": [
+    1240,
+    1320,
+    1120,
+    1979,
+    1312
+  ],
+  "fold_seconds": [
+    164.1118860244751,
+    172.52320528030396,
+    145.25272583961487,
+    243.47631812095642,
+    148.06773781776428
+  ],
+  "seconds": 457.5300862789154
+}

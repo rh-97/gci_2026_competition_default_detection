@@ -1,0 +1,32 @@
+{
+  "rule": "If the third model has nonpositive incremental AUC on the second seed and this frozen pair passes the existing primary/secondary gain gates, select the pair. No secondary weight search. Otherwise keep the original decision.",
+  "prospective_guard": "No new-candidate second-seed fold result existed when this rule was recorded.",
+  "pair": {
+    "names": [
+      "lgb_tune_15",
+      "r2_cat_term_proxies"
+    ],
+    "weights": [
+      0.25,
+      0.75
+    ],
+    "auc": 0.7629541355344485,
+    "method": "coarse two-model blend"
+  },
+  "full_secondary_auc": 0.762875657415778,
+  "pair_secondary_auc": 0.7628628611099685,
+  "third_model_secondary_increment": 1.2796305809525954e-05,
+  "pair_primary_gain": 0.0011817166451552064,
+  "pair_secondary_gain": 0.00143899681077031,
+  "pair_secondary_fold_gain": [
+    0.0013876388473670342,
+    0.0020459741215798077,
+    0.0010614242886028968,
+    0.001602293560160506,
+    0.0010079148036487018
+  ],
+  "pair_passes_original_gates": true,
+  "simplified": false,
+  "weights_retuned": false,
+  "caveat": "Two predeclared frozen recipes are compared on reused development folds; this is model selection, not a fresh independent test."
+}

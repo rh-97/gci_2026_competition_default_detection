@@ -1,0 +1,65 @@
+RUN ['budget_control.py']
+{'name': 'r2_cat_budget_control', 'seed': 20261108, 'split': 'original inner_fit/inner_valid, development only', 'status': 'complete', 'auc': 0.7484925822989676, 'average_precision': 0.23399382407407893, 'log_loss': 0.24872784171801024, 'iterations': 1670, 'features': 46, 'seconds': 139.76125407218933, 'auc_delta_vs_pass1_cat': 0.0, 'prediction_correlation': 0.9999999999999998, 'maximum_prediction_difference': 0.0, 'saturated': False}
+RUN ['validate.py', 'cv']
+{'name': 'r2_cat_rates_only', 'seed': 20261108, 'split': 'original inner_fit/inner_valid, development only', 'feature_selection_rule': 'spec.columns if present; otherwise complete named representation', 'status': 'complete', 'auc': 0.7484734449020205, 'average_precision': 0.2355793330838261, 'log_loss': 0.24861223672595745, 'iterations': 1497, 'features': 49, 'seconds': 199.51879000663757, 'auc_delta_vs_pass1_cat': -1.9137396947144225e-05, 'prediction_correlation': 0.9877682969756566, 'maximum_prediction_difference': 0.16210213537825213, 'saturated': False}
+{'name': 'r2_cat_proxies_native', 'seed': 20261108, 'split': 'original inner_fit/inner_valid, development only', 'feature_selection_rule': 'spec.columns if present; otherwise complete named representation', 'status': 'complete', 'auc': 0.7496474121388887, 'average_precision': 0.23677497229101735, 'log_loss': 0.24839801216758328, 'iterations': 1724, 'features': 51, 'seconds': 226.01628398895264, 'auc_delta_vs_pass1_cat': 0.001154829839921101, 'prediction_correlation': 0.9764741546090985, 'maximum_prediction_difference': 0.2558244847445137, 'saturated': False}
+{'name': 'r2_cat_proxies_rsm075', 'seed': 20261108, 'split': 'original inner_fit/inner_valid, development only', 'feature_selection_rule': 'spec.columns if present; otherwise complete named representation', 'status': 'complete', 'auc': 0.7492880773396347, 'average_precision': 0.2362469974140332, 'log_loss': 0.2484353168575852, 'iterations': 1293, 'features': 51, 'seconds': 154.8756422996521, 'auc_delta_vs_pass1_cat': 0.0007954950406670047, 'prediction_correlation': 0.979828117442687, 'maximum_prediction_difference': 0.2544033033656575, 'saturated': False}
+{'name': 'r2_cat_distances_only', 'seed': 20261108, 'split': 'original inner_fit/inner_valid, development only', 'feature_selection_rule': 'spec.columns if present; otherwise complete named representation', 'status': 'complete', 'auc': 0.7487658160528576, 'average_precision': 0.23480543942541102, 'log_loss': 0.24875018343935848, 'iterations': 1953, 'features': 48, 'seconds': 229.33697605133057, 'auc_delta_vs_pass1_cat': 0.00027323375388998983, 'prediction_correlation': 0.9797540458231557, 'maximum_prediction_difference': 0.21435318140929724, 'saturated': False}
+CV r2_cat_term_proxies 20261110 1 0.7646017 1332
+CV r2_cat_term_proxies 20261110 0 0.7575674 1385
+CV r2_cat_term_proxies 20261110 2 0.7622346 1637
+CV r2_cat_term_proxies 20261110 3 0.7613175 1636
+CV r2_cat_term_proxies 20261110 4 0.7656355 1568
+CV COMPLETE r2_cat_term_proxies 0.7622544252863716
+CV r2_cat_proxies_native 20261110 1 0.7642772 807
+CV r2_cat_proxies_native 20261110 0 0.7574204 1699
+CV r2_cat_proxies_native 20261110 2 0.7611514 1557
+CV r2_cat_proxies_native 20261110 3 0.7597911 1895
+CV r2_cat_proxies_native 20261110 4 0.7655988 1540
+CV COMPLETE r2_cat_proxies_native 0.7615744712299796
+CV r2_xgb_finance 20261110 0 0.7536338 1012
+CV r2_xgb_finance 20261110 1 0.7625034 1119
+CV r2_xgb_finance 20261110 2 0.7602666 1212
+CV r2_xgb_finance 20261110 3 0.7564754 1132
+CV r2_xgb_finance 20261110 4 0.7616299 937
+CV COMPLETE r2_xgb_finance 0.758883318470827
+CV r2_lgb_smooth_cats 20261110 0 0.7534399 477
+CV r2_lgb_smooth_cats 20261110 1 0.7610435 605
+CV r2_lgb_smooth_cats 20261110 2 0.7563184 522
+CV r2_lgb_smooth_cats 20261110 3 0.7579565 759
+CV r2_lgb_smooth_cats 20261110 4 0.7633306 673
+CV COMPLETE r2_lgb_smooth_cats 0.7584174292127097
+RUN ['validate.py', 'select']
+CV r2_cat_native_missing 20261110 1 0.762878 1170
+CV r2_cat_native_missing 20261110 0 0.7562518 1561
+CV r2_cat_native_missing 20261110 2 0.7596008 1666
+CV r2_cat_native_missing 20261110 3 0.7598536 1496
+CV r2_cat_native_missing 20261110 4 0.7643825 1210
+CV COMPLETE r2_cat_native_missing 0.7605612895609853
+PROVISIONAL ['lgb_tune_15', 'r2_cat_term_proxies', 'r2_cat_proxies_native'] [0.1875, 0.5625, 0.25] 0.7630891353395803 gain 0.001316716450287081
+RUN ['validate.py', 'stability']
+CV cat_lean 20261409 0 0.7643028 1529
+CV cat_lean 20261409 1 0.7543066 1529
+CV cat_lean 20261409 3 0.7579789 1529
+CV cat_lean 20261409 2 0.7644414 1529
+CV cat_lean 20261409 4 0.7603279 1529
+CV COMPLETE cat_lean 0.7601962557943115
+CV lgb_tune_15 20261409 1 0.7535055 590
+CV lgb_tune_15 20261409 0 0.760896 590
+CV lgb_tune_15 20261409 2 0.7629545 590
+CV lgb_tune_15 20261409 3 0.756088 590
+CV lgb_tune_15 20261409 4 0.7552947 590
+CV COMPLETE lgb_tune_15 0.7577077162387768
+CV r2_cat_term_proxies 20261409 0 0.7661439 1568
+CV r2_cat_term_proxies 20261409 1 0.7572921 1568
+CV r2_cat_term_proxies 20261409 3 0.760132 1568
+CV r2_cat_term_proxies 20261409 2 0.7658176 1568
+CV r2_cat_term_proxies 20261409 4 0.7613072 1568
+CV COMPLETE r2_cat_term_proxies 0.7620812685839511
+CV r2_cat_proxies_native 20261409 0 0.7657006 1557
+CV r2_cat_proxies_native 20261409 1 0.7554106 1557
+CV r2_cat_proxies_native 20261409 3 0.7588211 1557
+CV r2_cat_proxies_native 20261409 2 0.7658913 1557
+CV r2_cat_proxies_native 20261409 4 0.7607144 1557
+CV COMPLETE r2_cat_proxies_native 0.7612340962477353
+STABILITY {'baseline_auc': 0.7614238642991982, 'candidate_auc': 0.762875657415778, 'fold_gain': [0.0014734192439502802, 0.0018189609803044293, 0.0011588644572408935, 0.001473888073414975, 0.0012309024211930586], 'fold_seed': 20261409, 'early_stopping_on_validation': False, 'weights_retuned': False, 'caveat': 'A robustness check on development data, not a new independent test; the same development labels were used earlier in selection.', 'delta': 0.001451793116579836, 'recommend_new_submission': True, 'two_seed_diagnostic': {'baseline_primary_auc': 0.7617724188892933, 'baseline_secondary_auc': 0.7614238642991982, 'baseline_averaged_auc': 0.7625874941483515, 'candidate_primary_auc': 0.7630891353395803, 'candidate_secondary_auc': 0.762875657415778, 'candidate_averaged_auc': 0.7639709612844672, 'caveat': 'Conditional development diagnostic, not independent evidence. The primary seed uses validation early stopping; the secondary seed uses fixed iterations.'}, 'recommend_two_seed_bagging': True}

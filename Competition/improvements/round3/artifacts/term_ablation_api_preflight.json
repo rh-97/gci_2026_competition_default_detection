@@ -1,0 +1,11 @@
+{
+  "ignored_features": [
+    52,
+    54
+  ],
+  "ignored_importance_zero": true,
+  "resolved": [
+    52,
+    54
+  ]
+}

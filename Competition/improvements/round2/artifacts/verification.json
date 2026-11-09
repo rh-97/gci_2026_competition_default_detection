@@ -1,0 +1,17 @@
+{
+  "preserved_files": 19,
+  "all_preserved_hashes_match": true,
+  "splits_disjoint": true,
+  "features_ignore_ID_and_TARGET": true,
+  "row_batch_invariance": true,
+  "train_test_feature_schema_matches": true,
+  "hypothetical_rate_formula_verified": true,
+  "observed_scores_strictly_positive": true,
+  "unseen_categories_handled": true,
+  "numeric_native_missing_preserved": true,
+  "final": true,
+  "selection_unchanged_after_freeze": true,
+  "submission_format_valid": true,
+  "saved_model_reproduction_byte_identical": true,
+  "new_notebooks_fully_executed": true
+}

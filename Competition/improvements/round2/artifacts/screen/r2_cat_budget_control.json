@@ -1,0 +1,29 @@
+{
+  "name": "r2_cat_budget_control",
+  "spec": {
+    "name": "r2_cat_budget_control",
+    "kind": "cat",
+    "features": "lean",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "source": "improvements/round2/budget_control.py",
+    "hypothesis": "Hold features and all model parameters fixed while increasing patience 150\u2192200 and the cap 3000\u21924500. Test whether the changed stopping budget explains apparent gains from other trials."
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7484925822989676,
+  "average_precision": 0.23399382407407893,
+  "log_loss": 0.24872784171801024,
+  "iterations": 1670,
+  "features": 46,
+  "seconds": 139.76125407218933,
+  "auc_delta_vs_pass1_cat": 0.0,
+  "prediction_correlation": 0.9999999999999998,
+  "maximum_prediction_difference": 0.0,
+  "saturated": false
+}

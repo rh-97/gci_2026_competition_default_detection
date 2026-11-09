@@ -1,0 +1,18 @@
+{
+  "selection_sha256": "5279e3186a47be1bba65518a162745363e7166cfe73b5e6b63e2455009bfcb71",
+  "cdf_sha256": "11b24bf7451ebdb0decc690f048a0c61fec2b9f85b2ae2c6129c835d7bb920ff",
+  "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+  "source_hashes": {
+    "round3.py": "c76684cc19f5825aa76813ab7e81b68cbc162ceb34bd8d477cbfd6524ba8e058",
+    "validate.py": "d8cc30173fbe5f0a94eec617f8f3a800512632fa7ed7e77026c1fa663e080fc0",
+    "finalize.py": "e0f49acec57265a9a2e5230cbb3bb95bddd92843d7e15cc5673c9063749548b3",
+    "followup.py": "974fe7ba6f21d20e1c709f70e0feae9ee77eed1ddf9ea3881bc2cb9e65fc21a8",
+    "PLAN.md": "2aa34154e1d04b93f1bde6a85168224623df5cea6ce02ffe39c1d404cd07bee8",
+    "FOLLOWUP_PLAN.md": "d85762554c01a113df03a9605ee78e8220703f0fedb51c2e1166841af4e84c4f",
+    "STACKING_PROBE_PLAN.md": "96185170f827a647bae297e8d6c7f6e7277fd0b927d748a9de4c3531412a6e1e",
+    "reference/validation_reference_hashes.json": "eca51dbebffff63ad2657cc3be8c48071a35b5fcf8c6fef7c631be76d28e57bd",
+    "artifacts/candidate_plan.json": "02b7cc689737f8a4eba0282994c654cc2f72b003cbb27518d61a5fb3d30eb208",
+    "artifacts/followup_plan.json": "16d6af491bf06e48bcf0bdcd2a2e03ad605ffd741cb6ca08f63c22e6db10683c",
+    "artifacts/pair_grid_amendment.json": "bdedde786cef6183d83e6d910e6df0545f7abcc922002970a36e8d73fdf87fb8"
+  }
+}

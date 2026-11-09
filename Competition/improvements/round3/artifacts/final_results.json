@@ -1,0 +1,22 @@
+{
+  "accepted": true,
+  "new_submission_created": true,
+  "submission": "output/submission_round3.csv",
+  "sha256": "59f35bb06c11f10cf3ed8a2223fdf1bc4761d8a06b0f27e795d6d7703513cfb5",
+  "rows": 61500,
+  "full_oof": {
+    "auc": 0.7650940891573292,
+    "average_precision": 0.24803950024378554,
+    "log_loss": 0.24425980213492984,
+    "brier": 0.06752379979226311
+  },
+  "full_oof_independent": false,
+  "public_score": null,
+  "recommendation": "Locally validated third-pass candidate; upload to measure its public score.",
+  "probability_min": 0.0021992436660287287,
+  "probability_max": 0.8139739220823835,
+  "probability_mean": 0.08846170078087252,
+  "new_saved_models": 20,
+  "baseline_saved_models": 30,
+  "inference_method": "probability"
+}

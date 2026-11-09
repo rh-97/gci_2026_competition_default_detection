@@ -1,0 +1,22 @@
+{
+  "08_high_upside_modeling_plan.ipynb": {
+    "sha256": "e8c6d4fbcc38cd3f6b7d020180db8f2f5f1308b76ab35daef987878dd12e3d34",
+    "code_sha256": "87d256993dc61ddd652f25d3a46701ba0f872c20d9788222f117114423c4154f",
+    "executable": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/high_upside/../../.venv/bin/python"
+  },
+  "08b_local_gpu_amendment.ipynb": {
+    "sha256": "45768561737c3b7c55d29453a6172091791965badbda7a4e55126c4fb85e552d",
+    "code_sha256": "e4891941495737086f95f1a3b30cd2f3353d2dc964b709df8f90578be5b02bcd",
+    "executable": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/high_upside/../../.venv/bin/python"
+  },
+  "08c_compute_budget_policy.ipynb": {
+    "sha256": "135dc0d1f1164610efd2fb1b00773d59bf9d27881357557a5cc6e845d28ba0ed",
+    "code_sha256": "639cb911b86ff6ead2345b2b6db69065254d8be28d004c7d5c0f3c8fe1979266",
+    "executable": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/high_upside/../../.venv/bin/python"
+  },
+  "09_high_upside_results_reproduction.ipynb": {
+    "sha256": "9e04fba90c08a23d819c0b40998e9d4386cbbdded6c63b76127cdbbc0467cecc",
+    "code_sha256": "f93ea78d10e5ceca90bf1580649fde1d665ae37c4f714f60b9be09be2583bf84",
+    "executable": "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/.venv/bin/python"
+  }
+}

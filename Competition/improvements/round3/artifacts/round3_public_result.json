@@ -1,0 +1,19 @@
+{
+  "score": 0.76824,
+  "rank": 518,
+  "username": "hasanRocky",
+  "observed_date_bangladesh": "2026-11-09",
+  "submission": "output/submission_round3_bagged.csv",
+  "sha256": "7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02",
+  "source": "User explicitly confirmed submitting round 3 bagged and supplied a leaderboard screenshot.",
+  "file_attribution": "Explicitly confirmed by user; local CSV identity verified by SHA-256.",
+  "previous_round2_score": 0.76756,
+  "previous_round2_rank_snapshot": 568,
+  "gain_vs_round2": 0.00068,
+  "first_pass_score": 0.7654,
+  "gain_vs_first_pass": 0.00284,
+  "rank_is_snapshot": true,
+  "private_full_test_score": null,
+  "used_for_model_selection": false,
+  "interpretation": "Observed overall public-score gain for the frozen round-three bagged recipe. It does not isolate the marginal benefit of the third seed or establish private/full-test improvement."
+}

@@ -1,0 +1,64 @@
+{
+  "name": "hu_cat_score_reconstruction",
+  "spec": {
+    "name": "hu_cat_score_reconstruction",
+    "kind": "cat",
+    "features": "signed",
+    "learned": "score_reconstruction",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "max_iterations": 4500,
+    "patience": 200,
+    "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+  },
+  "origin": "high_upside",
+  "signature": {
+    "engine": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+    "spec": {
+      "name": "hu_cat_score_reconstruction",
+      "kind": "cat",
+      "features": "signed",
+      "learned": "score_reconstruction",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "max_iterations": 4500,
+      "patience": 200,
+      "hypothesis": "Use observed external scores as auxiliary supervised targets, with nested OOF reconstructions and residuals."
+    },
+    "origin": "high_upside",
+    "seed": 20264209,
+    "fixed": 1150
+  },
+  "auc": 0.7621344385491311,
+  "average_precision": 0.24426054761292043,
+  "log_loss": 0.24513759109705152,
+  "brier": 0.06772052968408221,
+  "counts": [
+    1150,
+    1150,
+    1150,
+    1150,
+    1150
+  ],
+  "fold_auc": [
+    0.7576624622901978,
+    0.7531513093506944,
+    0.7645288185899533,
+    0.767925502042732,
+    0.767809277721203
+  ],
+  "fold_seconds": [
+    118.75769877433777,
+    111.62277889251709,
+    134.34747886657715,
+    151.67793679237366,
+    134.68807411193848
+  ],
+  "seconds": 651.2103490829468
+}

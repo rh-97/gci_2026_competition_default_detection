@@ -1,0 +1,26 @@
+{
+  "origin": "Retrospective recomputation of the exact first-pass exploratory comparisons recorded in chat; no new fitting or selection",
+  "models": [
+    "cat_depth4",
+    "lgb_tune_12"
+  ],
+  "split": "original development OOF",
+  "comparisons": [
+    {
+      "cat_weight": 0.5,
+      "probability_auc": 0.7605637333149073,
+      "log_odds_auc": 0.7605155808750492
+    },
+    {
+      "cat_weight": 0.6666666666666666,
+      "probability_auc": 0.760744324000084,
+      "log_odds_auc": 0.7607011502958024
+    },
+    {
+      "cat_weight": 0.75,
+      "probability_auc": 0.7606692952953855,
+      "log_odds_auc": 0.7606259908552975
+    }
+  ],
+  "decision": "Probability averaging beat log-odds averaging for each tested weight. This does not establish universal dominance."
+}

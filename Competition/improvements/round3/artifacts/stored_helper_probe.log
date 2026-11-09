@@ -1,0 +1,12 @@
+lgb_tune_12 {'helper_weight': 0.1, 'method': 'probability', 'auc': 0.7637922303520547, 'gain': 6.934097878630308e-05}
+lgb_top_70 {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637504911500019, 'gain': 2.7601776733554573e-05}
+lgb_engineered {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637461244303985, 'gain': 2.3235057130088776e-05}
+lgb_raw {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637810272990961, 'gain': 5.813792582776145e-05}
+cat_depth4 {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637086377337007, 'gain': -1.425163956769726e-05}
+cat_lean {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637142708666387, 'gain': -8.61850662969843e-06}
+hgb_20 {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637152887382752, 'gain': -7.600634993165656e-06}
+spline_0.1 {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7636223650313128, 'gain': -0.00010052434195562121}
+cat_lean_depth6 {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637041783497068, 'gain': -1.8711023561546192e-05}
+r2_cat_native_missing {'helper_weight': 0.05, 'method': 'probability', 'auc': 0.7637059195782507, 'gain': -1.696979501764062e-05}
+r2_lgb_smooth_cats {'helper_weight': 0.1, 'method': 'probability', 'auc': 0.7637711833238623, 'gain': 4.829395059391395e-05}
+r2_xgb_finance {'helper_weight': 0.1, 'method': 'log_odds', 'auc': 0.7638145983865559, 'gain': 9.17090132874776e-05}

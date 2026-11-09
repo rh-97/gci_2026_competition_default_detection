@@ -1,0 +1,24 @@
+{
+  "accepted": true,
+  "new_submission_created": true,
+  "submission": "output/submission_round3_bagged.csv",
+  "sha256": "7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02",
+  "rows": 61500,
+  "full_oof": {
+    "auc": 0.7650709143402641,
+    "average_precision": 0.248402241005085,
+    "log_loss": 0.24424449387026184,
+    "brier": 0.06751501960492942
+  },
+  "full_oof_independent": false,
+  "public_score": null,
+  "recommendation": "Third-pass recipe plus prospectively validated three-seed averaging; public score unknown until uploaded.",
+  "probability_min": 0.002241952921346727,
+  "probability_max": 0.8128047091418165,
+  "probability_mean": 0.0884137868529318,
+  "new_saved_models": 30,
+  "baseline_saved_models": 45,
+  "inference_method": "probability",
+  "seeds_per_family": 3,
+  "additional_third_seed_models": 25
+}

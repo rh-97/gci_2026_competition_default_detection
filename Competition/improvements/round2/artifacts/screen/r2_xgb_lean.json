@@ -1,0 +1,32 @@
+{
+  "name": "r2_xgb_lean",
+  "spec": {
+    "name": "r2_xgb_lean",
+    "kind": "xgb",
+    "features": "lean",
+    "params": {
+      "max_depth": 4,
+      "min_child_weight": 30,
+      "reg_lambda": 20.0,
+      "reg_alpha": 1.0,
+      "subsample": 0.85,
+      "colsample_bytree": 0.85,
+      "max_bin": 256
+    },
+    "hypothesis": "The compact representation may also reduce noise for XGBoost."
+  },
+  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7452149496333597,
+  "average_precision": 0.23318711294466085,
+  "log_loss": 0.2496316283941269,
+  "iterations": 888,
+  "features": 46,
+  "seconds": 27.431570768356323,
+  "auc_delta_vs_pass1_cat": -0.003277632665607988,
+  "prediction_correlation": 0.946354078234228,
+  "maximum_prediction_difference": 0.30000798066935075,
+  "saturated": false
+}

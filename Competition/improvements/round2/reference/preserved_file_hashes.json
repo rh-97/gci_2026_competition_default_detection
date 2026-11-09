@@ -1,0 +1,21 @@
+{
+  "preprocessing.ipynb": "72f08252cd8c328ade91692add61eed9e172e3d04a4fa7617407663097fe5f4a",
+  "README.ipynb": "40dab614a6b0a8841fbf5fcb95bfbfae214a222a252c3b545c2151cc048f5c91",
+  "02_improved_models_and_submission.ipynb": "54fada686e62fdf9681e732c9045440896c832bdc4ecfbd1346d4930a4c33afe",
+  "01_competition_data_audit.ipynb": "a812bbb528013dfe5d7290c2ce1640c7ecab7802fdf03691143d5ea950308ee3",
+  "tutorial.ipynb": "d62888f5c151b270c32bd9b47898a2248ac0f9b0f17cba22b96dbd59ee6f16c9",
+  "input/test.csv": "dfb7aeb96e5af3d8616acaaba6b23cec8680845cfd525f7c08de15c6d2d42c65",
+  "input/train.csv": "b8dd5a61771d8eb2821972c1b7d3f2f747cc66471f4d34153036d2d9c458ecf1",
+  "input/sample_submission.csv": "6e5ad587b7c0b3d9fa39c90ce03e161ff5ef292193e117a6a02b11075dffe7db",
+  "improvements/refine_cat.py": "e3655833d1b618f700b75f3b60494b49186c04bce64181bc3f4991e4dbfe57de",
+  "improvements/refine.py": "995f02373fb31da3c911d09c0ad616a0a24116b1716ba12cd4c433eba606efb6",
+  "improvements/execute_notebook.py": "e9091ee4987ad0fa6a2e292f4226e12270e99eb82893ab9f5ac6f1d0edc285d1",
+  "improvements/experiment.py": "0e22b086fc2c271696b3e1c8061fa5b4591264fda43ac35acec6011ee0becde0",
+  "improvements/select_features.py": "ef841fe97289c776f0b36b279f31dbabb724efd3df3f67bfa658c00c63936328",
+  "improvements/build_notebooks.py": "8e127a67ffc2ca57af9a211ce9f93cd40884d47094625dab7591fc6a9dc88d43",
+  "improvements/verify.py": "3ea4ec12cae8bd2047181724f55fc760e3c1e8b99e6a61d344beddd258d55a15",
+  "improvements/supplement.py": "ad297eb90d2bb33c8d8587022eb62a4f1fbcc9fcb31dbd23f512c65619d1b74b",
+  "improvements/package_results.py": "82e4f272bef963904f3e81d67799f6a76b097d3bbd146e97a974a85f8c562b94",
+  "output/submission_improved.csv": "71cd8588031deef62dadd8eeddb8e33965cbe42b6e0fc25c41e673271b08c616",
+  "output/competition_improved_reproduction.zip": "f379ccf7879a86d3c904a61b92f4ca33ce0bc6c64aef137d69b4a34fea38b992"
+}

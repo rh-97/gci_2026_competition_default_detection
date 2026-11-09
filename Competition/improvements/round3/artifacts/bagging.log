@@ -1,0 +1,33 @@
+BAGGING PHASE probe
+{'passed': True, 'reference_two_seed': {'auc': 0.7639709612844672, 'average_precision': 0.24961659654110502, 'log_loss': 0.24435931684195786, 'brier': 0.06749072319513301}, 'reference_three_seed': {'auc': 0.7641962032758703, 'average_precision': 0.25012185409994864, 'log_loss': 0.2442864391747145, 'brier': 0.06747106274719959}, 'candidate_two_seed': {'auc': 0.7645840648073541, 'average_precision': 0.24943312367136428, 'log_loss': 0.24425825341011867, 'brier': 0.06748653279473298}, 'candidate_three_seed': {'auc': 0.7648034854637242, 'average_precision': 0.25007404217161094, 'log_loss': 0.24417548816405393, 'brier': 0.06746233457930292}, 'reference_increment': 0.00022524199140316892, 'candidate_increment': 0.00021942065637015062, 'recipe_gain_at_three_seeds': 0.0006072821878538859, 'reference_fold_increments': [0.0005496552159472978, -2.3241949901775527e-05, 0.0002221635844950054, 0.00035100014295430526, 2.669747079608875e-05], 'candidate_fold_increments': [0.0006577693951486108, 8.980660703872267e-06, 0.00018974339935362572, 0.0002309287093421597, -4.1294003250147426e-07], 'note': 'Conditional development averaging diagnostic. No weights, transforms or seed subsets were retuned.'}
+BAGGING PHASE train
+THIRD FINAL lgb_tune_15 1
+THIRD FINAL lgb_tune_15 0
+THIRD FINAL lgb_tune_15 3
+THIRD FINAL lgb_tune_15 2
+THIRD FINAL lgb_tune_15 4
+THIRD FINAL r2_cat_term_proxies 1
+THIRD FINAL r2_cat_term_proxies 0
+THIRD FINAL r2_cat_term_proxies 3
+THIRD FINAL r2_cat_term_proxies 2
+THIRD FINAL r2_cat_term_proxies 4
+THIRD FINAL r2_cat_proxies_native 1
+THIRD FINAL r2_cat_proxies_native 0
+THIRD FINAL r2_cat_proxies_native 3
+THIRD FINAL r2_cat_proxies_native 2
+THIRD FINAL r2_cat_proxies_native 4
+THIRD FINAL r3_cat_feature_b512 1
+THIRD FINAL r3_cat_feature_b512 0
+THIRD FINAL r3_cat_feature_b512 3
+THIRD FINAL r3_cat_feature_b512 2
+THIRD FINAL r3_cat_feature_b512 4
+THIRD FINAL r3_cat_signed 1
+THIRD FINAL r3_cat_signed 0
+THIRD FINAL r3_cat_signed 2
+THIRD FINAL r3_cat_signed 3
+THIRD FINAL r3_cat_signed 4
+BAGGED SUBMISSION {'accepted': True, 'new_submission_created': True, 'submission': 'output/submission_round3_bagged.csv', 'sha256': '7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02', 'rows': 61500, 'full_oof': {'auc': 0.7650709143402641, 'average_precision': 0.248402241005085, 'log_loss': 0.24424449387026184, 'brier': 0.06751501960492942}, 'full_oof_independent': False, 'public_score': None, 'recommendation': 'Third-pass recipe plus prospectively validated three-seed averaging; public score unknown until uploaded.', 'probability_min': 0.002241952921346727, 'probability_max': 0.8128047091418165, 'probability_mean': 0.0884137868529318, 'new_saved_models': 30, 'baseline_saved_models': 45, 'inference_method': 'probability', 'seeds_per_family': 3, 'additional_third_seed_models': 25}
+BAGGING PHASE reproduce
+Three-seed byte-identical reproduction: /Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/output/submission_round3_bagged_reproduced.csv
+Updated third-pass journal: 28 complete, 0 failed, 0 pending.
+BAGGING PIPELINE COMPLETE

@@ -1,0 +1,121 @@
+{
+  "families": [
+    {
+      "name": "r3_cat_feature_b512",
+      "file": "improvements/round3/artifacts/r3_cat_feature_b512_final_importance.csv",
+      "measure": "CatBoost PredictionValuesChange",
+      "models": 15,
+      "top_features": [
+        {
+          "feature": "EXT_MEAN",
+          "mean_importance_pct": 11.070341757815251,
+          "model_std_pct": 0.8187283475683118
+        },
+        {
+          "feature": "EXT_MAX",
+          "mean_importance_pct": 6.0107059736447175,
+          "model_std_pct": 0.7656582018639911
+        },
+        {
+          "feature": "EXT_MIN",
+          "mean_importance_pct": 5.787654243227562,
+          "model_std_pct": 0.3395414809960995
+        },
+        {
+          "feature": "DAYS_BIRTH",
+          "mean_importance_pct": 4.1788210553783784,
+          "model_std_pct": 0.2595862397869235
+        },
+        {
+          "feature": "TERM_MULTIPLE_6_SIGNED",
+          "mean_importance_pct": 3.959956334227449,
+          "model_std_pct": 0.3275784997199375
+        },
+        {
+          "feature": "EXT_SOURCE_3",
+          "mean_importance_pct": 3.792500200695783,
+          "model_std_pct": 0.41726666126574896
+        },
+        {
+          "feature": "CREDIT_GOODS_DIFF_RATIO",
+          "mean_importance_pct": 3.5905988221305023,
+          "model_std_pct": 0.16308341925071673
+        },
+        {
+          "feature": "TERM_MULTIPLE_6_DISTANCE",
+          "mean_importance_pct": 3.459350542928747,
+          "model_std_pct": 0.40769447332530395
+        },
+        {
+          "feature": "TERM_MULTIPLE_12_SIGNED",
+          "mean_importance_pct": 3.002887027365362,
+          "model_std_pct": 0.3227921858003669
+        },
+        {
+          "feature": "TERM_MULTIPLE_12_DISTANCE",
+          "mean_importance_pct": 2.939463349875693,
+          "model_std_pct": 0.2362990955078793
+        }
+      ]
+    },
+    {
+      "name": "r3_cat_signed",
+      "file": "improvements/round3/artifacts/r3_cat_signed_final_importance.csv",
+      "measure": "CatBoost PredictionValuesChange",
+      "models": 15,
+      "top_features": [
+        {
+          "feature": "EXT_MEAN",
+          "mean_importance_pct": 12.389326456222184,
+          "model_std_pct": 1.2287716605611454
+        },
+        {
+          "feature": "EXT_MIN",
+          "mean_importance_pct": 5.804766161100777,
+          "model_std_pct": 0.7637209201279874
+        },
+        {
+          "feature": "EXT_MAX",
+          "mean_importance_pct": 5.4630209257106985,
+          "model_std_pct": 0.6155505488374083
+        },
+        {
+          "feature": "DAYS_BIRTH",
+          "mean_importance_pct": 4.110034757194682,
+          "model_std_pct": 0.2082278505836918
+        },
+        {
+          "feature": "TERM_MULTIPLE_6_SIGNED",
+          "mean_importance_pct": 3.8935335886687685,
+          "model_std_pct": 0.3909860250114513
+        },
+        {
+          "feature": "EXT_SOURCE_3",
+          "mean_importance_pct": 3.88354947728294,
+          "model_std_pct": 0.5008503664170494
+        },
+        {
+          "feature": "CREDIT_GOODS_DIFF_RATIO",
+          "mean_importance_pct": 3.7297710221291265,
+          "model_std_pct": 0.18716915898553937
+        },
+        {
+          "feature": "TERM_MULTIPLE_6_DISTANCE",
+          "mean_importance_pct": 3.6475391336440124,
+          "model_std_pct": 0.4004377447432402
+        },
+        {
+          "feature": "TERM_MULTIPLE_12_SIGNED",
+          "mean_importance_pct": 3.056682351175186,
+          "model_std_pct": 0.23194228246347245
+        },
+        {
+          "feature": "TERM_MULTIPLE_12_DISTANCE",
+          "mean_importance_pct": 2.751837008420007,
+          "model_std_pct": 0.19751518533553045
+        }
+      ]
+    }
+  ],
+  "note": "Normalized to 100 within each model. Correlated features can share importance. These are descriptive model statistics, not causal effects, and different families use different measures."
+}

@@ -1,0 +1,83 @@
+{
+  "reference_auc": 0.7637228893732684,
+  "neural_auc": 0.7606961995750414,
+  "best": {
+    "new_weight": 0.3333333333333333,
+    "method": "probability",
+    "auc": 0.7650343253899636
+  },
+  "gain": 0.0013114360166952554,
+  "grid": [
+    {
+      "new_weight": 0.3333333333333333,
+      "method": "probability",
+      "auc": 0.7650343253899636
+    },
+    {
+      "new_weight": 0.3333333333333333,
+      "method": "log_odds",
+      "auc": 0.7649208423999334
+    },
+    {
+      "new_weight": 0.5,
+      "method": "probability",
+      "auc": 0.7649119092653736
+    },
+    {
+      "new_weight": 0.25,
+      "method": "probability",
+      "auc": 0.7648972647000576
+    },
+    {
+      "new_weight": 0.25,
+      "method": "log_odds",
+      "auc": 0.764893033744561
+    },
+    {
+      "new_weight": 0.5,
+      "method": "log_odds",
+      "auc": 0.76454584900712
+    },
+    {
+      "new_weight": 0.1,
+      "method": "log_odds",
+      "auc": 0.7644110819404568
+    },
+    {
+      "new_weight": 0.1,
+      "method": "probability",
+      "auc": 0.764329356258153
+    },
+    {
+      "new_weight": 0.6666666666666666,
+      "method": "probability",
+      "auc": 0.764218862951786
+    },
+    {
+      "new_weight": 0.6666666666666666,
+      "method": "log_odds",
+      "auc": 0.7636638068453222
+    },
+    {
+      "new_weight": 0.75,
+      "method": "probability",
+      "auc": 0.7636320811440546
+    },
+    {
+      "new_weight": 0.75,
+      "method": "log_odds",
+      "auc": 0.7630573636652818
+    },
+    {
+      "new_weight": 0.9,
+      "method": "probability",
+      "auc": 0.7621000104956429
+    },
+    {
+      "new_weight": 0.9,
+      "method": "log_odds",
+      "auc": 0.7617286683671401
+    }
+  ],
+  "scope": "Read-only preview of the already-declared primary pair grid; not a frozen decision or new configuration. Tree CV still runs; no gates or settings changed."
+}

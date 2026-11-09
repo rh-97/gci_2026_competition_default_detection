@@ -1,0 +1,244 @@
+{
+  "recipe": {
+    "names": [
+      "round2_reference",
+      "r3_cat_feature_b512",
+      "r3_cat_signed"
+    ],
+    "weights": [
+      0.5,
+      0.25,
+      0.25
+    ],
+    "method": "probability",
+    "auc": 0.7637228893732684,
+    "why": "Two complementary helpers with equal new-model weights.",
+    "baseline_auc": 0.7630891353395803,
+    "gain": 0.0006337540336880387,
+    "primary_gate_passed": true,
+    "fold_gains": [
+      0.0007927774701395052,
+      0.00044416551709702823,
+      0.0005978425830635015,
+      0.0004573670883321057,
+      0.0009047157033553743
+    ],
+    "new_families": [
+      {
+        "name": "r3_cat_feature_b512",
+        "spec": {
+          "name": "r3_cat_feature_b512",
+          "kind": "cat",
+          "features": "signed",
+          "params": {
+            "depth": 5,
+            "l2_leaf_reg": 8,
+            "random_strength": 0.5,
+            "border_count": 512
+          },
+          "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+          "max_iterations": 4500,
+          "patience": 200,
+          "source": "improvements/round3/followup.py"
+        },
+        "origin": "round3",
+        "iterations": [
+          1619,
+          1056,
+          1041,
+          1677,
+          1742
+        ],
+        "fixed_iterations": 1619
+      },
+      {
+        "name": "r3_cat_signed",
+        "spec": {
+          "name": "r3_cat_signed",
+          "kind": "cat",
+          "features": "signed",
+          "params": {
+            "depth": 5,
+            "l2_leaf_reg": 8,
+            "random_strength": 0.5
+          },
+          "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+          "max_iterations": 4500,
+          "patience": 200
+        },
+        "origin": "round3",
+        "iterations": [
+          1240,
+          1320,
+          1120,
+          1979,
+          1312
+        ],
+        "fixed_iterations": 1312
+      }
+    ],
+    "confirmation_seed": 20262209,
+    "status": "frozen before confirmation"
+  },
+  "new_families": [
+    {
+      "name": "r3_cat_feature_b512",
+      "spec": {
+        "name": "r3_cat_feature_b512",
+        "kind": "cat",
+        "features": "signed",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5,
+          "border_count": 512
+        },
+        "hypothesis": "Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.",
+        "max_iterations": 4500,
+        "patience": 200,
+        "source": "improvements/round3/followup.py"
+      },
+      "seeds": [
+        {
+          "seed_number": 0,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s0_fold0.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s0_fold0_encoder.joblib"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s0_fold1.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s0_fold1_encoder.joblib"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s0_fold2.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s0_fold2_encoder.joblib"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s0_fold3.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s0_fold3_encoder.joblib"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s0_fold4.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s0_fold4_encoder.joblib"
+            }
+          ]
+        },
+        {
+          "seed_number": 1,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s1_fold0.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s1_fold0_encoder.joblib"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s1_fold1.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s1_fold1_encoder.joblib"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s1_fold2.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s1_fold2_encoder.joblib"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s1_fold3.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s1_fold3_encoder.joblib"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round3/models/r3_cat_feature_b512_s1_fold4.cbm",
+              "encoder": "improvements/round3/models/r3_cat_feature_b512_s1_fold4_encoder.joblib"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r3_cat_signed",
+      "spec": {
+        "name": "r3_cat_signed",
+        "kind": "cat",
+        "features": "signed",
+        "params": {
+          "depth": 5,
+          "l2_leaf_reg": 8,
+          "random_strength": 0.5
+        },
+        "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+        "max_iterations": 4500,
+        "patience": 200
+      },
+      "seeds": [
+        {
+          "seed_number": 0,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round3/models/r3_cat_signed_s0_fold0.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s0_fold0_encoder.joblib"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round3/models/r3_cat_signed_s0_fold1.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s0_fold1_encoder.joblib"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round3/models/r3_cat_signed_s0_fold2.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s0_fold2_encoder.joblib"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round3/models/r3_cat_signed_s0_fold3.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s0_fold3_encoder.joblib"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round3/models/r3_cat_signed_s0_fold4.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s0_fold4_encoder.joblib"
+            }
+          ]
+        },
+        {
+          "seed_number": 1,
+          "instances": [
+            {
+              "fold": 0,
+              "model": "improvements/round3/models/r3_cat_signed_s1_fold0.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s1_fold0_encoder.joblib"
+            },
+            {
+              "fold": 1,
+              "model": "improvements/round3/models/r3_cat_signed_s1_fold1.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s1_fold1_encoder.joblib"
+            },
+            {
+              "fold": 2,
+              "model": "improvements/round3/models/r3_cat_signed_s1_fold2.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s1_fold2_encoder.joblib"
+            },
+            {
+              "fold": 3,
+              "model": "improvements/round3/models/r3_cat_signed_s1_fold3.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s1_fold3_encoder.joblib"
+            },
+            {
+              "fold": 4,
+              "model": "improvements/round3/models/r3_cat_signed_s1_fold4.cbm",
+              "encoder": "improvements/round3/models/r3_cat_signed_s1_fold4_encoder.joblib"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "baseline_manifest": "improvements/round2/artifacts/model_manifest.json"
+}

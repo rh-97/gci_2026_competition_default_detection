@@ -1,0 +1,36 @@
+{
+  "reference_auc": 0.7630891353395803,
+  "results": [
+    {
+      "names": [
+        "lgb_tune_15",
+        "r2_cat_term_proxies",
+        "r2_cat_proxies_native"
+      ],
+      "weights": [
+        0.1875,
+        0.5625,
+        0.25
+      ],
+      "method": "log_odds",
+      "auc": 0.7630436019258241,
+      "why": "Same current families/weights, change only prediction combination."
+    },
+    {
+      "names": [
+        "lgb_tune_15",
+        "r2_cat_term_proxies",
+        "r2_cat_proxies_native"
+      ],
+      "weights": [
+        0.1875,
+        0.5625,
+        0.25
+      ],
+      "method": "percentile",
+      "auc": 0.7630256264707563,
+      "why": "Same current families/weights, change only prediction combination."
+    }
+  ],
+  "percentile_note": "Primary OOF empirical CDFs use predictions only, no target fitting. They are frozen and transferred to subsequent checks and inference. This is a ranking transform, not calibrated probability estimation. Primary score remains a selection diagnostic."
+}

@@ -1,0 +1,24 @@
+{
+  "signature": {
+    "spec": {
+      "name": "r3_cat_signed",
+      "kind": "cat",
+      "features": "signed",
+      "params": {
+        "depth": 5,
+        "l2_leaf_reg": 8,
+        "random_strength": 0.5
+      },
+      "hypothesis": "Signed term residuals and rounded categories may retain structure lost by absolute distances.",
+      "max_iterations": 4500,
+      "patience": 200
+    },
+    "origin": "round3",
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "fold_seed": 20261409,
+    "fixed_iterations": 1312
+  },
+  "iterations": 1312,
+  "auc": 0.7617774626666303,
+  "seconds": 104.95200109481812
+}

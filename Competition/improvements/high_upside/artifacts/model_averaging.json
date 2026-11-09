@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "auc": 0.7648034854637242,
+    "average_precision": 0.25007404217161094,
+    "log_loss": 0.24417548816405393,
+    "brier": 0.06746233457930292
+  },
+  "candidate": {
+    "auc": 0.7662609426013722,
+    "average_precision": 0.2520906983798925,
+    "log_loss": 0.24371664207520882,
+    "brier": 0.06737021878880448
+  },
+  "gain": 0.0014574571376479994,
+  "fold_gains": [
+    0.0014812109333846024,
+    0.001834659175215192,
+    0.001729208257228887,
+    0.0018530695296581357,
+    0.00047769980193235195
+  ],
+  "passed": true,
+  "substantial_gain": false,
+  "weights_retuned": false,
+  "caveat": "Matching three-seed development comparison. Selection and fitting uncertainty are not removed."
+}

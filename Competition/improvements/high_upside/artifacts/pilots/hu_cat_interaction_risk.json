@@ -1,0 +1,64 @@
+{
+  "name": "hu_cat_interaction_risk",
+  "spec": {
+    "name": "hu_cat_interaction_risk",
+    "kind": "cat",
+    "features": "signed",
+    "learned": "interaction_risk",
+    "params": {
+      "depth": 5,
+      "l2_leaf_reg": 8,
+      "random_strength": 0.5
+    },
+    "max_iterations": 4500,
+    "patience": 200,
+    "hypothesis": "Use regularized OOF borrower/loan/score interaction risks to expose nonlinear population structure."
+  },
+  "signature": "fd4bd07beac5036482fe45fa854ed47d1e981739c35a88e7d7ea98a32153eb42",
+  "status": "complete",
+  "auc": 0.745379657680358,
+  "average_precision": 0.23395191862701045,
+  "log_loss": 0.24945738419598396,
+  "brier": 0.06834339084047984,
+  "count": 991,
+  "seconds": 99.31026697158813,
+  "reference_auc": 0.7518409026469929,
+  "blends": [
+    {
+      "new_weight": 0.1,
+      "auc": 0.7517083661159434
+    },
+    {
+      "new_weight": 0.25,
+      "auc": 0.7512834354461924
+    },
+    {
+      "new_weight": 0.5,
+      "auc": 0.7500319071555106
+    },
+    {
+      "new_weight": 0.75,
+      "auc": 0.7480889613793307
+    },
+    {
+      "new_weight": 1.0,
+      "auc": 0.745379657680358
+    }
+  ],
+  "best_blend": {
+    "new_weight": 0.1,
+    "auc": 0.7517083661159434
+  },
+  "diagnostics": {
+    "auxiliary": {
+      "inner_folds": 5,
+      "interactions": 8,
+      "features": 32
+    },
+    "source_hashes": {
+      "h_models.py": "ce6f6bf04d2058623aa5bc95dde6a8be030ce6f91d390c029e03182486363461",
+      "h_features.py": "47837f88af209e04af23c0babfeb89bb27be700a646623b04701fdd844420b42"
+    }
+  },
+  "correlation": 0.967772432367816
+}

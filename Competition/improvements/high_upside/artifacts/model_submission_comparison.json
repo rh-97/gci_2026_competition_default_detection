@@ -1,0 +1,9 @@
+{
+  "reference_sha256": "7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02",
+  "candidate_sha256": "15d050aa8709ae4e2d338b013c03216d4b3f3279348a3faca71080c17e44baed",
+  "rows": 61500,
+  "identical_id_order": true,
+  "changed_prediction_rows": 61500,
+  "mean_absolute_prediction_change": 0.005821758410661357,
+  "note": "Delivery diagnostic only; no selection, weight changes or public-score inference."
+}

@@ -1,0 +1,10 @@
+{
+  "protected_files_unchanged": 230,
+  "old_notebooks_unchanged": 9,
+  "new_notebook": "07_signal_opportunity_audit.ipynb",
+  "new_notebook_fully_executed": true,
+  "code_cells": 6,
+  "notebook_sha256": "e3a6d6725c631d337ea4f36ca69e8c19647020057d4630a8e36a3feb44ee1934",
+  "reference_submission_sha256": "7d933ea1e9bffea4e3bf034a81a8ece315655dcebdeb9408682d159d60bbfb02",
+  "no_new_models_fitted": true
+}

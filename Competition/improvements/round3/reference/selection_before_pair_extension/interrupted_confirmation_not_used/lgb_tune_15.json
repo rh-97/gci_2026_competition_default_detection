@@ -1,0 +1,67 @@
+{
+  "name": "lgb_tune_15",
+  "spec": {
+    "name": "lgb_tune_15",
+    "kind": "lgb",
+    "features": "engineered",
+    "groups": true,
+    "params": {
+      "num_leaves": 21,
+      "min_child_samples": 89,
+      "colsample_bytree": 0.6846068413999578,
+      "subsample": 0.961965333135664,
+      "subsample_freq": 1,
+      "reg_lambda": 2.1323824335960286,
+      "reg_alpha": 3.687185564401245,
+      "max_bin": 255,
+      "max_depth": -1
+    }
+  },
+  "origin": "round2",
+  "signature": {
+    "spec": {
+      "name": "lgb_tune_15",
+      "kind": "lgb",
+      "features": "engineered",
+      "groups": true,
+      "params": {
+        "num_leaves": 21,
+        "min_child_samples": 89,
+        "colsample_bytree": 0.6846068413999578,
+        "subsample": 0.961965333135664,
+        "subsample_freq": 1,
+        "reg_lambda": 2.1323824335960286,
+        "reg_alpha": 3.687185564401245,
+        "max_bin": 255,
+        "max_depth": -1
+      }
+    },
+    "origin": "round2",
+    "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f",
+    "fold_seed": 20261709,
+    "fixed_iterations": 590
+  },
+  "auc": 0.7570380184782391,
+  "fold_auc": [
+    0.7571533454031509,
+    0.7610407299725295,
+    0.7494649457062482,
+    0.7548054572457595,
+    0.7630179704320574
+  ],
+  "iterations": [
+    590,
+    590,
+    590,
+    590,
+    590
+  ],
+  "fold_seconds": [
+    11.98301887512207,
+    11.561275005340576,
+    11.368109226226807,
+    11.36279010772705,
+    7.763262033462524
+  ],
+  "seconds": 30.790755033493042
+}

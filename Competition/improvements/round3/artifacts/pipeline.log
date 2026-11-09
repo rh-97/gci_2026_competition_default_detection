@@ -1,0 +1,82 @@
+PHASE quantization_followup
+PHASE document_screens
+Updated third-pass journal: 28 complete, 0 failed, 0 pending.
+PHASE common_fold_cv
+PROMOTED ['r3_cat_feature_b512', 'r3_cat_signed', 'r3_lgb_proxy']
+PHASE freeze_primary_selection
+SELECTED {'names': ['round2_reference', 'r3_cat_feature_b512', 'r3_cat_signed'], 'weights': [0.5, 0.25, 0.25], 'method': 'probability', 'auc': 0.7637228893732684, 'why': 'Two complementary helpers with equal new-model weights.', 'baseline_auc': 0.7630891353395803, 'gain': 0.0006337540336880387, 'primary_gate_passed': True, 'fold_gains': [0.0007927774701395052, 0.00044416551709702823, 0.0005978425830635015, 0.0004573670883321057, 0.0009047157033553743], 'new_families': [{'name': 'r3_cat_feature_b512', 'spec': {'name': 'r3_cat_feature_b512', 'kind': 'cat', 'features': 'signed', 'params': {'depth': 5, 'l2_leaf_reg': 8, 'random_strength': 0.5, 'border_count': 512}, 'hypothesis': 'Combine the eligible best new feature block (r3_cat_signed) with finer quantization under the recorded rule.', 'max_iterations': 4500, 'patience': 200, 'source': 'improvements/round3/followup.py'}, 'origin': 'round3', 'iterations': [1619, 1056, 1041, 1677, 1742], 'fixed_iterations': 1619}, {'name': 'r3_cat_signed', 'spec': {'name': 'r3_cat_signed', 'kind': 'cat', 'features': 'signed', 'params': {'depth': 5, 'l2_leaf_reg': 8, 'random_strength': 0.5}, 'hypothesis': 'Signed term residuals and rounded categories may retain structure lost by absolute distances.', 'max_iterations': 4500, 'patience': 200}, 'origin': 'round3', 'iterations': [1240, 1320, 1120, 1979, 1312], 'fixed_iterations': 1312}], 'confirmation_seed': 20262209, 'status': 'frozen before confirmation'}
+PHASE new_seed_confirmation
+CV lgb_tune_15 20262209 1 0.7631492 590
+CV lgb_tune_15 20262209 0 0.7579192 590
+CV lgb_tune_15 20262209 2 0.7644103 590
+CV lgb_tune_15 20262209 3 0.7495416 590
+CV lgb_tune_15 20262209 4 0.7532803 590
+CV COMPLETE lgb_tune_15 0.7575913743008896
+CV r2_cat_term_proxies 20262209 1 0.7672138 1568
+CV r2_cat_term_proxies 20262209 0 0.7641739 1568
+CV r2_cat_term_proxies 20262209 2 0.7680262 1568
+CV r2_cat_term_proxies 20262209 3 0.7545969 1568
+CV r2_cat_term_proxies 20262209 4 0.7534403 1568
+CV COMPLETE r2_cat_term_proxies 0.7614464851853691
+CV r2_cat_proxies_native 20262209 1 0.7667636 1557
+CV r2_cat_proxies_native 20262209 0 0.7641421 1557
+CV r2_cat_proxies_native 20262209 3 0.7553141 1557
+CV r2_cat_proxies_native 20262209 2 0.7693175 1557
+CV r2_cat_proxies_native 20262209 4 0.7525334 1557
+CV COMPLETE r2_cat_proxies_native 0.7615938445525171
+CV r3_cat_feature_b512 20262209 0 0.7640601 1619
+CV r3_cat_feature_b512 20262209 1 0.7683262 1619
+CV r3_cat_feature_b512 20262209 2 0.7694021 1619
+CV r3_cat_feature_b512 20262209 3 0.7567688 1619
+CV r3_cat_feature_b512 20262209 4 0.7552328 1619
+CV COMPLETE r3_cat_feature_b512 0.7627212742315083
+CV r3_cat_signed 20262209 0 0.7645333 1312
+CV r3_cat_signed 20262209 1 0.7677509 1312
+CV r3_cat_signed 20262209 2 0.7702967 1312
+CV r3_cat_signed 20262209 3 0.7561551 1312
+CV r3_cat_signed 20262209 4 0.7550887 1312
+CV COMPLETE r3_cat_signed 0.7627388416759271
+CONFIRMATION {'baseline_auc': 0.762591670510874, 'candidate_auc': 0.7634378860333852, 'gain': 0.0008462155225112955, 'fold_gains': [0.0005013251976125899, 0.0007489511800685689, 0.0009191706230518015, 0.001275702852999716, 0.0007524485548534576], 'positive_folds': 5, 'passed': True, 'fold_seed': 20262209, 'validation_early_stopping': False, 'weights_retuned': False, 'caveat': 'A new partition of previously explored development labels, not an independent untouched test.'}
+PHASE two_seed_comparison
+CV r3_cat_feature_b512 20261409 0 0.768523 1619
+CV r3_cat_feature_b512 20261409 1 0.7565677 1619
+CV r3_cat_feature_b512 20261409 3 0.7606048 1619
+CV r3_cat_feature_b512 20261409 2 0.7682904 1619
+CV r3_cat_feature_b512 20261409 4 0.7631263 1619
+CV COMPLETE r3_cat_feature_b512 0.7633261449902274
+CV r3_cat_signed 20261409 0 0.7668598 1312
+CV r3_cat_signed 20261409 1 0.7571787 1312
+CV r3_cat_signed 20261409 2 0.7671271 1312
+CV r3_cat_signed 20261409 3 0.7602228 1312
+CV r3_cat_signed 20261409 4 0.7617775 1312
+CV COMPLETE r3_cat_signed 0.7625529935436739
+AVERAGING {'baseline_two_seed_auc': 0.7639709612844672, 'candidate_two_seed_auc': 0.7645840648073541, 'gain': 0.0006131035228869042, 'passed': True, 'candidate_primary_auc': 0.7637228893732684, 'candidate_secondary_auc': 0.7637168798361402, 'secondary_gain_vs_round2': 0.0008412224203622198, 'primary_fold_gains': [0.0009319686410713679, 0.0005371153553833663, 0.0005365944770625575, 0.0005989921076337001, 0.00047067982138015996], 'averaging': 'Average matching family predictions across the two development seeds before the frozen blend transform.', 'caveat': 'Selection/averaging diagnostic on development rows; no new independent labels.'}
+PHASE gated_final_training
+FINAL r3_cat_feature_b512 0 1
+FINAL r3_cat_feature_b512 0 0
+FINAL r3_cat_feature_b512 0 2
+FINAL r3_cat_feature_b512 0 3
+FINAL r3_cat_feature_b512 0 4
+FINAL r3_cat_feature_b512 1 0
+FINAL r3_cat_feature_b512 1 1
+FINAL r3_cat_feature_b512 1 2
+FINAL r3_cat_feature_b512 1 3
+FINAL r3_cat_feature_b512 1 4
+FINAL r3_cat_signed 0 1
+FINAL r3_cat_signed 0 0
+FINAL r3_cat_signed 0 3
+FINAL r3_cat_signed 0 2
+FINAL r3_cat_signed 0 4
+FINAL r3_cat_signed 1 0
+FINAL r3_cat_signed 1 1
+FINAL r3_cat_signed 1 2
+FINAL r3_cat_signed 1 3
+FINAL r3_cat_signed 1 4
+SUBMISSION {'accepted': True, 'new_submission_created': True, 'submission': 'output/submission_round3.csv', 'sha256': '59f35bb06c11f10cf3ed8a2223fdf1bc4761d8a06b0f27e795d6d7703513cfb5', 'rows': 61500, 'full_oof': {'auc': 0.7650940891573292, 'average_precision': 0.24803950024378554, 'log_loss': 0.24425980213492984, 'brier': 0.06752379979226311}, 'full_oof_independent': False, 'public_score': None, 'recommendation': 'Locally validated third-pass candidate; upload to measure its public score.', 'probability_min': 0.0021992436660287287, 'probability_max': 0.8139739220823835, 'probability_mean': 0.08846170078087252, 'new_saved_models': 20, 'baseline_saved_models': 30, 'inference_method': 'probability'}
+PHASE saved_model_reproduction
+Byte-identical saved-model reproduction: /Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/output/submission_round3_reproduced.csv
+PHASE conditional_uncertainty
+{'primary': {'gain': 0.0006337540336880387, 'conditional_gain_ci95': [0.0003058341511648077, 0.0009895809287284256], 'bootstrap_replicates': 400, 'caveat': 'Paired row resampling conditions on fitted OOF predictions. It excludes fitting and selection uncertainty; this is not a search-adjusted significance test.'}, 'confirmation': {'gain': 0.0008462155225112955, 'conditional_gain_ci95': [0.000517355599255992, 0.0011563982375238813], 'bootstrap_replicates': 400, 'caveat': 'Paired row resampling conditions on fitted OOF predictions. It excludes fitting and selection uncertainty; this is not a search-adjusted significance test.'}, 'two_seed': {'gain': 0.0006131035228869042, 'conditional_gain_ci95': [0.00033356772323948626, 0.000857796577941025], 'bootstrap_replicates': 400, 'caveat': 'Paired row resampling conditions on fitted OOF predictions. It excludes fitting and selection uncertainty; this is not a search-adjusted significance test.'}}
+PHASE document_final
+Updated third-pass journal: 28 complete, 0 failed, 0 pending.
+PIPELINE COMPLETE

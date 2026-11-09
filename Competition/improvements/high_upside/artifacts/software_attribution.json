@@ -1,0 +1,50 @@
+{
+  "torch": {
+    "Name": [
+      "torch"
+    ],
+    "Version": [
+      "2.15.0"
+    ],
+    "License-Expression": [
+      "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND ISC AND MIT AND Zlib"
+    ],
+    "Project-URL": [
+      "Homepage, https://pytorch.org",
+      "Repository, https://github.com/pytorch/pytorch",
+      "Documentation, https://pytorch.org/docs",
+      "Issue Tracker, https://github.com/pytorch/pytorch/issues",
+      "Forum, https://discuss.pytorch.org"
+    ]
+  },
+  "tabm": {
+    "Name": [
+      "tabm"
+    ],
+    "Version": [
+      "0.0.3"
+    ],
+    "Author": [
+      "Yury Gorishniy"
+    ],
+    "Project-URL": [
+      "Code, https://github.com/yandex-research/tabm",
+      "Documentation, https://github.com/yandex-research/tabm/tree/main/README.md"
+    ]
+  },
+  "rtdl_num_embeddings": {
+    "Name": [
+      "rtdl_num_embeddings"
+    ],
+    "Version": [
+      "0.0.12"
+    ],
+    "Author": [
+      "Yury Gorishniy"
+    ],
+    "Project-URL": [
+      "Code, https://github.com/yandex-research/rtdl-num-embeddings/tree/main/package/README.md",
+      "Documentation, https://github.com/yandex-research/rtdl-num-embeddings/tree/main/package/README.md"
+    ]
+  }
+}

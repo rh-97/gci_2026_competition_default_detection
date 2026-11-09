@@ -1,0 +1,4 @@
+{'name': 'lgb_top_25', 'auc': 0.7381651233917288, 'iterations': 430, 'seconds': 13.52407717704773}
+{'name': 'lgb_top_40', 'auc': 0.7428896007362, 'iterations': 470, 'seconds': 18.060664176940918}
+{'name': 'lgb_top_55', 'auc': 0.7459223896602057, 'iterations': 727, 'seconds': 29.129662036895752}
+{'name': 'lgb_top_70', 'auc': 0.7463364125883933, 'iterations': 709, 'seconds': 31.65031909942627}

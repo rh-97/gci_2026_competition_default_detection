@@ -1,0 +1,10 @@
+{
+  "submission": "output/submission_improved.csv",
+  "sha256": "71cd8588031deef62dadd8eeddb8e33965cbe42b6e0fc25c41e673271b08c616",
+  "public_roc_auc": 0.7654,
+  "displayed_rank": 1094,
+  "displayed_username": "hasanRocky",
+  "source": "User-provided screenshot and explicit confirmation in chat",
+  "date_recorded": "2026-11-08",
+  "precision": "Score and rank as displayed; rank is a snapshot, not a permanent result"
+}

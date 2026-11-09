@@ -1,0 +1,36 @@
+{
+  "submission": "output/submission_round2.csv",
+  "sha256": "ca654e22e1f0e4d807456e666d6fd9562d31979dc0f6ed2195491e9a47da9546",
+  "rows": 61500,
+  "probability_min": 0.0022076076435753995,
+  "probability_max": 0.8098346571250177,
+  "probability_mean": 0.08842427562417424,
+  "models": [
+    {
+      "name": "lgb_tune_15",
+      "weight": 0.1875,
+      "seeds": 2
+    },
+    {
+      "name": "r2_cat_term_proxies",
+      "weight": 0.5625,
+      "seeds": 2
+    },
+    {
+      "name": "r2_cat_proxies_native",
+      "weight": 0.25,
+      "seeds": 2
+    }
+  ],
+  "full_oof_auc": 0.764430549858415,
+  "full_oof_average_precision": 0.24785660726119904,
+  "full_oof_log_loss": 0.244405433235763,
+  "full_oof_independent": false,
+  "recommended_new_recipe": true,
+  "two_seed_bagging": true,
+  "public_score": null,
+  "public_score_note": "User must submit this new CSV; no public improvement is assumed.",
+  "existing_public_score": 0.7654,
+  "existing_public_csv": "output/submission_improved.csv",
+  "recommendation": "A locally validated candidate; submit to obtain its actual public score."
+}

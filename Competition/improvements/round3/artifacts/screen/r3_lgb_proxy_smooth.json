@@ -1,0 +1,92 @@
+{
+  "name": "r3_lgb_proxy_smooth",
+  "spec": {
+    "name": "r3_lgb_proxy_smooth",
+    "kind": "lgb",
+    "features": "proxy",
+    "groups": true,
+    "params": {
+      "num_leaves": 16,
+      "min_child_samples": 150,
+      "colsample_bytree": 0.6846068413999578,
+      "subsample": 0.961965333135664,
+      "subsample_freq": 1,
+      "reg_lambda": 2.1323824335960286,
+      "reg_alpha": 3.687185564401245,
+      "max_bin": 255,
+      "max_depth": -1,
+      "cat_smooth": 100.0,
+      "cat_l2": 30.0
+    },
+    "hypothesis": "Stronger categorical/leaf smoothing may work differently on the compact proxy representation."
+  },
+  "implementation_hash": "a94c490794f8063519012e4e4cb798164bbd5446c725516785a93e6dfa8882a1",
+  "seed": 20261108,
+  "split": "original inner_fit/inner_valid, development only",
+  "status": "complete",
+  "auc": 0.7489292942491214,
+  "average_precision": 0.23956883551380162,
+  "log_loss": 0.24846357397147073,
+  "brier": 0.0681694807356169,
+  "iterations": 876,
+  "features": 51,
+  "seconds": 17.398489952087402,
+  "reference_auc": 0.751231298970185,
+  "individual_gain": -0.0023020047210636774,
+  "best_blend": {
+    "new_weight": 0.25,
+    "auc": 0.7516863667299032
+  },
+  "blends": [
+    {
+      "new_weight": 0.1,
+      "auc": 0.7515056821172852
+    },
+    {
+      "new_weight": 0.25,
+      "auc": 0.7516863667299032
+    },
+    {
+      "new_weight": 0.5,
+      "auc": 0.7514396609713007
+    },
+    {
+      "new_weight": 0.75,
+      "auc": 0.7505218704930856
+    },
+    {
+      "new_weight": 1.0,
+      "auc": 0.7489292942491214
+    }
+  ],
+  "correlation": 0.9703244571971257,
+  "saturated": false,
+  "resolved_parameters": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.6846068413999578,
+    "importance_type": "split",
+    "learning_rate": 0.035,
+    "max_depth": -1,
+    "min_child_samples": 150,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 4500,
+    "n_jobs": 4,
+    "num_leaves": 16,
+    "objective": "binary",
+    "random_state": 20261108,
+    "reg_alpha": 3.687185564401245,
+    "reg_lambda": 2.1323824335960286,
+    "subsample": 0.961965333135664,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 1,
+    "metric": "auc",
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1,
+    "max_bin": 255,
+    "cat_smooth": 100.0,
+    "cat_l2": 30.0
+  }
+}

@@ -1,0 +1,8 @@
+{'name': 'lgb_lean', 'auc': 0.7432963020296399, 'iterations': 560, 'seconds': 13.210665225982666}
+{'name': 'lgb_scores', 'auc': 0.7389121600146608, 'iterations': 670, 'seconds': 11.928406000137329}
+{'name': 'lgb_small_8', 'auc': 0.7451259406231744, 'iterations': 1371, 'seconds': 18.93700671195984}
+{'name': 'lgb_small_12', 'auc': 0.7454155532303075, 'iterations': 839, 'seconds': 14.928426027297974}
+{'name': 'lgb_weight_2.0', 'auc': 0.7441755188717262, 'iterations': 672, 'seconds': 13.317162990570068}
+{'name': 'lgb_weight_5.0', 'auc': 0.7449651290191579, 'iterations': 673, 'seconds': 13.273348093032837}
+{'name': 'cat_raw', 'auc': 0.7416555662101753, 'iterations': 1285, 'seconds': 96.96291399002075}
+{'name': 'cat_lean', 'auc': 0.7484925822989676, 'iterations': 1670, 'seconds': 170.86723017692566}

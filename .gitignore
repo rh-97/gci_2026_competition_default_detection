@@ -8,7 +8,7 @@ Competition/improvements/**/artifacts/kernels/
 Competition/improvements/**/artifacts/model_kernels/
 Competition/improvements/**/artifacts/matplotlib/
 catboost_info/
-# Generated outputs are recoverable from the snapshot; retain the latest CSV.
+# Historical CSVs are in the published snapshot; ZIPs are in the full local backup.
 Competition/output/*
 !Competition/output/submission_high_upside.csv
 # Generated ZIP archives are kept in the local backup, not remote history.

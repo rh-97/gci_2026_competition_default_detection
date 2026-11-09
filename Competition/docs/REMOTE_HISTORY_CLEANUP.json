@@ -1,0 +1,28 @@
+{
+  "branches_before": {
+    "cleanup/project-organization": "34210f8e42234d84fa103ab8be4054eb57b4a2b9",
+    "organize/round-folders": "5f619c57e2a78581286aba9adba4f5b215078824",
+    "snapshot/pre-cleanup-2026-11-09": "04e7a5ad906017a7bfe5b3336549b6bbc1aaaff7"
+  },
+  "branches_after": {
+    "cleanup/project-organization": "67e5f6f6ecc701e54b95977714723fa43bd8ba76",
+    "organize/round-folders": "ec831c939e0a91686265d009e47dccac597a8760",
+    "snapshot/pre-cleanup-2026-11-09": "4ac92c23e019c4847d99c6b2d79c0bd9108b01b1"
+  },
+  "local_full_backup": ".git/local-backups/before-zip-history-cleanup.bundle",
+  "backup_verified": true,
+  "excluded_paths": [
+    "Competition/output/competition_high_upside_reproduction.zip",
+    "Competition/output/competition_improved_reproduction.zip",
+    "Competition/output/competition_round2_reproduction.zip",
+    "Competition/output/competition_round3_reproduction.zip"
+  ],
+  "scope": "Only generated ZIP history removed; data, saved models, source and reports retained.",
+  "published_blob_audit": {
+    "blobs": 1704,
+    "largest_bytes": 44260698,
+    "largest_path": "Competition/input/train.csv",
+    "zip_blobs": 0,
+    "blobs_at_or_above_100_MiB": 0
+  }
+}

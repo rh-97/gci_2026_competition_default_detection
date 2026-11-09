@@ -17,14 +17,26 @@ def project_file(name):
     locations=t.read(t.ROOT/'docs/file_locations.json')['files']
     return t.ROOT/locations.get(name,name)
 
+class UnavailableGeneratedArchive(FileNotFoundError):
+    """A deliberately excluded ZIP is available only in the full local backup."""
+
 _archived={}
 def project_sha(name):
     p=project_file(name)
     if p.exists():return sha(p)
     archive=t.read(t.ROOT/'docs/output_archive.json')
     row=archive['archived_files'][name]
-    blob=subprocess.check_output(['git','rev-parse',archive['snapshot_commit']+':'+row['repository_path']],cwd=t.ROOT).decode().strip()
-    assert blob==row['git_blob'],name
+    if row.get('storage')=='local_backup_only':
+        # Only generated ZIPs may be absent from a published source/model clone.
+        assert name.startswith('output/') and name.endswith('.zip'),name
+        assert row['repository_path']=='Competition/'+name,name
+        blob=row['git_blob']
+        exists=subprocess.run(['git','cat-file','-e',blob+'^{blob}'],cwd=t.ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+        if exists.returncode:
+            raise UnavailableGeneratedArchive(name)
+    else:
+        blob=subprocess.check_output(['git','rev-parse',archive['snapshot_commit']+':'+row['repository_path']],cwd=t.ROOT).decode().strip()
+        assert blob==row['git_blob'],name
     if blob not in _archived:
         proc=subprocess.Popen(['git','cat-file','blob',blob],cwd=t.ROOT,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         digest=hashlib.sha256()
@@ -37,7 +49,10 @@ def project_sha(name):
 def verify():
     assert Path(sys.prefix).resolve()==(t.ROOT/'.venv').resolve()
     protected=t.read(HERE/'reference/modeling_preserved_hashes.json')
-    for name,want in protected.items():assert project_sha(name)==want,name
+    unavailable=[]
+    for name,want in protected.items():
+        try:assert project_sha(name)==want,name
+        except UnavailableGeneratedArchive:unavailable.append(name)
     environment=t.read(ART/'model_environment.json')
     for name,want in environment['identity']['sources'].items():assert sha(HERE/name)==want,name
     freeze=t.read(ART/'model_selection_freeze.json')
@@ -70,12 +85,14 @@ def verify():
                 for instance in seed['instances']:
                     for key in ['model','encoder']:inference[instance[key]]=sha(t.ROOT/instance[key])
     t.dump(ART/'model_inference_hashes.json',inference)
-    result=dict(passed=True,protected_files_unchanged=len(protected),old_notebooks_unchanged=sum(name.endswith('.ipynb') for name in protected),
+    result=dict(passed=True,protected_files_unchanged=len(protected)-len(unavailable),old_notebooks_unchanged=sum(name.endswith('.ipynb') for name in protected),
         new_plan_result_notebooks_executed=True,submission=final['submission'],sha256=final['sha256'],accepted_new_submission=final['accepted'],
         new_submission_saved_model_replay=bool(final['accepted'] and replay.get('saved_model_replay')),
         reference_checksum_preserved=project_sha('output/submission_round3_bagged.csv')==protected['output/submission_round3_bagged.csv'],
         fallback_to_reference=not final['accepted'],
-        protected_files_archived_in_git=[n for n in protected if not project_file(n).exists()],
+        protected_files_archived_in_git=[n for n in protected if not project_file(n).exists() and n not in unavailable],
+        unavailable_generated_archives=unavailable,
+        verification_scope='All data, model, source, notebook and CSV checks are required. Historical generated ZIPs are checked when present locally; unavailable ZIPs are explicitly listed and not counted as verified.',
         inference_files_checked=len(inference),source_selection_freezes_checked=True,local_venv=sys.executable)
     t.dump(ART/'model_verification.json',result);print('VERIFIED',result,flush=True)
 

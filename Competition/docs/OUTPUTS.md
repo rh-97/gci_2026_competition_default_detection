@@ -9,21 +9,31 @@ The latest CSV is reproducible byte for byte:
 Competition/.venv/bin/python Competition/project.py reproduce
 ```
 
-The command checks the replay and removes its temporary duplicate CSV. Older ZIPs are historical packages: restore them from Git rather than expecting today's report/code state to generate the same ZIP bytes.
+The command checks the replay and removes its temporary duplicate CSV. Older ZIPs are historical packages: recover them from the full local backup rather than expecting today's report/code state to generate the same ZIP bytes. They were excluded from all published branch histories to allow the GitHub push. Supplied input data and saved model files remain included.
 
-Restore an individual output from the snapshot, from the repository root:
+Restore an individual CSV from the published snapshot, from the repository root (in a single-branch clone, first fetch `snapshot/pre-cleanup-2026-11-09`):
 
 ```sh
 git restore --source=snapshot/pre-cleanup-2026-11-09 -- Competition/output/submission_round3_bagged.csv
 ```
 
-Restore all historical outputs when an older notebook requires them:
+Restore the historical CSVs when an older notebook requires them:
 
 ```sh
 git restore --source=snapshot/pre-cleanup-2026-11-09 -- Competition/output
 ```
 
-Restoring a tracked historical file stages it for addition to the current branch. `git show snapshot/pre-cleanup-2026-11-09:Competition/output/FILENAME > /tmp/FILENAME` extracts a copy without changing the branch. Archived files are ignored if restored as untracked files. The current verifier checks archived protected outputs directly against their original Git blobs and SHA-256s rather than requiring redundant working copies.
+Restoring a tracked historical file stages it for addition to the current branch. `git show snapshot/pre-cleanup-2026-11-09:Competition/output/FILENAME > /tmp/FILENAME` extracts a CSV without changing the branch. Archived files are ignored if restored as untracked files.
+
+The original repository retains the full pre-rewrite history in `.git/local-backups/before-zip-history-cleanup.bundle` (576,551,718 bytes, verified with `git bundle verify`). Local backup refs also retain the original branch heads. For example, extract a ZIP locally with:
+
+```sh
+git show refs/local-backup/pre-remote-cleanup/snapshot/pre-cleanup-2026-11-09:Competition/output/competition_high_upside_reproduction.zip > /tmp/competition_high_upside_reproduction.zip
+```
+
+These refs and the bundle are **local only**. A remote clone cannot recover those exact ZIP bytes unless the backup is supplied separately. The latest submission is reproducible from the models included in the remote repository. Keep the backup if the exact historical ZIPs matter; do not use `git push --mirror`, which would publish the old oversized history too.
+
+The verifier checks available archived protected outputs against their Git blobs and recorded SHA-256s. In a remote clone, excluded historical ZIPs are explicitly listed as unavailable and are not counted as verified. Data, sources, notebooks, CSVs and all saved inference files remain mandatory checks.
 
 | Archived project-relative path | Bytes |
 | --- | --- |
@@ -41,4 +51,4 @@ Restoring a tracked historical file stages it for addition to the current branch
 | `output/submission_round3_bagged_reproduced.csv` | 1,667,514 |
 | `output/submission_round3_reproduced.csv` | 1,667,271 |
 
-Historical end-to-end notebook-generation and packaging scripts can assume the original root-level notebook layout. Use the original snapshot in a separate temporary worktree when recreating those historical deliveries. The current `project.py status`, `verify`, `reproduce` and `report` commands support the new layout. Existing notebook source and outputs have not been rewritten.
+Historical end-to-end notebook-generation and packaging scripts can assume the original root-level notebook layout. Use the local backup snapshot in a separate temporary worktree when recreating those historical deliveries. The current `project.py status`, `verify`, `reproduce` and `report` commands support the new layout. Existing notebook source and outputs have not been rewritten. See [the history cleanup report](REMOTE_PUSH_REPORT.md) for old/new commit mappings and push scope.

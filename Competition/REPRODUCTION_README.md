@@ -1,6 +1,6 @@
 # Reproducing the recommended submission
 
-Files are now [grouped by round](rounds/README.md). Only the latest CSV remains in `output/`; [older outputs and historical ZIPs are recoverable from Git](docs/OUTPUTS.md). The current `project.py verify` supports moved notebooks and archived outputs. `project.py reproduce` removes the identical duplicate replay CSV after checking it. Original commands below can create additional generated output files.
+Files are now [grouped by round](rounds/README.md). Only the latest CSV remains in `output/`; [older CSVs are in the published snapshot, and historical ZIPs are in the full local Git backup](docs/OUTPUTS.md). The current `project.py verify` supports moved notebooks and archived outputs, and explicitly reports historical ZIPs unavailable in a remote clone. `project.py reproduce` removes the identical duplicate replay CSV after checking it. Original commands below can create additional generated output files.
 
 Current project entry point, from the repository root:
 

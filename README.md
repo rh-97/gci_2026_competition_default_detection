@@ -38,8 +38,9 @@ Competition/.venv/bin/python Competition/project.py reproduce
 Competition/.venv/bin/python Competition/project.py report
 ```
 
-Prediction replay loads saved models and keeps only the latest CSV. Older outputs
-are recoverable from the snapshot branch. Existing notebook contents are unchanged;
+Prediction replay loads saved models and keeps only the latest CSV. Older CSVs
+are recoverable from the published snapshot; historical ZIPs are in the local full-history backup.
+Existing notebook contents are unchanged;
 execute with `Competition` as the kernel working directory and use its local venv.
 The [reproduction guide](Competition/REPRODUCTION_README.md) gives detailed commands.
 
@@ -60,17 +61,23 @@ and IDE tabs. Actual notebook/report ownership is shown by the round folders and
 ## Git
 
 There is one repository at this parent folder and one project `.gitignore`.
-No remote is configured and nothing was pushed.
+The remote is [gci_competition_2026](https://github.com/rh-97/gci_competition_2026).
+Generated ZIP archives are excluded from the published branch histories; supplied
+data, saved models, notebooks, code and reports remain included.
 
-- `snapshot/pre-cleanup-2026-11-09`: original recovery snapshot (`b8d094c`).
-- `cleanup/project-organization`: first cleanup (`02f8717`).
+- `snapshot/pre-cleanup-2026-11-09`: recovery snapshot with generated ZIPs omitted.
+- `cleanup/project-organization`: first cleanup.
 - `organize/round-folders`: current file organization.
 
-Recover an old output from the original snapshot:
+Recover an old CSV from the published snapshot:
 
 ```sh
 git restore --source=snapshot/pre-cleanup-2026-11-09 -- Competition/output/submission_round3_bagged.csv
 ```
+
+The [remote history cleanup report](Competition/docs/REMOTE_PUSH_REPORT.md)
+records the exclusions, full local backup and verification. Commit IDs changed
+when ZIPs were removed from history; historical reports retain their original IDs.
 
 Original supplied competition rules:
 [Round 1's README notebook](Competition/rounds/round1/notebooks/README.ipynb).

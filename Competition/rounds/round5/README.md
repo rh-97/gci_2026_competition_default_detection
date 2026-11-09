@@ -12,6 +12,7 @@ This folder groups the files for this round. `code`, `results` and `models` are 
 
 ## Reports
 
+- [Model selection report](reports/MODEL_SELECTION_REPORT.md): model comparisons, rejected options, validation gates and final weights.
 - [IMPROVEMENT_REPORT.md](reports/IMPROVEMENT_REPORT.md)
 - [HIGH_UPSIDE_EXPERIMENT_LOG.md](reports/HIGH_UPSIDE_EXPERIMENT_LOG.md)
 - [Standalone EDA report, including the later error audit](../round1/reports/EDA_REPORT.md)

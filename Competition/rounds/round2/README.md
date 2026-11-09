@@ -9,6 +9,7 @@ This folder groups the files for this round. `code`, `results` and `models` are 
 
 ## Reports
 
+- [Dataset enhancement report](reports/DATASET_ENHANCEMENT_REPORT.md): what inputs changed, why, how and the measured results.
 - [EXPERIMENT_LOG.md](reports/EXPERIMENT_LOG.md)
 
 ## Code and evidence

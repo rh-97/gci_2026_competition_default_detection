@@ -1,6 +1,12 @@
 # Competition project report
 
-For a data-only explanation, read the [data audit and EDA report](rounds/round1/reports/EDA_REPORT.md). Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.
+Focused reports:
+
+- [Data audit and EDA](rounds/round1/reports/EDA_REPORT.md)
+- [Dataset enhancement: what, why, how and results](rounds/round2/reports/DATASET_ENHANCEMENT_REPORT.md)
+- [Model selection: comparisons, reasoning and final choice](rounds/round5/reports/MODEL_SELECTION_REPORT.md)
+
+Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.
 
 The latest generated file is [submission_high_upside.csv](output/submission_high_upside.csv).
 It combines the previous ensemble, a TabM neural model trained from scratch, and
@@ -176,7 +182,7 @@ longer training budgets from actual feature improvements.
 
 **Third pass.** Signed loan-term structure and a selected 512-border CatBoost
 variant added useful complementary ranking. The reference mixture ultimately
-contained LightGBM, proxy CatBoost, native-missing proxy CatBoost, feature-selected
+contained LightGBM, proxy CatBoost, native-missing proxy CatBoost, signed-feature
 512-border CatBoost and signed-feature CatBoost. Their expanded weights were
 **0.09375 / 0.28125 / 0.125 / 0.25 / 0.25**. Three seeds and five folds produced
 75 primary saved models. The best public-confirmed older file is

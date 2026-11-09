@@ -1,6 +1,10 @@
 # Competition rounds
 
-For a data-only explanation, start with the [data audit and EDA report](round1/reports/EDA_REPORT.md).
+Read the focused reports in this order:
+
+1. [Data audit and EDA](round1/reports/EDA_REPORT.md): what the data contain and what we observed.
+2. [Dataset enhancement](round2/reports/DATASET_ENHANCEMENT_REPORT.md): what inputs changed, why, how and the results.
+3. [Model selection](round5/reports/MODEL_SELECTION_REPORT.md): what was tested, how choices were made and why the final blend won.
 
 Start with a round folder; its README links the notebooks, reports, implementation, models and raw results.
 

@@ -309,7 +309,7 @@ longer training budgets from actual feature improvements.
 
 **Third pass.** Signed loan-term structure and a selected 512-border CatBoost
 variant added useful complementary ranking. The reference mixture ultimately
-contained LightGBM, proxy CatBoost, native-missing proxy CatBoost, feature-selected
+contained LightGBM, proxy CatBoost, native-missing proxy CatBoost, signed-feature
 512-border CatBoost and signed-feature CatBoost. Their expanded weights were
 **0.09375 / 0.28125 / 0.125 / 0.25 / 0.25**. Three seeds and five folds produced
 75 primary saved models. The best public-confirmed older file is
@@ -482,7 +482,7 @@ recorded validation comparisons. Negative results apply to their tested settings
 not every possible version of that idea.
 '''
     report = report.replace('## 7. Repository cleanup and recovery', '## 7. First cleanup and recovery (historical)')
-    report = report.replace('# Competition project report\n', '# Competition project report\n\nFor a data-only explanation, read the [data audit and EDA report](rounds/round1/reports/EDA_REPORT.md). Current navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.\n')
+    report = report.replace('# Competition project report\n', '# Competition project report\n\nFocused reports:\n\n- [Data audit and EDA](rounds/round1/reports/EDA_REPORT.md)\n- [Dataset enhancement: what, why, how and results](rounds/round2/reports/DATASET_ENHANCEMENT_REPORT.md)\n- [Model selection: comparisons, reasoning and final choice](rounds/round5/reports/MODEL_SELECTION_REPORT.md)\n\nCurrent navigation: [files grouped by round](rounds/README.md). Notebook contents and fitted models are unchanged. Historical output files now live in Git; see [output recovery](docs/OUTPUTS.md). Section 7 records the initial cleanup before this later file organization.\n')
     path = ROOT / 'PROJECT_REPORT.md'
     path.write_text(navigation_links(report, path))
     cleanup_check_text = check_text.replace('](docs/cleanup_validation.json)', '](cleanup_validation.json)')

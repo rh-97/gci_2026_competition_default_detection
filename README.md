@@ -17,6 +17,8 @@ There is no new Python package or algorithm refactor.
 
 - [Consolidated data/model report](Competition/PROJECT_REPORT.md)
 - [Data audit and EDA report](Competition/rounds/round1/reports/EDA_REPORT.md)
+- [Dataset enhancement report](Competition/rounds/round2/reports/DATASET_ENHANCEMENT_REPORT.md)
+- [Model selection report](Competition/rounds/round5/reports/MODEL_SELECTION_REPORT.md)
 - [Complete 135-entry experiment catalog](Competition/docs/EXPERIMENT_CATALOG.md)
 - [Latest submission CSV](Competition/output/submission_high_upside.csv)
 - [Historical output recovery](Competition/docs/OUTPUTS.md)

@@ -1,0 +1,41 @@
+{
+  "chosen_candidate": "new families (with repeat history)",
+  "method": "logistic stacking",
+  "weights": {
+    "LightGBM-new": 0.14433688847120119,
+    "CatBoost-new": 0.46922215666220024,
+    "TabM-new": 0.38644095486659874
+  },
+  "nested_oof_auc": 0.7681540945955153,
+  "in_sample_oof_auc": 0.7681871330420936,
+  "blend_grid": {
+    "equal weights": {
+      "base families (previous recipe)": 0.766669,
+      "all models": 0.767555,
+      "new families (with repeat history)": 0.767949
+    },
+    "optimised weights": {
+      "base families (previous recipe)": 0.766669,
+      "all models": 0.767896,
+      "new families (with repeat history)": 0.768152
+    },
+    "logistic stacking": {
+      "base families (previous recipe)": 0.766725,
+      "all models": 0.768121,
+      "new families (with repeat history)": 0.768154
+    }
+  },
+  "single_models": {
+    "TabM": 0.761271,
+    "LightGBM": 0.763303,
+    "LightGBM-new": 0.764376,
+    "CatBoost": 0.764839,
+    "CatBoost-recon": 0.765041,
+    "TabM-new": 0.76515,
+    "CatBoost-new": 0.766128
+  },
+  "secondary": {
+    "auc": 0.7681871330420936,
+    "log_loss": 0.24323315372345747
+  }
+}

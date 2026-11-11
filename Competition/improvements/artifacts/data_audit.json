@@ -1,6 +1,0 @@
-{
-  "adversarial_auc": 0.5188982242075874,
-  "train_rows": 171202,
-  "test_rows": 61500,
-  "positive_rate": 0.08072919708881905
-}

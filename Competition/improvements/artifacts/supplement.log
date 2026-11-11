@@ -1,7 +1,0 @@
-{'name': 'hgb_10', 'auc': 0.7412823237530796, 'iterations': 383, 'seconds': 10.31001877784729}
-{'name': 'hgb_20', 'auc': 0.7416091192305576, 'iterations': 422, 'seconds': 15.58474612236023}
-{'name': 'hgb_31', 'auc': 0.7413034955760085, 'iterations': 186, 'seconds': 10.452124834060669}
-{'name': 'spline_0.01', 'auc': 0.7360168615064397, 'iterations': 1, 'seconds': 11.006970882415771}
-{'name': 'spline_0.1', 'auc': 0.736537329739809, 'iterations': 1, 'seconds': 12.758423805236816}
-{'name': 'spline_1.0', 'auc': 0.735930335185588, 'iterations': 1, 'seconds': 16.5795578956604}
-{'name': 'lgb_engineered_groups', 'auc': 0.7450357707258468, 'iterations': 681, 'seconds': 20.715056896209717}

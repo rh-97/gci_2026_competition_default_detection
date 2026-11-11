@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "plots": {
-    "model_screen_gains.png": "87933b6249d5de999459aff60f67b14d5cf0bdedd707f2ebe509a5b13264379a",
-    "model_neural_curves.png": "21ce68f95e2b0c486e40350e0469839f4e75eb73742c4be8fe03faccdb884cd3",
-    "model_fold_gains.png": "1e780d781ce315d0911dac43a698629b08c1f3cd2e992bee518b22a255a182a8"
-  },
-  "observations": "Axes, labels and legends are legible; all six pilots are shown, including the negative result; fold groups are labeled within their respective partitions."
-}

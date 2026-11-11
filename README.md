@@ -1,83 +1,53 @@
-# Home Credit competition project
+# Home Credit default risk (GCI Global 2026)
 
-Start with [files grouped by round](Competition/rounds/README.md).
+Predict the probability that a loan applicant defaults (`TARGET = 1`), scored by ROC AUC.
+Only the supplied `train.csv` / `test.csv` are used: no outside data, no hand labelling.
 
-| Folder | Work |
+**Start with [APPROACH.md](APPROACH.md)**: what was done to the data and the models, what worked and what did not.
+The notebooks show every step with its results.
+
+**Result:** a stacked blend of LightGBM, CatBoost and a TabM neural network, all using a new repeat-applicant
+history feature. Out-of-fold AUC is **0.7682** (5-fold CV, 3 seeds), against 0.7667 for the rebuilt previous recipe.
+The submission is [outputs/submission.csv](outputs/submission.csv).
+
+## Layout
+
+| Path | Content |
 | --- | --- |
-| [Round 1](Competition/rounds/round1/README.md) | Supplied material, data audit and first improved models |
-| [Round 2](Competition/rounds/round2/README.md) | Feature engineering and two-seed ensemble |
-| [Round 3](Competition/rounds/round3/README.md) | Signed loan-term features and three-seed bagging |
-| [Round 4](Competition/rounds/round4/README.md) | Stopped incremental search |
-| [Round 5](Competition/rounds/round5/README.md) | Structural models, neural ensemble and score reconstruction |
+| [APPROACH.md](APPROACH.md) | Method write-up: data, features, models, validation, results |
+| [notebooks/](notebooks/) | The analysis, run in order (outputs are saved in the notebooks) |
+| [src/](src/) | Small generic helpers: paths and caching, CV runner, model wrappers |
+| [data/](data/) | Supplied data: train, test, sample submission, column descriptions |
+| [outputs/](outputs/) | `submission.csv` and `cv_results.json` (blend weights and scores) |
+| [docs/competition_rules.ipynb](docs/competition_rules.ipynb) | Supplied competition description and rules |
+| `work/` | Regenerated caches (features, per-model predictions); git-ignored |
 
-Each round contains its notebooks and reports, plus relative links to its code,
-saved models and raw experiment results. Links avoid duplicate copies and retain
-the original checkpoint-compatible paths in `Competition/improvements/`.
-There is no new Python package or algorithm refactor.
+| Notebook | What it does |
+| --- | --- |
+| [01_data_exploration](notebooks/01_data_exploration.ipynb) | Missingness, placeholder values, signal per column, loan-term structure, train/test similarity, repeat applicants |
+| [02_feature_engineering](notebooks/02_feature_engineering.ipynb) | Builds all label-free features for train and test → `work/features.parquet` |
+| [03_base_models](notebooks/03_base_models.ipynb) | LightGBM, CatBoost, CatBoost with reconstructed scores, TabM neural net (5-fold CV, 3 seeds) |
+| [04_new_ideas](notebooks/04_new_ideas.ipynb) | Population statistics, repeat-applicant history, neighbour default rate: screened, then confirmed |
+| [05_ensemble_and_submission](notebooks/05_ensemble_and_submission.ipynb) | Compares blending methods with nested CV, writes the submission |
 
-- [Consolidated data/model report](Competition/PROJECT_REPORT.md)
-- [Data audit and EDA report](Competition/rounds/round1/reports/EDA_REPORT.md)
-- [Dataset enhancement report](Competition/rounds/round2/reports/DATASET_ENHANCEMENT_REPORT.md)
-- [Model selection report](Competition/rounds/round5/reports/MODEL_SELECTION_REPORT.md)
-- [Complete 135-entry experiment catalog](Competition/docs/EXPERIMENT_CATALOG.md)
-- [Latest submission CSV](Competition/output/submission_high_upside.csv)
-- [Historical output recovery](Competition/docs/OUTPUTS.md)
-
-The latest screenshot shows **0.77029**, rank snapshot **364**; the uploaded
-filename was not explicitly confirmed. Matched local AUC improved **0.76480 to
-0.76626**. The report distinguishes these evaluations.
-
-## Current commands
-
-From this repository's root, using the project-local venv:
+## Reproduce
 
 ```sh
-Competition/.venv/bin/python Competition/project.py status
-Competition/.venv/bin/python Competition/project.py verify
-Competition/.venv/bin/python Competition/project.py reproduce
-Competition/.venv/bin/python Competition/project.py report
+conda create -p ./.venv python=3.12
+.venv/bin/pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+cd notebooks
+for nb in 0*.ipynb; do ../.venv/bin/jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 "$nb"; done
 ```
 
-Prediction replay loads saved models and keeps only the latest CSV. Older CSVs
-are recoverable from the published snapshot; historical ZIPs are in the local full-history backup.
-Existing notebook contents are unchanged;
-execute with `Competition` as the kernel working directory and use its local venv.
-The [reproduction guide](Competition/REPRODUCTION_README.md) gives detailed commands.
+Everything runs on CPU (8 threads by default; set `HC_THREADS` to change). A full run takes about 6–7 hours on an
+8-core desktop. TabM accounts for about 4 hours (about an hour per seed) and CatBoost for about 2.
 
-## Shared files
+* **Caching.** Each model run is cached in `work/preds/` per seed and keyed by its settings and columns, so
+  re-running a notebook only computes what is missing. If you change the feature code, delete `work/` first.
+* **Repeatability.** All seeds are fixed. Two sources of tiny floating-point differences remain:
+  - multi-threaded LightGBM in the score reconstruction (about 1e-13);
+  - PyTorch on different thread counts.
 
-- `Competition/input/`: supplied train/test/sample data.
-- `Competition/output/`: latest CSV only.
-- `Competition/environment/`: original environment specifications; the installed
-  `.venv` stays in place and is ignored by Git.
-- `Competition/docs/`: overall catalog, integrity records, cleanup and recovery.
-- `Competition/improvements/`: original implementation/evidence paths used by the
-  saved models; navigate them through each round's links.
-
-A few original root paths are relative compatibility links for existing notebooks
-and IDE tabs. Actual notebook/report ownership is shown by the round folders and
-[file location map](Competition/docs/file_locations.json).
-
-## Git
-
-There is one repository at this parent folder and one project `.gitignore`.
-The remote is [gci_competition_2026](https://github.com/rh-97/gci_competition_2026).
-Generated ZIP archives are excluded from the published branch histories; supplied
-data, saved models, notebooks, code and reports remain included.
-
-- `snapshot/pre-cleanup-2026-11-09`: recovery snapshot with generated ZIPs omitted.
-- `cleanup/project-organization`: first cleanup.
-- `organize/round-folders`: current file organization.
-
-Recover an old CSV from the published snapshot:
-
-```sh
-git restore --source=snapshot/pre-cleanup-2026-11-09 -- Competition/output/submission_round3_bagged.csv
-```
-
-The [remote history cleanup report](Competition/docs/REMOTE_PUSH_REPORT.md)
-records the exclusions, full local backup and verification. Commit IDs changed
-when ZIPs were removed from history; historical reports retain their original IDs.
-
-Original supplied competition rules:
-[Round 1's README notebook](Competition/rounds/round1/notebooks/README.ipynb).
+  The three TabM-new seeds used for the submission were trained as three parallel processes with
+  `HC_THREADS=3`, using the same code and settings as notebook 04. A re-run therefore reproduces the submission
+  up to such small differences rather than byte for byte.

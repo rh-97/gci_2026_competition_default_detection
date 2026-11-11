@@ -1,9 +1,0 @@
-{
-  "mps_built": true,
-  "mps_available": true,
-  "outside_sandbox": true,
-  "timings": {
-    "cpu": 0.10265288352966309,
-    "mps": 0.03307638168334961
-  }
-}

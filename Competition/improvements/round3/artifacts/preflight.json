@@ -1,8 +1,0 @@
-{
-  "protected_hashes_match": true,
-  "venv": true,
-  "features_ignore_ID_TARGET": true,
-  "row_batch_invariance": true,
-  "train_test_schema_matches": true,
-  "implementation_hash": "a1e121c4ca79cef4ac80c526a939528f09a2c74e0d63d9262dbe29e2aa81f01f"
-}

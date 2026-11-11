@@ -1,8 +1,0 @@
-{
-  "original_files_unchanged": true,
-  "splits_disjoint": true,
-  "no_ID_or_target_in_features": true,
-  "row_feature_batch_invariance": true,
-  "unseen_categories_handled": true,
-  "final_checks": true
-}

@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/round3/run_pipeline.py", line 27, in <module>
-    try:main()
-        ^^^^^^
-  File "/Volumes/Projects/GCI World_202609/04. Competition (due XX)/Competition/improvements/round3/run_pipeline.py", line 11, in main
-    time.sleep(15)
-KeyboardInterrupt

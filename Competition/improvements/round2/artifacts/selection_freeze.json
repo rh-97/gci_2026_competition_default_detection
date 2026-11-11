@@ -1,5 +1,0 @@
-{
-  "selection_sha256": "bd23c06150d622b5ebcf35031d2afbc15b41d7bc358a8cb9c7175cf8fe8d5c3d",
-  "implementation_hash": "eefd523813af25ea275affe2beb7c739e5d658ba0023fd9110c13aedbcb94606",
-  "note": "Frozen before full-data training or final OOF feedback."
-}

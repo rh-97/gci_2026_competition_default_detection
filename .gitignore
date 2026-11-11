@@ -1,15 +1,8 @@
-# Local environment and generated runtime files; experiment evidence stays tracked.
+# Local environment and regenerated caches
 .venv/
+work/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
-.DS_Store
-Competition/improvements/**/artifacts/kernels/
-Competition/improvements/**/artifacts/model_kernels/
-Competition/improvements/**/artifacts/matplotlib/
 catboost_info/
-# Historical CSVs are in the published snapshot; ZIPs are in the full local backup.
-Competition/output/*
-!Competition/output/submission_high_upside.csv
-# Generated ZIP archives are kept in the local backup, not remote history.
-*.zip
+.DS_Store

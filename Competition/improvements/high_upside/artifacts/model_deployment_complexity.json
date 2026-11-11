@@ -1,7 +1,0 @@
-{
-  "primary_new_predictor_bundles": 30,
-  "auxiliary_reconstruction_regressors": 45,
-  "neural_shared_internal_members": 240,
-  "legacy_primary_models": 75,
-  "note": "Each reconstructed-score primary bundle also contains three auxiliary regressors. TabM internal members share weights and are not separate saved fold models. new_models in the final result counts primary fold predictor bundles."
-}

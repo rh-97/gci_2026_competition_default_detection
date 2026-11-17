@@ -42,6 +42,9 @@ export HC_DEVICE=mps   # optional, Apple silicon only
 for nb in 0*.ipynb; do ../.venv/bin/jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 "$nb"; done
 ```
 
+Commands above are for macOS (tested) and Linux (same commands, without `HC_DEVICE`). Windows PowerShell
+equivalents are in the README of the `submission/final-package` branch.
+
 Everything runs on CPU (8 threads by default; set `HC_THREADS` to change). On Apple silicon, `HC_DEVICE=mps`
 trains TabM on the GPU (one epoch: 5.6 s vs 10.7 s on the M1 CPU). The 3-seed run took **4 h 40 min on an M1
 MacBook with `HC_DEVICE=mps`** (notebook 03: 1.5 h, 04: 3.2 h, 05: 1 min); the 3 extra CatBoost and 6 extra TabM

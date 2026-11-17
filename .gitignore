@@ -6,3 +6,6 @@ __pycache__/
 .ipynb_checkpoints/
 catboost_info/
 .DS_Store
+
+# Submission package built with git archive
+/home_credit_submission.zip

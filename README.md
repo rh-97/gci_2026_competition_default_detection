@@ -25,10 +25,10 @@ end of notebook 05. The notebooks are saved with their outputs, so they can be r
    data/sample_submission.csv
    ```
 
-2. Create the environment (Python 3.12):
+2. Create the environment (Python 3.12). `llvm-openmp` provides the OpenMP runtime that LightGBM needs on macOS:
 
    ```sh
-   conda create -p ./.venv python=3.12
+   conda create -p ./.venv python=3.12 llvm-openmp
    .venv/bin/pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
    ```
 
@@ -51,9 +51,13 @@ model's predictions per seed. A re-run only computes what is not cached yet; del
   30 minutes each) and CatBoost (about 25 minutes per seed). Without a GPU the neural network takes roughly twice
   as long.
 * **Threads.** 8 CPU threads by default; set `HC_THREADS` to change.
-* **Apple silicon with conda.** The pip build of PyTorch ships its own `libomp.dylib`, which clashes with conda's
-  (`OMP: Error #15` on `import torch`). Fix: replace `.venv/lib/python3.12/site-packages/torch/lib/libomp.dylib`
-  with a symlink to `.venv/lib/libomp.dylib`.
+* **Tested setup.** These exact steps were followed in a new environment on an M1 MacBook (macOS, conda). The
+  notebooks ran without errors, and the predictions matched the submitted file up to rounding (largest difference
+  about 1e-14; same blend weights and scores).
+* **If `import lightgbm` fails** with `Library not loaded: @rpath/libomp.dylib`, the OpenMP runtime is missing: run
+  `conda install -p ./.venv llvm-openmp`.
+* **If `import torch` fails** with `OMP: Error #15`, two OpenMP copies are loaded. Fix: replace
+  `.venv/lib/python3.12/site-packages/torch/lib/libomp.dylib` with a symlink to `.venv/lib/libomp.dylib`.
 * **Repeatability.** All seeds are fixed. CatBoost and neural-network results can differ in the 4th decimal between
   machines (x86 vs ARM, CPU vs GPU). For the submitted file, the extra CatBoost seeds (3–5) and neural-network seeds
   (3–8) were trained in separate processes with exactly the same code and settings as notebook 04 and picked up from

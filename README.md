@@ -35,7 +35,7 @@ The submission is [outputs/submission.csv](outputs/submission.csv).
 ## Reproduce
 
 ```sh
-conda create -p ./.venv python=3.12
+conda create -p ./.venv python=3.12 llvm-openmp   # OpenMP runtime needed by LightGBM on macOS
 .venv/bin/pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
 cd notebooks
 export HC_DEVICE=mps   # optional, Apple silicon only

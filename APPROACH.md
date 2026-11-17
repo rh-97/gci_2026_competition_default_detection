@@ -22,7 +22,7 @@ Key findings from [01_data_exploration](notebooks/01_data_exploration.ipynb):
 | `DAYS_EMPLOYED = 365243` for 18% of rows (a placeholder, mostly pensioners) | Replace by missing and add a flag |
 | Credit / annuity has a very spiky distribution (standard loan products) and default rate moves sharply with it | Loan-term and implied-rate features |
 | A classifier separates train from test with AUC 0.513 only | Train and test look alike, so random K-fold CV is a fair stand-in for the test set |
-| About 3% of rows are probably repeat applications by the same person (identified via date differences) | New "repeat-applicant history" features |
+| About 3% of rows are probably repeat applications by the same person (identified via date differences) | New "repeat-applicant history" features, then a stricter same-person match (round 2) |
 
 ## 2. Validation
 
@@ -57,6 +57,13 @@ other supplied columns (out-of-fold, fitted on train + test since no default lab
 prediction fills in where the score is missing, and the **residual** (observed − expected) says whether the
 bureau rates the applicant better or worse than their profile suggests. Reconstruction R²: 0.49 / 0.24 / 0.12.
 
+**Same-person pairs (5 columns, round 2).** Four date differences stay constant when one person applies twice
+(birth − ID publish, − registration, − employment start, − last phone change). Two applications with the same gender
+count as the same person when at least 3 of the 4 match, or 2 match and region population and education are equal too.
+That gives 3,455 pairs; 2.9% of applicants have one. Label-free columns: number of matched applications, how many are
+earlier or later, the smallest gap in days and the strongest match. The pairs are also saved for the label features in
+notebook 04.
+
 ## 4. Models ([03_base_models](notebooks/03_base_models.ipynb))
 
 | Model | Setup |
@@ -86,6 +93,25 @@ sharing (gender, birth − ID publish, birth − registration) are treated as th
 application in such a group defaulted, another one defaulted 25% of the time (base rate 8%). The key is not
 perfect, so it is used as a model input, never as a rule. A row's own label is always excluded.
 
+**Round 2: D. Same-person history.** Checking the `APPLICANT_KEY` groups showed that many join different people: of the
+pairs matching *only* on the two key differences, 13% share the region population and 64% the education, and their
+labels are unrelated (when one defaulted the other did 6% of the time, below the 8% base rate). With the stricter
+pairs from notebook 02, the figure is 38–47%; for exact duplicates (same birth date) it is 72%. Later applications
+default more often than earlier ones (7.9% vs 5.5%). D adds, on top of B: the 5 label-free pair columns and, inside
+each fold, the defaults among matched applications (all, later, earlier, exact duplicates, all-4-match) and the gap to
+the nearest default.
+
+| LightGBM, 2 seeds | AUC | Gain over B |
+| --- | --- | --- |
+| B (kept in round 1) | 0.76423 | |
+| B + pair columns only (no labels) | 0.76610 | +0.00187 |
+| **B + D** | **0.76620** | **+0.00197** (per seed +0.0021 / +0.0017) |
+
+Most of the gain comes from the label-free pair structure; the pair labels add little on top. Confirmation on
+CatBoost-recon (seed 0): 0.76458 → 0.76643 (+0.00185). Not kept: features describing how the application changed
+between a person's applications (income, credit, family status ...) and external scores borrowed from the other
+application (both within ±0.0001 in a scratch screen).
+
 The neighbour default rate is strong on its own (AUC 0.72), but boosted trees already capture the same
 information from the scores, so it added nothing. Confirmation on CatBoost-recon: 0.76329 → 0.76439 (seed 0).
 
@@ -96,27 +122,38 @@ on 3 seeds. Then three ways of combining OOF predictions were compared. Each is 
 scored on the other 1/5, so no method is scored on the rows it was fitted to. Predictions are combined on the
 logit scale.
 
-| Single model (out-of-fold AUC) | Base features | + repeat history |
-| --- | --- | --- |
-| LightGBM | 0.76330 | 0.76438 |
-| CatBoost | 0.76484 | |
-| CatBoost-recon | 0.76504 | **0.76613** |
-| TabM | 0.76127 (1 seed) | 0.76515 |
+The repeat-applicant history and then the same-person history (v2) were added to all three model types.
+Numbers below are from the full re-run on an Apple M1 (TabM on its GPU); CatBoost and TabM differ from the earlier
+x86 run in the 4th decimal, LightGBM matches exactly. The v2 models use more seeds where it pays off: LightGBM 3,
+CatBoost-recon 6, TabM 9 (with 3 seeds each the v2 blend scored 0.77019).
+
+| Single model (out-of-fold AUC) | Base features | + repeat history | + same-person history (v2) |
+| --- | --- | --- | --- |
+| LightGBM | 0.76330 | 0.76438 | 0.76634 |
+| CatBoost | 0.76508 | | |
+| CatBoost-recon | 0.76498 | 0.76630 | **0.76889** (6 seeds) |
+| TabM | 0.76068 (1 seed) | 0.76524 | 0.76833 (9 seeds) |
 
 | Blend (nested AUC) | Equal weights | Optimised weights | Logistic stacking |
 | --- | --- | --- | --- |
-| Previous recipe rebuilt (LightGBM, CatBoost, CatBoost-recon, TabM) | 0.76667 | 0.76667 | 0.76672 |
-| All seven models | 0.76756 | 0.76790 | 0.76812 |
-| **Models with repeat history** | 0.76795 | 0.76815 | **0.76815** |
+| Previous recipe rebuilt (LightGBM, CatBoost, CatBoost-recon, TabM) | 0.76659 | 0.76657 | 0.76662 |
+| All ten models | 0.76894 | 0.77036 | 0.77081 |
+| Models with repeat history (previous submission) | 0.76804 | 0.76819 | 0.76828 |
+| **v2 models (same-person history)** | 0.77037 | 0.77066 | **0.77073** |
 
-**Final submission:** logistic stacking of LightGBM-new (weight 0.14), CatBoost-recon-new (0.47) and TabM-new
-(0.39), with nested AUC **0.76815**. That is +0.0014 over the rebuilt previous recipe; the gain is slightly
-generous because the baseline TabM has 1 seed instead of 3.
+**Choice rule:** among blends within 0.0001 of the best, the one with the fewest models. The ten-model stack is only
+0.00008 higher and gives several models negative weights, which is fragile on new data.
+
+**Final submission:** logistic stacking of LightGBM-v2 (normalised weight 0.076), CatBoost-recon-v2 (0.475) and
+TabM-v2 (0.448), nested AUC **0.77073**: +0.0025 over the previous submission's recipe and +0.0041 over the rebuilt
+original recipe. The 3-seed version of this blend scored 0.77375 on the public leaderboard (previous submission: 0.77029).
 
 * TabM's large weight despite its lower score comes from its different errors. Its predictions correlate about
   0.94 with the tree models', while the tree models correlate 0.97 to 0.99 with each other.
-* The new submission's rank correlation with the earlier submission (public score 0.77029) is 0.997.
-* Optimised weights and stacking performed the same, so the blend is not sensitive to the method.
+* Rank correlation with the previous submission: 0.994; with the 3-seed v2 submission: 0.9997.
+* Optimised weights and stacking performed within 0.0001 of each other, so the blend is not sensitive to the method.
+* CatBoost tuning on the v2 features (depth 6–7, stronger L2, 254 borders, bagging) gave nothing over the current
+  settings (best +0.00007, seed 0 development runs).
 
 Local CV and the public leaderboard are different evaluations. Expect the public score to move around the
 local number by a few thousandths.

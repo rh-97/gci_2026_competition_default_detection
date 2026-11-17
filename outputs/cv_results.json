@@ -1,41 +1,47 @@
 {
-  "chosen_candidate": "new families (with repeat history)",
+  "chosen_candidate": "v2 families (same-person history)",
   "method": "logistic stacking",
   "weights": {
-    "LightGBM-new": 0.14433688847120119,
-    "CatBoost-new": 0.46922215666220024,
-    "TabM-new": 0.38644095486659874
+    "LightGBM-v2": 0.07649843431384698,
+    "CatBoost-v2": 0.4754564261600928,
+    "TabM-v2": 0.4480451395260601
   },
-  "nested_oof_auc": 0.7681540945955153,
-  "in_sample_oof_auc": 0.7681871330420936,
+  "nested_oof_auc": 0.7707274454258195,
+  "in_sample_oof_auc": 0.7707622469588198,
   "blend_grid": {
     "equal weights": {
-      "base families (previous recipe)": 0.766669,
-      "all models": 0.767555,
-      "new families (with repeat history)": 0.767949
+      "base families (previous recipe)": 0.766592,
+      "all models": 0.768935,
+      "new families (with repeat history)": 0.768042,
+      "v2 families (same-person history)": 0.770367
     },
     "optimised weights": {
-      "base families (previous recipe)": 0.766669,
-      "all models": 0.767896,
-      "new families (with repeat history)": 0.768152
+      "base families (previous recipe)": 0.766572,
+      "all models": 0.770364,
+      "new families (with repeat history)": 0.768189,
+      "v2 families (same-person history)": 0.770664
     },
     "logistic stacking": {
-      "base families (previous recipe)": 0.766725,
-      "all models": 0.768121,
-      "new families (with repeat history)": 0.768154
+      "base families (previous recipe)": 0.766619,
+      "all models": 0.770814,
+      "new families (with repeat history)": 0.768282,
+      "v2 families (same-person history)": 0.770727
     }
   },
   "single_models": {
-    "TabM": 0.761271,
+    "TabM": 0.760678,
     "LightGBM": 0.763303,
     "LightGBM-new": 0.764376,
-    "CatBoost": 0.764839,
-    "CatBoost-recon": 0.765041,
-    "TabM-new": 0.76515,
-    "CatBoost-new": 0.766128
+    "CatBoost-recon": 0.764978,
+    "CatBoost": 0.765084,
+    "TabM-new": 0.765238,
+    "CatBoost-new": 0.766299,
+    "LightGBM-v2": 0.766341,
+    "TabM-v2": 0.768326,
+    "CatBoost-v2": 0.768893
   },
   "secondary": {
-    "auc": 0.7681871330420936,
-    "log_loss": 0.24323315372345747
+    "auc": 0.7707622469588198,
+    "log_loss": 0.24231322922889847
   }
 }

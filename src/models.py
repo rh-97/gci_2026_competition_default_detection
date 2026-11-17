@@ -18,6 +18,7 @@ from catboost import CatBoostClassifier
 from sklearn.preprocessing import QuantileTransformer
 
 THREADS = int(os.environ.get("HC_THREADS", "8"))   # CPU threads per model
+DEVICE = os.environ.get("HC_DEVICE", "cpu")         # TabM only: "cpu", or "mps" for the Apple-silicon GPU (about 2x faster)
 
 
 def categorical_columns(X):
@@ -107,8 +108,8 @@ def _predict(model, numeric, cats):
     out = []
     with torch.inference_mode():
         for start in range(0, len(numeric), 4096):
-            logits = model(numeric[start:start + 4096], cats[start:start + 4096]).squeeze(-1)
-            out.append(logits.sigmoid().mean(dim=1).numpy())   # average the k ensemble members
+            logits = model(numeric[start:start + 4096].to(DEVICE), cats[start:start + 4096].to(DEVICE)).squeeze(-1)
+            out.append(logits.sigmoid().mean(dim=1).cpu().numpy())   # average the k ensemble members
     return np.concatenate(out).astype(float)
 
 
@@ -133,15 +134,16 @@ def tabm(iterations=None, max_epochs=140, patience=20, schedule_epochs=140, k=16
         embedding = rtdl_num_embeddings.PiecewiseLinearEmbeddings(bins, d_embedding, activation=False, version='B')
         model = tabm_package.TabM.make(n_num_features=a_num.shape[1], cat_cardinalities=enc.cardinalities,
                                        num_embeddings=embedding, d_out=1, n_blocks=n_blocks, d_block=d_block,
-                                       dropout=dropout, k=k, arch_type='tabm-mini')
+                                       dropout=dropout, k=k, arch_type='tabm-mini').to(DEVICE)
+        a_num, a_cat = a_num.to(DEVICE), a_cat.to(DEVICE)
         optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=weight_decay)
         schedule = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=schedule_epochs, eta_min=learning_rate * .05)
-        target = torch.from_numpy(ytr.astype('float32'))
+        target = torch.from_numpy(ytr.astype('float32')).to(DEVICE)
         generator = torch.Generator().manual_seed(seed)
         best, best_epoch, best_state = -np.inf, 0, None
         for epoch in range(1, (iterations or max_epochs) + 1):
             model.train()
-            for batch in torch.randperm(len(target), generator=generator).split(batch_size):
+            for batch in torch.randperm(len(target), generator=generator).to(DEVICE).split(batch_size):
                 optimizer.zero_grad(set_to_none=True)
                 logits = model(a_num[batch], a_cat[batch]).squeeze(-1)           # (batch, k)
                 loss = F.binary_cross_entropy_with_logits(logits, target[batch, None].expand_as(logits))
